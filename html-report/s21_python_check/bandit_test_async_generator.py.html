@@ -1,0 +1,1187 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s21_python_check.html" title="./../s21_python_check.html" >&laquo; Back to s21_python_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>Run started:2024-10-25 14:20:06.758497</pre>
+<br />
+<pre>Test results:</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:61:4</pre>
+<pre>60	async def test_async_generator():</pre>
+<pre>61	    assert await collect(async_range(10)) == list(range(10))</pre>
+<pre>62	    assert (await collect(double(async_range(5))) == [0, 2, 4, 6, 8])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:62:4</pre>
+<pre>61	    assert await collect(async_range(10)) == list(range(10))</pre>
+<pre>62	    assert (await collect(double(async_range(5))) == [0, 2, 4, 6, 8])</pre>
+<pre>63	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:65:4</pre>
+<pre>64	    tripler = HasAsyncGenMethod(3)</pre>
+<pre>65	    assert (</pre>
+<pre>66	        await</pre>
+<pre>67	        collect(tripler.async_multiplied(async_range(5))) == [0, 3, 6, 9, 12]</pre>
+<pre>68	    )</pre>
+<pre>69	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:77:4</pre>
+<pre>76	async def test_yield_no_arg():</pre>
+<pre>77	    assert await collect(agen_yield_no_arg()) == [None]</pre>
+<pre>78	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:97:8</pre>
+<pre>96	    async for item in gen:  # pragma: no branch</pre>
+<pre>97	        assert item == 1</pre>
+<pre>98	        break</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:100:8</pre>
+<pre>99	    async for item in gen:  # pragma: no branch</pre>
+<pre>100	        assert item == 2</pre>
+<pre>101	        break</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:105:8</pre>
+<pre>104	    except StopAsyncIteration as e:</pre>
+<pre>105	        assert e.args[0] == "hi"</pre>
+<pre>106	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:140:4</pre>
+<pre>139	def number_me():</pre>
+<pre>140	    assert (yield "number me") == 1</pre>
+<pre>141	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:145:4</pre>
+<pre>144	def next_me():</pre>
+<pre>145	    assert (yield "next me") is None</pre>
+<pre>146	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:171:16</pre>
+<pre>170	            else:</pre>
+<pre>171	                assert value in (None, "next me")</pre>
+<pre>172	                value = coro_iter.__next__()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:180:4</pre>
+<pre>179	    yielded = hostile_coroutine_runner(coro)</pre>
+<pre>180	    assert yielded == [1, 2, 3, 4]</pre>
+<pre>181	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:203:4</pre>
+<pre>202	    sender2 = ag.asend(None)</pre>
+<pre>203	    assert sender1.send(None) == "mock_sleep"</pre>
+<pre>204	    with pytest.raises(ValueError):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:221:4</pre>
+<pre>220	    fut = asend_coro.send(None)</pre>
+<pre>221	    assert fut == "mock_sleep"</pre>
+<pre>222	    # Now the async generator's frame is not executing, but a call to asend()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:225:4</pre>
+<pre>224	    # can't start up another call to asend().</pre>
+<pre>225	    assert ag.ag_running</pre>
+<pre>226	    with pytest.raises(ValueError):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:244:4</pre>
+<pre>243	async def asend_me():</pre>
+<pre>244	    assert (await yield_(1)) == 2</pre>
+<pre>245	    assert (await yield_(3)) == 4</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:245:4</pre>
+<pre>244	    assert (await yield_(1)) == 2</pre>
+<pre>245	    assert (await yield_(3)) == 4</pre>
+<pre>246	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:250:4</pre>
+<pre>249	    aiter = asend_me()</pre>
+<pre>250	    assert (await aiter.__anext__()) == 1</pre>
+<pre>251	    assert (await aiter.asend(2)) == 3</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:251:4</pre>
+<pre>250	    assert (await aiter.__anext__()) == 1</pre>
+<pre>251	    assert (await aiter.asend(2)) == 3</pre>
+<pre>252	    with pytest.raises(StopAsyncIteration):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:274:4</pre>
+<pre>273	    aiter = athrow_me()</pre>
+<pre>274	    assert (await aiter.__anext__()) == 1</pre>
+<pre>275	    assert (await aiter.athrow(KeyError("oops"))) == 2</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:275:4</pre>
+<pre>274	    assert (await aiter.__anext__()) == 1</pre>
+<pre>275	    assert (await aiter.athrow(KeyError("oops"))) == 2</pre>
+<pre>276	    assert (await aiter.athrow(ValueError("oops"))) == 3</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:276:4</pre>
+<pre>275	    assert (await aiter.athrow(KeyError("oops"))) == 2</pre>
+<pre>276	    assert (await aiter.athrow(ValueError("oops"))) == 3</pre>
+<pre>277	    with pytest.raises(OSError):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:303:8</pre>
+<pre>302	    async for obj in aiter:  # pragma: no branch</pre>
+<pre>303	        assert obj == 1</pre>
+<pre>304	        break</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:305:4</pre>
+<pre>304	        break</pre>
+<pre>305	    assert track[0] is None</pre>
+<pre>306	    await aiter.aclose()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:307:4</pre>
+<pre>306	    await aiter.aclose()</pre>
+<pre>307	    assert track[0] == "closed"</pre>
+<pre>308	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:314:8</pre>
+<pre>313	    async for obj in aiter:</pre>
+<pre>314	        assert False  # pragma: no cover</pre>
+<pre>315	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:342:4</pre>
+<pre>341	    aiter = sync_yield_during_aclose()</pre>
+<pre>342	    assert (await aiter.__anext__()) == 1</pre>
+<pre>343	    # Doesn't raise:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:347:4</pre>
+<pre>346	    aiter = async_yield_during_aclose()</pre>
+<pre>347	    assert (await aiter.__anext__()) == 1</pre>
+<pre>348	    with pytest.raises(RuntimeError):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B102:exec_used] Use of exec detected.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:367:4</pre>
+<pre>366	if sys.version_info &gt;= (3, 6):</pre>
+<pre>367	    exec(</pre>
+<pre>368	        """</pre>
+<pre>369	async def native_async_range(count):</pre>
+<pre>370	    for i in range(count):</pre>
+<pre>371	        yield i</pre>
+<pre>372	</pre>
+<pre>373	# XX uncomment if/when we re-enable the ctypes hacks:</pre>
+<pre>374	# async def native_async_range_twice(count):</pre>
+<pre>375	#     # make sure yield_from_ works inside a native async generator</pre>
+<pre>376	#     await yield_from_(async_range(count))</pre>
+<pre>377	#     yield None</pre>
+<pre>378	#     # make sure we can yield_from_ a native async generator</pre>
+<pre>379	#     await yield_from_(native_async_range(count))</pre>
+<pre>380	    """</pre>
+<pre>381	    )</pre>
+<pre>382	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:385:4</pre>
+<pre>384	async def test_async_yield_from_():</pre>
+<pre>385	    assert await collect(async_range_twice(3)) == [</pre>
+<pre>386	        0,</pre>
+<pre>387	        1,</pre>
+<pre>388	        2,</pre>
+<pre>389	        None,</pre>
+<pre>390	        0,</pre>
+<pre>391	        1,</pre>
+<pre>392	        2,</pre>
+<pre>393	    ]</pre>
+<pre>394	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:401:8</pre>
+<pre>400	</pre>
+<pre>401	        assert await collect(yield_from_native()) == [0, 1, 2]</pre>
+<pre>402	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:424:4</pre>
+<pre>423	    await gen.__anext__() == 20</pre>
+<pre>424	    assert (await gen.asend(2)) == 4</pre>
+<pre>425	    assert (await gen.asend(5)) == 10</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:425:4</pre>
+<pre>424	    assert (await gen.asend(2)) == 4</pre>
+<pre>425	    assert (await gen.asend(5)) == 10</pre>
+<pre>426	    assert (await gen.asend(0)) == 0</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:426:4</pre>
+<pre>425	    assert (await gen.asend(5)) == 10</pre>
+<pre>426	    assert (await gen.asend(0)) == 0</pre>
+<pre>427	    await gen.aclose()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:432:4</pre>
+<pre>431	    gen = async_range_twice(2)</pre>
+<pre>432	    assert (await gen.__anext__()) == 0</pre>
+<pre>433	    with pytest.raises(ValueError):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:449:4</pre>
+<pre>448	async def test_async_yield_from_return_value():</pre>
+<pre>449	    assert await collect(yields_from_returns_1()) == [0, 1]</pre>
+<pre>450	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:460:8</pre>
+<pre>459	    async def yield_from_empty():</pre>
+<pre>460	        assert (await yield_from_(empty())) == "done"</pre>
+<pre>461	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:462:4</pre>
+<pre>461	</pre>
+<pre>462	    assert await collect(yield_from_empty()) == []</pre>
+<pre>463	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:493:12</pre>
+<pre>492	            c = Countdown(count)</pre>
+<pre>493	            assert (await yield_from_(c)) == "boom"</pre>
+<pre>494	        except BaseException as e:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:501:4</pre>
+<pre>500	    h = []</pre>
+<pre>501	    assert await collect(yield_from_countdown(3, h)) == [2, 1, 0]</pre>
+<pre>502	    assert h == []</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:502:4</pre>
+<pre>501	    assert await collect(yield_from_countdown(3, h)) == [2, 1, 0]</pre>
+<pre>502	    assert h == []</pre>
+<pre>503	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:508:4</pre>
+<pre>507	    agen = yield_from_countdown(3, h)</pre>
+<pre>508	    assert await agen.__anext__() == 2</pre>
+<pre>509	    exc = ValueError("x")</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:513:8</pre>
+<pre>512	    except StopAsyncIteration as e:</pre>
+<pre>513	        assert e.args[0] is exc</pre>
+<pre>514	    assert h == ["raise"]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:514:4</pre>
+<pre>513	        assert e.args[0] is exc</pre>
+<pre>514	    assert h == ["raise"]</pre>
+<pre>515	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:519:4</pre>
+<pre>518	    agen = yield_from_countdown(3, h)</pre>
+<pre>519	    assert await agen.__anext__() == 2</pre>
+<pre>520	    await agen.aclose()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:521:4</pre>
+<pre>520	    await agen.aclose()</pre>
+<pre>521	    assert h == ["countdown closed", "raise"]</pre>
+<pre>522	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:527:4</pre>
+<pre>526	    agen = yield_from_countdown(3, h)</pre>
+<pre>527	    assert await agen.__anext__() == 2</pre>
+<pre>528	    exc = GeneratorExit()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:531:4</pre>
+<pre>530	        await agen.athrow(exc)</pre>
+<pre>531	    assert h == ["countdown closed", "raise"]</pre>
+<pre>532	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:559:4</pre>
+<pre>558	</pre>
+<pre>559	    assert await collect(yield_from_countdown(3)) == [2, 1, 0]</pre>
+<pre>560	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:562:4</pre>
+<pre>561	    agen = yield_from_countdown(3)</pre>
+<pre>562	    assert await agen.__anext__() == 2</pre>
+<pre>563	    assert await agen.__anext__() == 1</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:563:4</pre>
+<pre>562	    assert await agen.__anext__() == 2</pre>
+<pre>563	    assert await agen.__anext__() == 1</pre>
+<pre>564	    # It's OK that Countdown has no aclose</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:589:4</pre>
+<pre>588	</pre>
+<pre>589	    assert await collect(yield_from_countdown(3)) == [2, 1, 0]</pre>
+<pre>590	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:606:4</pre>
+<pre>605	    agen = yield_from_catch()</pre>
+<pre>606	    assert await agen.__anext__() == "hi"</pre>
+<pre>607	    assert await agen.__anext__() == "hi"</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:607:4</pre>
+<pre>606	    assert await agen.__anext__() == "hi"</pre>
+<pre>607	    assert await agen.__anext__() == "hi"</pre>
+<pre>608	    thrown = ValueError("oops")</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:612:8</pre>
+<pre>611	    except StopAsyncIteration as caught:</pre>
+<pre>612	        assert caught.args == (("bye", thrown),)</pre>
+<pre>613	    else:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:643:4</pre>
+<pre>642	    gen = awaits_when_unwinding()</pre>
+<pre>643	    assert await collect(gen) == [0, 1, 2]</pre>
+<pre>644	    # Exhausted, so no problem</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:650:12</pre>
+<pre>649	        for turn in range(stop_after_turn):</pre>
+<pre>650	            assert await gen.__anext__() == turn</pre>
+<pre>651	        await gen.aclose()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:658:12</pre>
+<pre>657	        for turn in range(stop_after_turn):</pre>
+<pre>658	            assert await gen.__anext__() == turn</pre>
+<pre>659	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:665:12</pre>
+<pre>664	                gen.__del__()</pre>
+<pre>665	            assert "awaited during finalization; install a finalization hook" in str(</pre>
+<pre>666	                info.value</pre>
+<pre>667	            )</pre>
+<pre>668	        else:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:672:4</pre>
+<pre>671	</pre>
+<pre>672	    assert completions == 3</pre>
+<pre>673	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:682:4</pre>
+<pre>681	    gen = yields_when_unwinding()</pre>
+<pre>682	    assert await gen.__anext__() == 1</pre>
+<pre>683	    with pytest.raises(RuntimeError) as info:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:693:4</pre>
+<pre>692	def test_isasyncgen():</pre>
+<pre>693	    assert not isasyncgen(async_range)</pre>
+<pre>694	    assert isasyncgen(async_range(10))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:694:4</pre>
+<pre>693	    assert not isasyncgen(async_range)</pre>
+<pre>694	    assert isasyncgen(async_range(10))</pre>
+<pre>695	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:697:8</pre>
+<pre>696	    if sys.version_info &gt;= (3, 6):</pre>
+<pre>697	        assert not isasyncgen(native_async_range)</pre>
+<pre>698	        assert isasyncgen(native_async_range(10))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:698:8</pre>
+<pre>697	        assert not isasyncgen(native_async_range)</pre>
+<pre>698	        assert isasyncgen(native_async_range(10))</pre>
+<pre>699	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:702:4</pre>
+<pre>701	def test_isasyncgenfunction():</pre>
+<pre>702	    assert isasyncgenfunction(async_range)</pre>
+<pre>703	    assert not isasyncgenfunction(list)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:703:4</pre>
+<pre>702	    assert isasyncgenfunction(async_range)</pre>
+<pre>703	    assert not isasyncgenfunction(list)</pre>
+<pre>704	    assert not isasyncgenfunction(async_range(10))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:704:4</pre>
+<pre>703	    assert not isasyncgenfunction(list)</pre>
+<pre>704	    assert not isasyncgenfunction(async_range(10))</pre>
+<pre>705	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:707:8</pre>
+<pre>706	    if sys.version_info &gt;= (3, 6):</pre>
+<pre>707	        assert isasyncgenfunction(native_async_range)</pre>
+<pre>708	        assert not isasyncgenfunction(native_async_range(10))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:708:8</pre>
+<pre>707	        assert isasyncgenfunction(native_async_range)</pre>
+<pre>708	        assert not isasyncgenfunction(native_async_range(10))</pre>
+<pre>709	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:733:4</pre>
+<pre>732	</pre>
+<pre>733	    assert not isasyncgenfunction(async_range_wrapper)</pre>
+<pre>734	    assert isasyncgenfunction(async_range_wrapper.__wrapped__)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:734:4</pre>
+<pre>733	    assert not isasyncgenfunction(async_range_wrapper)</pre>
+<pre>734	    assert isasyncgenfunction(async_range_wrapper.__wrapped__)</pre>
+<pre>735	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:739:8</pre>
+<pre>738	    if hasattr(collections.abc, "AsyncGenerator"):</pre>
+<pre>739	        assert isinstance(async_range(10), collections.abc.AsyncGenerator)</pre>
+<pre>740	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:749:4</pre>
+<pre>748	    agen = f()</pre>
+<pre>749	    assert agen.ag_code.co_name == "f"</pre>
+<pre>750	    async for _ in agen:  # pragma: no branch</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:751:8</pre>
+<pre>750	    async for _ in agen:  # pragma: no branch</pre>
+<pre>751	        assert agen.ag_frame.f_locals["x"] == 1</pre>
+<pre>752	        break</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:774:4</pre>
+<pre>773	    print(sys.getrefcount(x))</pre>
+<pre>774	    assert sys.getrefcount(x) &gt;= base_count + 100</pre>
+<pre>775	    l2 = [_impl._unwrap(box) for box in l]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:776:4</pre>
+<pre>775	    l2 = [_impl._unwrap(box) for box in l]</pre>
+<pre>776	    assert sys.getrefcount(x) &gt;= base_count + 200</pre>
+<pre>777	    print(sys.getrefcount(x))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:789:4</pre>
+<pre>788	    print(sys.getrefcount(x))</pre>
+<pre>789	    assert sys.getrefcount(x) == base_count</pre>
+<pre>790	    print(sys.getrefcount(x))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:816:8</pre>
+<pre>815	            await agen.athrow(exc)</pre>
+<pre>816	        assert excinfo.type is RuntimeError</pre>
+<pre>817	        assert excinfo.value.__cause__ is exc</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:817:8</pre>
+<pre>816	        assert excinfo.type is RuntimeError</pre>
+<pre>817	        assert excinfo.value.__cause__ is exc</pre>
+<pre>818	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:836:8</pre>
+<pre>835	        print(msg)</pre>
+<pre>836	        assert not issubclass(msg.category, RuntimeWarning)</pre>
+<pre>837	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:861:4</pre>
+<pre>860	    set_asyncgen_hooks(None, None)</pre>
+<pre>861	    assert get_asyncgen_hooks() == (None, None)</pre>
+<pre>862	    set_asyncgen_hooks(finalizer=two)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:863:4</pre>
+<pre>862	    set_asyncgen_hooks(finalizer=two)</pre>
+<pre>863	    assert get_asyncgen_hooks() == (None, two)</pre>
+<pre>864	    set_asyncgen_hooks(firstiter=one)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:865:4</pre>
+<pre>864	    set_asyncgen_hooks(firstiter=one)</pre>
+<pre>865	    assert get_asyncgen_hooks() == (one, two)</pre>
+<pre>866	    set_asyncgen_hooks(finalizer=None, firstiter=two)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:867:4</pre>
+<pre>866	    set_asyncgen_hooks(finalizer=None, firstiter=two)</pre>
+<pre>867	    assert get_asyncgen_hooks() == (two, None)</pre>
+<pre>868	    set_asyncgen_hooks(None, one)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:869:4</pre>
+<pre>868	    set_asyncgen_hooks(None, one)</pre>
+<pre>869	    assert get_asyncgen_hooks() == (None, one)</pre>
+<pre>870	    tup = (one, two)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:872:4</pre>
+<pre>871	    set_asyncgen_hooks(*tup)</pre>
+<pre>872	    assert get_asyncgen_hooks() == tup</pre>
+<pre>873	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:890:4</pre>
+<pre>889	    thread.join()</pre>
+<pre>890	    assert results == [(None, None), (two, one)]</pre>
+<pre>891	    assert get_asyncgen_hooks() == (one, two)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:891:4</pre>
+<pre>890	    assert results == [(None, None), (two, one)]</pre>
+<pre>891	    assert get_asyncgen_hooks() == (one, two)</pre>
+<pre>892	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:944:4</pre>
+<pre>943	</pre>
+<pre>944	    assert events == [</pre>
+<pre>945	        "before asend A", "before send A", "yield 1 A", "after asend A",</pre>
+<pre>946	        "before asend B", "firstiter B", "before send B", "yield 1 B",</pre>
+<pre>947	        "after asend B", "before asend C", "firstiter C", "before send C",</pre>
+<pre>948	        "yield 1 C", "after asend C"</pre>
+<pre>949	    ]</pre>
+<pre>950	    del events[:]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:961:4</pre>
+<pre>960	    await iterX.aclose()</pre>
+<pre>961	    assert events == ["firstiter X", "before close"]</pre>
+<pre>962	    del events[:]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:975:4</pre>
+<pre>974	        gc.collect()</pre>
+<pre>975	    assert refA() is None</pre>
+<pre>976	    assert events == [</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:976:4</pre>
+<pre>975	    assert refA() is None</pre>
+<pre>976	    assert events == [</pre>
+<pre>977	        "yield 2 A", "after yield 2 A", "mock_sleep A", "yield 3 A",</pre>
+<pre>978	        "unwind 3 A"</pre>
+<pre>979	    ]</pre>
+<pre>980	    assert not to_finalize</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:980:4</pre>
+<pre>979	    ]</pre>
+<pre>980	    assert not to_finalize</pre>
+<pre>981	    del events[:]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:994:4</pre>
+<pre>993	        gc.collect()</pre>
+<pre>994	    assert events == [</pre>
+<pre>995	        "yield 2 C", "yield 2 B", "after yield 2 C", "mock_sleep C",</pre>
+<pre>996	        "yield 3 C", "finalizer B", "finalizer C"</pre>
+<pre>997	    ]</pre>
+<pre>998	    del events[:]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:1001:4</pre>
+<pre>1000	    # finalizer invokes aclose() is not called again once the revived reference drops</pre>
+<pre>1001	    assert list(map(id, to_finalize)) == [idB, idC]</pre>
+<pre>1002	    events.append("before aclose B")</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:1010:4</pre>
+<pre>1009	        gc.collect()</pre>
+<pre>1010	    assert refB() is None and refC() is None</pre>
+<pre>1011	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/async_generator/_tests/test_async_generator.py:1012:4</pre>
+<pre>1011	</pre>
+<pre>1012	    assert events == [</pre>
+<pre>1013	        "before aclose B", "mock_sleep B", "before aclose C", "unwind 3 C",</pre>
+<pre>1014	        "after aclose both"</pre>
+<pre>1015	    ]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<br />
+<pre>Code scanned:</pre>
+<pre>	Total lines of code: 660</pre>
+<pre>	Total lines skipped (#nosec): 0</pre>
+<pre>	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0</pre>
+<br />
+<pre>Run metrics:</pre>
+<pre>	Total issues (by severity):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 96</pre>
+<pre>		Medium: 1</pre>
+<pre>		High: 0</pre>
+<pre>	Total issues (by confidence):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 0</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 97</pre>
+<pre>Files skipped (0):</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

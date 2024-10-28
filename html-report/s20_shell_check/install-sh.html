@@ -1,0 +1,697 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s20_shell_check.html" title="./../s20_shell_check.html" >&laquo; Back to s20_shell_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>#!/bin/sh</pre>
+<pre># install - install a program, script, or datafile</pre>
+<br />
+<pre>scriptversion=2020-11-14.01; # UTC</pre>
+<br />
+<pre># This originates from X11R5 (mit/util/scripts/install.sh), which was</pre>
+<pre># later released in X11R6 (xc/config/util/install.sh) with the</pre>
+<pre># following copyright and license.</pre>
+<pre>#</pre>
+<pre># Copyright (C) 1994 X Consortium</pre>
+<pre>#</pre>
+<pre># Permission is hereby granted, free of charge, to any person obtaining a copy</pre>
+<pre># of this software and associated documentation files (the "Software"), to</pre>
+<pre># deal in the Software without restriction, including without limitation the</pre>
+<pre># rights to use, copy, modify, merge, publish, distribute, sublicense, and/or</pre>
+<pre># sell copies of the Software, and to permit persons to whom the Software is</pre>
+<pre># furnished to do so, subject to the following conditions:</pre>
+<pre>#</pre>
+<pre># The above copyright notice and this permission notice shall be included in</pre>
+<pre># all copies or substantial portions of the Software.</pre>
+<pre>#</pre>
+<pre># THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</pre>
+<pre># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</pre>
+<pre># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE</pre>
+<pre># X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN</pre>
+<pre># AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNEC-</pre>
+<pre># TION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
+<pre>#</pre>
+<pre># Except as contained in this notice, the name of the X Consortium shall not</pre>
+<pre># be used in advertising or otherwise to promote the sale, use or other deal-</pre>
+<pre># ings in this Software without prior written authorization from the X Consor-</pre>
+<pre># tium.</pre>
+<pre>#</pre>
+<pre>#</pre>
+<pre># FSF changes to this file are in the public domain.</pre>
+<pre>#</pre>
+<pre># Calling this script install-sh is preferred over install.sh, to prevent</pre>
+<pre># 'make' implicit rules from creating a file called install from it</pre>
+<pre># when there is no Makefile.</pre>
+<pre>#</pre>
+<pre># This script is compatible with the BSD install script, but was written</pre>
+<pre># from scratch.</pre>
+<br />
+<pre>tab='	'</pre>
+<pre>nl='</pre>
+<pre>'</pre>
+<pre>IFS=" $tab$nl"</pre>
+<br />
+<pre># Set DOITPROG to "echo" to test this script.</pre>
+<br />
+<pre>doit=${DOITPROG-}</pre>
+<pre>doit_exec=${doit:-exec}</pre>
+<br />
+<pre># Put in absolute file names if you don't have them in your path;</pre>
+<pre># or use environment vars.</pre>
+<br />
+<pre>chgrpprog=${CHGRPPROG-chgrp}</pre>
+<pre>chmodprog=${CHMODPROG-chmod}</pre>
+<pre>chownprog=${CHOWNPROG-chown}</pre>
+<pre>cmpprog=${CMPPROG-cmp}</pre>
+<pre>cpprog=${CPPROG-cp}</pre>
+<pre>mkdirprog=${MKDIRPROG-mkdir}</pre>
+<pre>mvprog=${MVPROG-mv}</pre>
+<pre>rmprog=${RMPROG-rm}</pre>
+<pre>stripprog=${STRIPPROG-strip}</pre>
+<br />
+<pre>posix_mkdir=</pre>
+<br />
+<pre># Desired mode of installed file.</pre>
+<pre>mode=0755</pre>
+<br />
+<pre># Create dirs (including intermediate dirs) using mode 755.</pre>
+<pre># This is like GNU 'install' as of coreutils 8.32 (2020).</pre>
+<pre>mkdir_umask=22</pre>
+<br />
+<pre>backupsuffix=</pre>
+<pre>chgrpcmd=</pre>
+<pre>chmodcmd=$chmodprog</pre>
+<pre>chowncmd=</pre>
+<pre>mvcmd=$mvprog</pre>
+<pre>rmcmd="$rmprog -f"</pre>
+<pre>stripcmd=</pre>
+<br />
+<pre>src=</pre>
+<pre>dst=</pre>
+<pre>dir_arg=</pre>
+<pre>dst_arg=</pre>
+<br />
+<pre>copy_on_change=false</pre>
+<pre>is_target_a_directory=possibly</pre>
+<br />
+<pre>usage="\</pre>
+<pre>Usage: $0 [OPTION]... [-T] SRCFILE DSTFILE</pre>
+<pre>   or: $0 [OPTION]... SRCFILES... DIRECTORY</pre>
+<pre>   or: $0 [OPTION]... -t DIRECTORY SRCFILES...</pre>
+<pre>   or: $0 [OPTION]... -d DIRECTORIES...</pre>
+<br />
+<pre>In the 1st form, copy SRCFILE to DSTFILE.</pre>
+<pre>In the 2nd and 3rd, copy all SRCFILES to DIRECTORY.</pre>
+<pre>In the 4th, create DIRECTORIES.</pre>
+<br />
+<pre>Options:</pre>
+<pre>     --help     display this help and exit.</pre>
+<pre>     --version  display version info and exit.</pre>
+<br />
+<pre>  -c            (ignored)</pre>
+<pre>  -C            install only if different (preserve data modification time)</pre>
+<pre>  -d            create directories instead of installing files.</pre>
+<pre>  -g GROUP      $chgrpprog installed files to GROUP.</pre>
+<pre>  -m MODE       $chmodprog installed files to MODE.</pre>
+<pre>  -o USER       $chownprog installed files to USER.</pre>
+<pre>  -p            pass -p to $cpprog.</pre>
+<pre>  -s            $stripprog installed files.</pre>
+<pre>  -S SUFFIX     attempt to back up existing files, with suffix SUFFIX.</pre>
+<pre>  -t DIRECTORY  install into DIRECTORY.</pre>
+<pre>  -T            report an error if DSTFILE is a directory.</pre>
+<br />
+<pre>Environment variables override the default commands:</pre>
+<pre>  CHGRPPROG CHMODPROG CHOWNPROG CMPPROG CPPROG MKDIRPROG MVPROG</pre>
+<pre>  RMPROG STRIPPROG</pre>
+<br />
+<pre>By default, rm is invoked with -f; when overridden with RMPROG,</pre>
+<pre>it's up to you to specify -f if you want it.</pre>
+<br />
+<pre>If -S is not specified, no backups are attempted.</pre>
+<br />
+<pre>Email bug reports to bug-automake&commat;gnu.org.</pre>
+<pre>Automake home page: <a href="https://www.gnu.org/software/automake/" title="https://www.gnu.org/software/automake/" target="_blank" >https://www.gnu.org/software/automake/</a></pre>
+<pre>"</pre>
+<br />
+<pre>while test $# -ne 0; do</pre>
+<pre>  case $1 in</pre>
+<pre>    -c) </span>;</pre>
+<br />
+<pre>    -C) copy_on_change=true</span>;</pre>
+<br />
+<pre>    -d) dir_arg=true</span>;</pre>
+<br />
+<pre>    -g) chgrpcmd="$chgrpprog $2"</pre>
+<pre>        shift</span>;</pre>
+<br />
+<pre>    --help) echo "$usage"; exit $?</span>;</pre>
+<br />
+<pre>    -m) mode=$2</pre>
+<pre>        case $mode in</pre>
+<pre>          *' '* | *"$tab"* | *"$nl"* | *'*'* | *'?'* | *'['*)</pre>
+<pre>            echo "$0: invalid mode: $mode" &gt;&amp;2</pre>
+<pre>            exit 1</span>;</pre>
+<pre>        esac</pre>
+<pre>        shift</span>;</pre>
+<br />
+<pre>    -o) chowncmd="$chownprog $2"</pre>
+<pre>        shift</span>;</pre>
+<br />
+<pre>    -p) cpprog="$cpprog -p"</span>;</pre>
+<br />
+<pre>    -s) stripcmd=$stripprog</span>;</pre>
+<br />
+<pre>    -S) backupsuffix="$2"</pre>
+<pre>        shift</span>;</pre>
+<br />
+<pre>    -t)</pre>
+<pre>        is_target_a_directory=always</pre>
+<pre>        dst_arg=$2</pre>
+<pre>        # Protect names problematic for 'test' and other utilities.</pre>
+<pre>        case $dst_arg in</pre>
+<pre>          -* | [=\(\)!]) dst_arg=./$dst_arg</span>;</pre>
+<pre>        esac</pre>
+<pre>        shift</span>;</pre>
+<br />
+<pre>    -T) is_target_a_directory=never</span>;</pre>
+<br />
+<pre>    --version) echo "$0 $scriptversion"; exit $?</span>;</pre>
+<br />
+<pre>    --) shift</pre>
+<pre>        break</span>;</pre>
+<br />
+<pre>    -*) echo "$0: invalid option: $1" &gt;&amp;2</pre>
+<pre>        exit 1</span>;</pre>
+<br />
+<pre>    *)  break</span>;</pre>
+<pre>  esac</pre>
+<pre>  shift</pre>
+<pre>done</pre>
+<br />
+<pre># We allow the use of options -d and -T together, by making -d</pre>
+<pre># take the precedence; this is for compatibility with GNU install.</pre>
+<br />
+<pre>if test -n "$dir_arg"; then</pre>
+<pre>  if test -n "$dst_arg"; then</pre>
+<pre>    echo "$0: target directory not allowed when installing a directory." &gt;&amp;2</pre>
+<pre>    exit 1</pre>
+<pre>  fi</pre>
+<pre>fi</pre>
+<br />
+<pre>if test $# -ne 0 &amp;&amp; test -z "$dir_arg$dst_arg"; then</pre>
+<pre>  # When -d is used, all remaining arguments are directories to create.</pre>
+<pre>  # When -t is used, the destination is already specified.</pre>
+<pre>  # Otherwise, the last argument is the destination.  Remove it from $&commat;.</pre>
+<pre>  for arg</pre>
+<pre>  do</pre>
+<pre>    if test -n "$dst_arg"; then</pre>
+<pre>      # $&commat; is not empty: it contains at least $arg.</pre>
+<pre>      set fnord "$&commat;" "$dst_arg"</pre>
+<pre>      shift # fnord</pre>
+<pre>    fi</pre>
+<pre>    shift # arg</pre>
+<pre>    dst_arg=$arg</pre>
+<pre>    # Protect names problematic for 'test' and other utilities.</pre>
+<pre>    case $dst_arg in</pre>
+<pre>      -* | [=\(\)!]) dst_arg=./$dst_arg</span>;</pre>
+<pre>    esac</pre>
+<pre>  done</pre>
+<pre>fi</pre>
+<br />
+<pre>if test $# -eq 0; then</pre>
+<pre>  if test -z "$dir_arg"; then</pre>
+<pre>    echo "$0: no input file specified." &gt;&amp;2</pre>
+<pre>    exit 1</pre>
+<pre>  fi</pre>
+<pre>  # It's OK to call 'install-sh -d' without argument.</pre>
+<pre>  # This can happen when creating conditional directories.</pre>
+<pre>  exit 0</pre>
+<pre>fi</pre>
+<br />
+<pre>if test -z "$dir_arg"; then</pre>
+<pre>  if test $# -gt 1 || test "$is_target_a_directory" = always; then</pre>
+<pre>    if test ! -d "$dst_arg"; then</pre>
+<pre>      echo "$0: $dst_arg: Is not a directory." &gt;&amp;2</pre>
+<pre>      exit 1</pre>
+<pre>    fi</pre>
+<pre>  fi</pre>
+<pre>fi</pre>
+<br />
+<pre>if test -z "$dir_arg"; then</pre>
+<pre>  do_exit='(exit $ret); exit $ret'</pre>
+<pre>  trap "ret=129; $do_exit" 1</pre>
+<pre>  trap "ret=130; $do_exit" 2</pre>
+<pre>  trap "ret=141; $do_exit" 13</pre>
+<pre>  trap "ret=143; $do_exit" 15</pre>
+<br />
+<pre>  # Set umask so as not to create temps with too-generous modes.</pre>
+<pre>  # However, 'strip' requires both read and write access to temps.</pre>
+<pre>  case $mode in</pre>
+<pre>    # Optimize common cases.</pre>
+<pre>    *644) cp_umask=133</span>;</pre>
+<pre>    *755) cp_umask=22</span>;</pre>
+<br />
+<pre>    *[0-7])</pre>
+<pre>      if test -z "$stripcmd"; then</pre>
+<pre>        u_plus_rw=</pre>
+<pre>      else</pre>
+<pre>        u_plus_rw='% 200'</pre>
+<pre>      fi</pre>
+<pre>      cp_umask=`expr '(' 777 - $mode % 1000 ')' $u_plus_rw`</span>;</pre>
+<pre>    *)</pre>
+<pre>      if test -z "$stripcmd"; then</pre>
+<pre>        u_plus_rw=</pre>
+<pre>      else</pre>
+<pre>        u_plus_rw=,u+rw</pre>
+<pre>      fi</pre>
+<pre>      cp_umask=$mode$u_plus_rw</span>;</pre>
+<pre>  esac</pre>
+<pre>fi</pre>
+<br />
+<pre>for src</pre>
+<pre>do</pre>
+<pre>  # Protect names problematic for 'test' and other utilities.</pre>
+<pre>  case $src in</pre>
+<pre>    -* | [=\(\)!]) src=./$src</span>;</pre>
+<pre>  esac</pre>
+<br />
+<pre>  if test -n "$dir_arg"; then</pre>
+<pre>    dst=$src</pre>
+<pre>    dstdir=$dst</pre>
+<pre>    test -d "$dstdir"</pre>
+<pre>    dstdir_status=$?</pre>
+<pre>    # Don't chown directories that already exist.</pre>
+<pre>    if test $dstdir_status = 0; then</pre>
+<pre>      chowncmd=""</pre>
+<pre>    fi</pre>
+<pre>  else</pre>
+<br />
+<pre>    # Waiting for this to be detected by the "$cpprog $src $dsttmp" command</pre>
+<pre>    # might cause directories to be created, which would be especially bad</pre>
+<pre>    # if $src (and thus $dsttmp) contains '*'.</pre>
+<pre>    if test ! -f "$src" &amp;&amp; test ! -d "$src"; then</pre>
+<pre>      echo "$0: $src does not exist." &gt;&amp;2</pre>
+<pre>      exit 1</pre>
+<pre>    fi</pre>
+<br />
+<pre>    if test -z "$dst_arg"; then</pre>
+<pre>      echo "$0: no destination specified." &gt;&amp;2</pre>
+<pre>      exit 1</pre>
+<pre>    fi</pre>
+<pre>    dst=$dst_arg</pre>
+<br />
+<pre>    # If destination is a directory, append the input filename.</pre>
+<pre>    if test -d "$dst"; then</pre>
+<pre>      if test "$is_target_a_directory" = never; then</pre>
+<pre>        echo "$0: $dst_arg: Is a directory" &gt;&amp;2</pre>
+<pre>        exit 1</pre>
+<pre>      fi</pre>
+<pre>      dstdir=$dst</pre>
+<pre>      dstbase=`basename "$src"`</pre>
+<pre>      case $dst in</pre>
+<pre>	*/) dst=$dst$dstbase</span>;</pre>
+<pre>	*)  dst=$dst/$dstbase</span>;</pre>
+<pre>      esac</pre>
+<pre>      dstdir_status=0</pre>
+<pre>    else</pre>
+<pre>      dstdir=`dirname "$dst"`</pre>
+<pre>      test -d "$dstdir"</pre>
+<pre>      dstdir_status=$?</pre>
+<pre>    fi</pre>
+<pre>  fi</pre>
+<br />
+<pre>  case $dstdir in</pre>
+<pre>    */) dstdirslash=$dstdir</span>;</pre>
+<pre>    *)  dstdirslash=$dstdir/</span>;</pre>
+<pre>  esac</pre>
+<br />
+<pre>  obsolete_mkdir_used=false</pre>
+<br />
+<pre>  if test $dstdir_status != 0; then</pre>
+<pre>    case $posix_mkdir in</pre>
+<pre>      '')</pre>
+<pre>        # With -d, create the new directory with the user-specified mode.</pre>
+<pre>        # Otherwise, rely on $mkdir_umask.</pre>
+<pre>        if test -n "$dir_arg"; then</pre>
+<pre>          mkdir_mode=-m$mode</pre>
+<pre>        else</pre>
+<pre>          mkdir_mode=</pre>
+<pre>        fi</pre>
+<br />
+<pre>        posix_mkdir=false</pre>
+<pre>	# The $RANDOM variable is not portable (e.g., dash).  Use it</pre>
+<pre>	# here however when possible just to lower collision chance.</pre>
+<pre>	tmpdir=${TMPDIR-/tmp}/ins$RANDOM-$$</pre>
+<br />
+<pre>	trap '</pre>
+<pre>	  ret=$?</pre>
+<pre>	  rmdir "$tmpdir/a/b" "$tmpdir/a" "$tmpdir" 2&gt;/dev/null</pre>
+<pre>	  exit $ret</pre>
+<pre>	' 0</pre>
+<br />
+<pre>	# Because "mkdir -p" follows existing symlinks and we likely work</pre>
+<pre>	# directly in world-writeable /tmp, make sure that the '$tmpdir'</pre>
+<pre>	# directory is successfully created first before we actually test</pre>
+<pre>	# 'mkdir -p'.</pre>
+<pre>	if (umask $mkdir_umask &amp;&amp;</pre>
+<pre>	    $mkdirprog $mkdir_mode "$tmpdir" &amp;&amp;</pre>
+<pre>	    exec $mkdirprog $mkdir_mode -p -- "$tmpdir/a/b") &gt;/dev/null 2&gt;&amp;1</pre>
+<pre>	then</pre>
+<pre>	  if test -z "$dir_arg" || {</pre>
+<pre>	       # Check for POSIX incompatibilities with -m.</pre>
+<pre>	       # HP-UX 11.23 and IRIX 6.5 mkdir -m -p sets group- or</pre>
+<pre>	       # other-writable bit of parent directory when it shouldn't.</pre>
+<pre>	       # FreeBSD 6.1 mkdir -m -p sets mode of existing directory.</pre>
+<pre>	       test_tmpdir="$tmpdir/a"</pre>
+<pre>	       ls_ld_tmpdir=`ls -ld "$test_tmpdir"`</pre>
+<pre>	       case $ls_ld_tmpdir in</pre>
+<pre>		 d????-?r-*) different_mode=700</span>;</pre>
+<pre>		 d????-?--*) different_mode=755</span>;</pre>
+<pre>		 *) false</span>;</pre>
+<pre>	       esac &amp;&amp;</pre>
+<pre>	       $mkdirprog -m$different_mode -p -- "$test_tmpdir" &amp;&amp; {</pre>
+<pre>		 ls_ld_tmpdir_1=`ls -ld "$test_tmpdir"`</pre>
+<pre>		 test "$ls_ld_tmpdir" = "$ls_ld_tmpdir_1"</pre>
+<pre>	       }</pre>
+<pre>	     }</pre>
+<pre>	  then posix_mkdir=:</pre>
+<pre>	  fi</pre>
+<pre>	  rmdir "$tmpdir/a/b" "$tmpdir/a" "$tmpdir"</pre>
+<pre>	else</pre>
+<pre>	  # Remove any dirs left behind by ancient mkdir implementations.</pre>
+<pre>	  rmdir ./$mkdir_mode ./-p ./-- "$tmpdir" 2&gt;/dev/null</pre>
+<pre>	fi</pre>
+<pre>	trap '' 0</span>;</pre>
+<pre>    esac</pre>
+<br />
+<pre>    if</pre>
+<pre>      $posix_mkdir &amp;&amp; (</pre>
+<pre>        umask $mkdir_umask &amp;&amp;</pre>
+<pre>        $doit_exec $mkdirprog $mkdir_mode -p -- "$dstdir"</pre>
+<pre>      )</pre>
+<pre>    then :</pre>
+<pre>    else</pre>
+<br />
+<pre>      # mkdir does not conform to POSIX,</pre>
+<pre>      # or it failed possibly due to a race condition.  Create the</pre>
+<pre>      # directory the slow way, step by step, checking for races as we go.</pre>
+<br />
+<pre>      case $dstdir in</pre>
+<pre>        /*) prefix='/'</span>;</pre>
+<pre>        [-=\(\)!]*) prefix='./'</span>;</pre>
+<pre>        *)  prefix=''</span>;</pre>
+<pre>      esac</pre>
+<br />
+<pre>      oIFS=$IFS</pre>
+<pre>      IFS=/</pre>
+<pre>      set -f</pre>
+<pre>      set fnord $dstdir</pre>
+<pre>      shift</pre>
+<pre>      set +f</pre>
+<pre>      IFS=$oIFS</pre>
+<br />
+<pre>      prefixes=</pre>
+<br />
+<pre>      for d</pre>
+<pre>      do</pre>
+<pre>        test X"$d" = X &amp;&amp; continue</pre>
+<br />
+<pre>        prefix=$prefix$d</pre>
+<pre>        if test -d "$prefix"; then</pre>
+<pre>          prefixes=</pre>
+<pre>        else</pre>
+<pre>          if $posix_mkdir; then</pre>
+<pre>            (umask $mkdir_umask &amp;&amp;</pre>
+<pre>             $doit_exec $mkdirprog $mkdir_mode -p -- "$dstdir") &amp;&amp; break</pre>
+<pre>            # Don't fail if two instances are running concurrently.</pre>
+<pre>            test -d "$prefix" || exit 1</pre>
+<pre>          else</pre>
+<pre>            case $prefix in</pre>
+<pre>              *\'*) qprefix=`echo "$prefix" | sed "s/'/'\\\\\\\\''/g"`</span>;</pre>
+<pre>              *) qprefix=$prefix</span>;</pre>
+<pre>            esac</pre>
+<pre>            prefixes="$prefixes '$qprefix'"</pre>
+<pre>          fi</pre>
+<pre>        fi</pre>
+<pre>        prefix=$prefix/</pre>
+<pre>      done</pre>
+<br />
+<pre>      if test -n "$prefixes"; then</pre>
+<pre>        # Don't fail if two instances are running concurrently.</pre>
+<pre>        (umask $mkdir_umask &amp;&amp;</pre>
+<pre><span class="green">         eval "\$doit_exec \$mkdirprog $prefixes") ||</span></pre>
+<pre>          test -d "$dstdir" || exit 1</pre>
+<pre>        obsolete_mkdir_used=true</pre>
+<pre>      fi</pre>
+<pre>    fi</pre>
+<pre>  fi</pre>
+<br />
+<pre>  if test -n "$dir_arg"; then</pre>
+<pre>    { test -z "$chowncmd" || $doit $chowncmd "$dst"; } &amp;&amp;</pre>
+<pre>    { test -z "$chgrpcmd" || $doit $chgrpcmd "$dst"; } &amp;&amp;</pre>
+<pre>    { test "$obsolete_mkdir_used$chowncmd$chgrpcmd" = false ||</pre>
+<pre>      test -z "$chmodcmd" || $doit $chmodcmd $mode "$dst"; } || exit 1</pre>
+<pre>  else</pre>
+<br />
+<pre>    # Make a couple of temp file names in the proper directory.</pre>
+<pre>    dsttmp=${dstdirslash}_inst.$$_</pre>
+<pre>    rmtmp=${dstdirslash}_rm.$$_</pre>
+<br />
+<pre>    # Trap to clean up those temp files at exit.</pre>
+<pre>    trap 'ret=$?; rm -f "$dsttmp" "$rmtmp" &amp;&amp; exit $ret' 0</pre>
+<br />
+<pre>    # Copy the file name to the temp name.</pre>
+<pre>    (umask $cp_umask &amp;&amp;</pre>
+<pre>     { test -z "$stripcmd" || {</pre>
+<pre>	 # Create $dsttmp read-write so that cp doesn't create it read-only,</pre>
+<pre>	 # which would cause strip to fail.</pre>
+<pre>	 if test -z "$doit"; then</pre>
+<pre>	   : &gt;"$dsttmp" # No need to fork-exec 'touch'.</pre>
+<pre>	 else</pre>
+<pre>	   $doit touch "$dsttmp"</pre>
+<pre>	 fi</pre>
+<pre>       }</pre>
+<pre>     } &amp;&amp;</pre>
+<pre>     $doit_exec $cpprog "$src" "$dsttmp") &amp;&amp;</pre>
+<br />
+<pre>    # and set any options; do chmod last to preserve setuid bits.</pre>
+<pre>    #</pre>
+<pre>    # If any of these fail, we abort the whole thing.  If we want to</pre>
+<pre>    # ignore errors from any of these, just make sure not to ignore</pre>
+<pre>    # errors from the above "$doit $cpprog $src $dsttmp" command.</pre>
+<pre>    #</pre>
+<pre>    { test -z "$chowncmd" || $doit $chowncmd "$dsttmp"; } &amp;&amp;</pre>
+<pre>    { test -z "$chgrpcmd" || $doit $chgrpcmd "$dsttmp"; } &amp;&amp;</pre>
+<pre>    { test -z "$stripcmd" || $doit $stripcmd "$dsttmp"; } &amp;&amp;</pre>
+<pre>    { test -z "$chmodcmd" || $doit $chmodcmd $mode "$dsttmp"; } &amp;&amp;</pre>
+<br />
+<pre>    # If -C, don't bother to copy if it wouldn't change the file.</pre>
+<pre>    if $copy_on_change &amp;&amp;</pre>
+<pre>       old=`LC_ALL=C ls -dlL "$dst"     2&gt;/dev/null` &amp;&amp;</pre>
+<pre>       new=`LC_ALL=C ls -dlL "$dsttmp"  2&gt;/dev/null` &amp;&amp;</pre>
+<pre>       set -f &amp;&amp;</pre>
+<pre>       set X $old &amp;&amp; old=:$2:$4:$5:$6 &amp;&amp;</pre>
+<pre>       set X $new &amp;&amp; new=:$2:$4:$5:$6 &amp;&amp;</pre>
+<pre>       set +f &amp;&amp;</pre>
+<pre>       test "$old" = "$new" &amp;&amp;</pre>
+<pre>       $cmpprog "$dst" "$dsttmp" &gt;/dev/null 2&gt;&amp;1</pre>
+<pre>    then</pre>
+<pre>      rm -f "$dsttmp"</pre>
+<pre>    else</pre>
+<pre>      # If $backupsuffix is set, and the file being installed</pre>
+<pre>      # already exists, attempt a backup.  Don't worry if it fails,</pre>
+<pre>      # e.g., if mv doesn't support -f.</pre>
+<pre>      if test -n "$backupsuffix" &amp;&amp; test -f "$dst"; then</pre>
+<pre>        $doit $mvcmd -f "$dst" "$dst$backupsuffix" 2&gt;/dev/null</pre>
+<pre>      fi</pre>
+<br />
+<pre>      # Rename the file to the real destination.</pre>
+<pre>      $doit $mvcmd -f "$dsttmp" "$dst" 2&gt;/dev/null ||</pre>
+<br />
+<pre>      # The rename failed, perhaps because mv can't rename something else</pre>
+<pre>      # to itself, or perhaps because mv is so ancient that it does not</pre>
+<pre>      # support -f.</pre>
+<pre>      {</pre>
+<pre>        # Now remove or move aside any old file at destination location.</pre>
+<pre>        # We try this two ways since rm can't unlink itself on some</pre>
+<pre>        # systems and the destination file might be busy for other</pre>
+<pre>        # reasons.  In this case, the final cleanup might fail but the new</pre>
+<pre>        # file should still install successfully.</pre>
+<pre>        {</pre>
+<pre>          test ! -f "$dst" ||</pre>
+<pre>          $doit $rmcmd "$dst" 2&gt;/dev/null ||</pre>
+<pre>          { $doit $mvcmd -f "$dst" "$rmtmp" 2&gt;/dev/null &amp;&amp;</pre>
+<pre>            { $doit $rmcmd "$rmtmp" 2&gt;/dev/null; :; }</pre>
+<pre>          } ||</pre>
+<pre>          { echo "$0: cannot unlink or rename $dst" &gt;&amp;2</pre>
+<pre>            (exit 1); exit 1</pre>
+<pre>          }</pre>
+<pre>        } &amp;&amp;</pre>
+<br />
+<pre>        # Now rename the file to the real destination.</pre>
+<pre>        $doit $mvcmd "$dsttmp" "$dst"</pre>
+<pre>      }</pre>
+<pre>    fi || exit 1</pre>
+<br />
+<pre>    trap '' 0</pre>
+<pre>  fi</pre>
+<pre>done</pre>
+<br />
+<pre># Local variables:</pre>
+<pre># eval: (add-hook 'before-save-hook 'time-stamp)</pre>
+<pre># time-stamp-start: "scriptversion="</pre>
+<pre># time-stamp-format: "%:y-%02m-%02d.%02H"</pre>
+<pre># time-stamp-time-zone: "UTC0"</pre>
+<pre># time-stamp-end: "; # UTC"</pre>
+<pre># End:</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

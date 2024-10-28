@@ -1,0 +1,1852 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s21_python_check.html" title="./../s21_python_check.html" >&laquo; Back to s21_python_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>Run started:2024-10-25 14:24:25.822940</pre>
+<br />
+<pre>Test results:</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:22:8</pre>
+<pre>21	    def test_nodes(self):</pre>
+<pre>22	        assert nodes_equal(self.G.nodes(), list(nx.nodes(self.G)))</pre>
+<pre>23	        assert nodes_equal(self.DG.nodes(), list(nx.nodes(self.DG)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:23:8</pre>
+<pre>22	        assert nodes_equal(self.G.nodes(), list(nx.nodes(self.G)))</pre>
+<pre>23	        assert nodes_equal(self.DG.nodes(), list(nx.nodes(self.DG)))</pre>
+<pre>24	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:26:8</pre>
+<pre>25	    def test_edges(self):</pre>
+<pre>26	        assert edges_equal(self.G.edges(), list(nx.edges(self.G)))</pre>
+<pre>27	        assert sorted(self.DG.edges()) == sorted(nx.edges(self.DG))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:27:8</pre>
+<pre>26	        assert edges_equal(self.G.edges(), list(nx.edges(self.G)))</pre>
+<pre>27	        assert sorted(self.DG.edges()) == sorted(nx.edges(self.DG))</pre>
+<pre>28	        assert edges_equal(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:28:8</pre>
+<pre>27	        assert sorted(self.DG.edges()) == sorted(nx.edges(self.DG))</pre>
+<pre>28	        assert edges_equal(</pre>
+<pre>29	            self.G.edges(nbunch=[0, 1, 3]), list(nx.edges(self.G, nbunch=[0, 1, 3]))</pre>
+<pre>30	        )</pre>
+<pre>31	        assert sorted(self.DG.edges(nbunch=[0, 1, 3])) == sorted(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:31:8</pre>
+<pre>30	        )</pre>
+<pre>31	        assert sorted(self.DG.edges(nbunch=[0, 1, 3])) == sorted(</pre>
+<pre>32	            nx.edges(self.DG, nbunch=[0, 1, 3])</pre>
+<pre>33	        )</pre>
+<pre>34	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:36:8</pre>
+<pre>35	    def test_degree(self):</pre>
+<pre>36	        assert edges_equal(self.G.degree(), list(nx.degree(self.G)))</pre>
+<pre>37	        assert sorted(self.DG.degree()) == sorted(nx.degree(self.DG))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:37:8</pre>
+<pre>36	        assert edges_equal(self.G.degree(), list(nx.degree(self.G)))</pre>
+<pre>37	        assert sorted(self.DG.degree()) == sorted(nx.degree(self.DG))</pre>
+<pre>38	        assert edges_equal(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:38:8</pre>
+<pre>37	        assert sorted(self.DG.degree()) == sorted(nx.degree(self.DG))</pre>
+<pre>38	        assert edges_equal(</pre>
+<pre>39	            self.G.degree(nbunch=[0, 1]), list(nx.degree(self.G, nbunch=[0, 1]))</pre>
+<pre>40	        )</pre>
+<pre>41	        assert sorted(self.DG.degree(nbunch=[0, 1])) == sorted(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:41:8</pre>
+<pre>40	        )</pre>
+<pre>41	        assert sorted(self.DG.degree(nbunch=[0, 1])) == sorted(</pre>
+<pre>42	            nx.degree(self.DG, nbunch=[0, 1])</pre>
+<pre>43	        )</pre>
+<pre>44	        assert edges_equal(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:44:8</pre>
+<pre>43	        )</pre>
+<pre>44	        assert edges_equal(</pre>
+<pre>45	            self.G.degree(weight="weight"), list(nx.degree(self.G, weight="weight"))</pre>
+<pre>46	        )</pre>
+<pre>47	        assert sorted(self.DG.degree(weight="weight")) == sorted(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:47:8</pre>
+<pre>46	        )</pre>
+<pre>47	        assert sorted(self.DG.degree(weight="weight")) == sorted(</pre>
+<pre>48	            nx.degree(self.DG, weight="weight")</pre>
+<pre>49	        )</pre>
+<pre>50	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:52:8</pre>
+<pre>51	    def test_neighbors(self):</pre>
+<pre>52	        assert list(self.G.neighbors(1)) == list(nx.neighbors(self.G, 1))</pre>
+<pre>53	        assert list(self.DG.neighbors(1)) == list(nx.neighbors(self.DG, 1))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:53:8</pre>
+<pre>52	        assert list(self.G.neighbors(1)) == list(nx.neighbors(self.G, 1))</pre>
+<pre>53	        assert list(self.DG.neighbors(1)) == list(nx.neighbors(self.DG, 1))</pre>
+<pre>54	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:56:8</pre>
+<pre>55	    def test_number_of_nodes(self):</pre>
+<pre>56	        assert self.G.number_of_nodes() == nx.number_of_nodes(self.G)</pre>
+<pre>57	        assert self.DG.number_of_nodes() == nx.number_of_nodes(self.DG)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:57:8</pre>
+<pre>56	        assert self.G.number_of_nodes() == nx.number_of_nodes(self.G)</pre>
+<pre>57	        assert self.DG.number_of_nodes() == nx.number_of_nodes(self.DG)</pre>
+<pre>58	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:60:8</pre>
+<pre>59	    def test_number_of_edges(self):</pre>
+<pre>60	        assert self.G.number_of_edges() == nx.number_of_edges(self.G)</pre>
+<pre>61	        assert self.DG.number_of_edges() == nx.number_of_edges(self.DG)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:61:8</pre>
+<pre>60	        assert self.G.number_of_edges() == nx.number_of_edges(self.G)</pre>
+<pre>61	        assert self.DG.number_of_edges() == nx.number_of_edges(self.DG)</pre>
+<pre>62	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:64:8</pre>
+<pre>63	    def test_is_directed(self):</pre>
+<pre>64	        assert self.G.is_directed() == nx.is_directed(self.G)</pre>
+<pre>65	        assert self.DG.is_directed() == nx.is_directed(self.DG)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:65:8</pre>
+<pre>64	        assert self.G.is_directed() == nx.is_directed(self.G)</pre>
+<pre>65	        assert self.DG.is_directed() == nx.is_directed(self.DG)</pre>
+<pre>66	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:71:8</pre>
+<pre>70	        nx.add_star(G, nlist)</pre>
+<pre>71	        assert edges_equal(G.edges(nlist), [(12, 13), (12, 14), (12, 15)])</pre>
+<pre>72	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:75:8</pre>
+<pre>74	        nx.add_star(G, nlist, weight=2.0)</pre>
+<pre>75	        assert edges_equal(</pre>
+<pre>76	            G.edges(nlist, data=True),</pre>
+<pre>77	            [</pre>
+<pre>78	                (12, 13, {"weight": 2.0}),</pre>
+<pre>79	                (12, 14, {"weight": 2.0}),</pre>
+<pre>80	                (12, 15, {"weight": 2.0}),</pre>
+<pre>81	            ],</pre>
+<pre>82	        )</pre>
+<pre>83	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:87:8</pre>
+<pre>86	        nx.add_star(G, nlist)</pre>
+<pre>87	        assert nodes_equal(G, list(self.G) + nlist)</pre>
+<pre>88	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:92:8</pre>
+<pre>91	        nx.add_star(G, nlist)</pre>
+<pre>92	        assert nodes_equal(G.nodes, self.Gnodes)</pre>
+<pre>93	        assert edges_equal(G.edges, self.G.edges)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:93:8</pre>
+<pre>92	        assert nodes_equal(G.nodes, self.Gnodes)</pre>
+<pre>93	        assert edges_equal(G.edges, self.G.edges)</pre>
+<pre>94	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:99:8</pre>
+<pre>98	        nx.add_path(G, nlist)</pre>
+<pre>99	        assert edges_equal(G.edges(nlist), [(12, 13), (13, 14), (14, 15)])</pre>
+<pre>100	        G = self.G.copy()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:102:8</pre>
+<pre>101	        nx.add_path(G, nlist, weight=2.0)</pre>
+<pre>102	        assert edges_equal(</pre>
+<pre>103	            G.edges(nlist, data=True),</pre>
+<pre>104	            [</pre>
+<pre>105	                (12, 13, {"weight": 2.0}),</pre>
+<pre>106	                (13, 14, {"weight": 2.0}),</pre>
+<pre>107	                (14, 15, {"weight": 2.0}),</pre>
+<pre>108	            ],</pre>
+<pre>109	        )</pre>
+<pre>110	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:114:8</pre>
+<pre>113	        nx.add_path(G, nlist)</pre>
+<pre>114	        assert edges_equal(G.edges(nlist), [])</pre>
+<pre>115	        assert nodes_equal(G, list(self.G) + ["node"])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:115:8</pre>
+<pre>114	        assert edges_equal(G.edges(nlist), [])</pre>
+<pre>115	        assert nodes_equal(G, list(self.G) + ["node"])</pre>
+<pre>116	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:120:8</pre>
+<pre>119	        nx.add_path(G, nlist)</pre>
+<pre>120	        assert edges_equal(G.edges(["node"]), [])</pre>
+<pre>121	        assert nodes_equal(G, list(self.G) + ["node"])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:121:8</pre>
+<pre>120	        assert edges_equal(G.edges(["node"]), [])</pre>
+<pre>121	        assert nodes_equal(G, list(self.G) + ["node"])</pre>
+<pre>122	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:126:8</pre>
+<pre>125	        nx.add_path(G, nlist)</pre>
+<pre>126	        assert edges_equal(G.edges(nlist), [])</pre>
+<pre>127	        assert nodes_equal(G, list(self.G) + [12])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:127:8</pre>
+<pre>126	        assert edges_equal(G.edges(nlist), [])</pre>
+<pre>127	        assert nodes_equal(G, list(self.G) + [12])</pre>
+<pre>128	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:132:8</pre>
+<pre>131	        nx.add_path(G, nlist)</pre>
+<pre>132	        assert edges_equal(G.edges([12]), [])</pre>
+<pre>133	        assert nodes_equal(G, list(self.G) + [12])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:133:8</pre>
+<pre>132	        assert edges_equal(G.edges([12]), [])</pre>
+<pre>133	        assert nodes_equal(G, list(self.G) + [12])</pre>
+<pre>134	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:138:8</pre>
+<pre>137	        nx.add_path(G, nlist)</pre>
+<pre>138	        assert edges_equal(G.edges, self.G.edges)</pre>
+<pre>139	        assert nodes_equal(G, list(self.G))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:139:8</pre>
+<pre>138	        assert edges_equal(G.edges, self.G.edges)</pre>
+<pre>139	        assert nodes_equal(G, list(self.G))</pre>
+<pre>140	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:144:8</pre>
+<pre>143	        nx.add_path(G, nlist)</pre>
+<pre>144	        assert edges_equal(G.edges, self.G.edges)</pre>
+<pre>145	        assert nodes_equal(G, list(self.G))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:145:8</pre>
+<pre>144	        assert edges_equal(G.edges, self.G.edges)</pre>
+<pre>145	        assert nodes_equal(G, list(self.G))</pre>
+<pre>146	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:155:8</pre>
+<pre>154	        nx.add_cycle(G, nlist)</pre>
+<pre>155	        assert sorted(G.edges(nlist)) in oklists</pre>
+<pre>156	        G = self.G.copy()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:172:8</pre>
+<pre>171	        nx.add_cycle(G, nlist, weight=1.0)</pre>
+<pre>172	        assert sorted(G.edges(nlist, data=True)) in oklists</pre>
+<pre>173	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:177:8</pre>
+<pre>176	        nx.add_cycle(G, nlist)</pre>
+<pre>177	        assert nodes_equal(G, list(self.G) + nlist)</pre>
+<pre>178	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:182:8</pre>
+<pre>181	        nx.add_cycle(G, nlist)</pre>
+<pre>182	        assert nodes_equal(G.nodes, self.Gnodes)</pre>
+<pre>183	        assert edges_equal(G.edges, self.G.edges)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:183:8</pre>
+<pre>182	        assert nodes_equal(G.nodes, self.Gnodes)</pre>
+<pre>183	        assert edges_equal(G.edges, self.G.edges)</pre>
+<pre>184	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:186:8</pre>
+<pre>185	    def test_subgraph(self):</pre>
+<pre>186	        assert (</pre>
+<pre>187	            self.G.subgraph([0, 1, 2, 4]).adj == nx.subgraph(self.G, [0, 1, 2, 4]).adj</pre>
+<pre>188	        )</pre>
+<pre>189	        assert (</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:189:8</pre>
+<pre>188	        )</pre>
+<pre>189	        assert (</pre>
+<pre>190	            self.DG.subgraph([0, 1, 2, 4]).adj == nx.subgraph(self.DG, [0, 1, 2, 4]).adj</pre>
+<pre>191	        )</pre>
+<pre>192	        assert (</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:192:8</pre>
+<pre>191	        )</pre>
+<pre>192	        assert (</pre>
+<pre>193	            self.G.subgraph([0, 1, 2, 4]).adj</pre>
+<pre>194	            == nx.induced_subgraph(self.G, [0, 1, 2, 4]).adj</pre>
+<pre>195	        )</pre>
+<pre>196	        assert (</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:196:8</pre>
+<pre>195	        )</pre>
+<pre>196	        assert (</pre>
+<pre>197	            self.DG.subgraph([0, 1, 2, 4]).adj</pre>
+<pre>198	            == nx.induced_subgraph(self.DG, [0, 1, 2, 4]).adj</pre>
+<pre>199	        )</pre>
+<pre>200	        # subgraph-subgraph chain is allowed in function interface</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:202:8</pre>
+<pre>201	        H = nx.induced_subgraph(self.G.subgraph([0, 1, 2, 4]), [0, 1, 4])</pre>
+<pre>202	        assert H._graph is not self.G</pre>
+<pre>203	        assert H.adj == self.G.subgraph([0, 1, 4]).adj</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:203:8</pre>
+<pre>202	        assert H._graph is not self.G</pre>
+<pre>203	        assert H.adj == self.G.subgraph([0, 1, 4]).adj</pre>
+<pre>204	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:206:8</pre>
+<pre>205	    def test_edge_subgraph(self):</pre>
+<pre>206	        assert (</pre>
+<pre>207	            self.G.edge_subgraph([(1, 2), (0, 3)]).adj</pre>
+<pre>208	            == nx.edge_subgraph(self.G, [(1, 2), (0, 3)]).adj</pre>
+<pre>209	        )</pre>
+<pre>210	        assert (</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:210:8</pre>
+<pre>209	        )</pre>
+<pre>210	        assert (</pre>
+<pre>211	            self.DG.edge_subgraph([(1, 2), (0, 3)]).adj</pre>
+<pre>212	            == nx.edge_subgraph(self.DG, [(1, 2), (0, 3)]).adj</pre>
+<pre>213	        )</pre>
+<pre>214	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:217:8</pre>
+<pre>216	        G = nx.create_empty_copy(self.G, with_data=False)</pre>
+<pre>217	        assert nodes_equal(G, list(self.G))</pre>
+<pre>218	        assert G.graph == {}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:218:8</pre>
+<pre>217	        assert nodes_equal(G, list(self.G))</pre>
+<pre>218	        assert G.graph == {}</pre>
+<pre>219	        assert G._node == {}.fromkeys(self.G.nodes(), {})</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:219:8</pre>
+<pre>218	        assert G.graph == {}</pre>
+<pre>219	        assert G._node == {}.fromkeys(self.G.nodes(), {})</pre>
+<pre>220	        assert G._adj == {}.fromkeys(self.G.nodes(), {})</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:220:8</pre>
+<pre>219	        assert G._node == {}.fromkeys(self.G.nodes(), {})</pre>
+<pre>220	        assert G._adj == {}.fromkeys(self.G.nodes(), {})</pre>
+<pre>221	        G = nx.create_empty_copy(self.G)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:222:8</pre>
+<pre>221	        G = nx.create_empty_copy(self.G)</pre>
+<pre>222	        assert nodes_equal(G, list(self.G))</pre>
+<pre>223	        assert G.graph == self.G.graph</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:223:8</pre>
+<pre>222	        assert nodes_equal(G, list(self.G))</pre>
+<pre>223	        assert G.graph == self.G.graph</pre>
+<pre>224	        assert G._node == self.G._node</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:224:8</pre>
+<pre>223	        assert G.graph == self.G.graph</pre>
+<pre>224	        assert G._node == self.G._node</pre>
+<pre>225	        assert G._adj == {}.fromkeys(self.G.nodes(), {})</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:225:8</pre>
+<pre>224	        assert G._node == self.G._node</pre>
+<pre>225	        assert G._adj == {}.fromkeys(self.G.nodes(), {})</pre>
+<pre>226	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:228:8</pre>
+<pre>227	    def test_degree_histogram(self):</pre>
+<pre>228	        assert nx.degree_histogram(self.G) == [1, 1, 1, 1, 1]</pre>
+<pre>229	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:231:8</pre>
+<pre>230	    def test_density(self):</pre>
+<pre>231	        assert nx.density(self.G) == 0.5</pre>
+<pre>232	        assert nx.density(self.DG) == 0.3</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:232:8</pre>
+<pre>231	        assert nx.density(self.G) == 0.5</pre>
+<pre>232	        assert nx.density(self.DG) == 0.3</pre>
+<pre>233	        G = nx.Graph()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:235:8</pre>
+<pre>234	        G.add_node(1)</pre>
+<pre>235	        assert nx.density(G) == 0.0</pre>
+<pre>236	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:240:8</pre>
+<pre>239	        G.add_edge(1, 1)</pre>
+<pre>240	        assert nx.density(G) == 0.0</pre>
+<pre>241	        G.add_edge(1, 2)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:242:8</pre>
+<pre>241	        G.add_edge(1, 2)</pre>
+<pre>242	        assert nx.density(G) == 2.0</pre>
+<pre>243	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:246:8</pre>
+<pre>245	        G = nx.freeze(self.G)</pre>
+<pre>246	        assert G.frozen</pre>
+<pre>247	        pytest.raises(nx.NetworkXError, G.add_node, 1)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:259:8</pre>
+<pre>258	    def test_is_frozen(self):</pre>
+<pre>259	        assert not nx.is_frozen(self.G)</pre>
+<pre>260	        G = nx.freeze(self.G)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:261:8</pre>
+<pre>260	        G = nx.freeze(self.G)</pre>
+<pre>261	        assert G.frozen == nx.is_frozen(self.G)</pre>
+<pre>262	        assert G.frozen</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:262:8</pre>
+<pre>261	        assert G.frozen == nx.is_frozen(self.G)</pre>
+<pre>262	        assert G.frozen</pre>
+<pre>263	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:268:8</pre>
+<pre>267	        node["node_attribute"] = True</pre>
+<pre>268	        assert node["node_attribute"] == True</pre>
+<pre>269	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:274:8</pre>
+<pre>273	        edge["edge_attribute"] = True</pre>
+<pre>274	        assert edge["edge_attribute"] == True</pre>
+<pre>275	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:281:8</pre>
+<pre>280	        # should be all the other vertices in the graph</pre>
+<pre>281	        assert len(nbors) == len(graph) - 1</pre>
+<pre>282	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:288:12</pre>
+<pre>287	        if node != 0 and node != 99:</pre>
+<pre>288	            assert len(nbors) == 2</pre>
+<pre>289	        else:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:290:12</pre>
+<pre>289	        else:</pre>
+<pre>290	            assert len(nbors) == 1</pre>
+<pre>291	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:295:8</pre>
+<pre>294	        nbors = list(nx.neighbors(graph, 0))</pre>
+<pre>295	        assert len(nbors) == 99</pre>
+<pre>296	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:302:8</pre>
+<pre>301	        # should be all the other vertices in the graph</pre>
+<pre>302	        assert len(nbors) == 0</pre>
+<pre>303	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:309:12</pre>
+<pre>308	        if node != 0 and node != 99:</pre>
+<pre>309	            assert len(nbors) == 97</pre>
+<pre>310	        else:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:311:12</pre>
+<pre>310	        else:</pre>
+<pre>311	            assert len(nbors) == 98</pre>
+<pre>312	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:316:8</pre>
+<pre>315	        nbors = list(nx.non_neighbors(graph, 0))</pre>
+<pre>316	        assert len(nbors) == 0</pre>
+<pre>317	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:322:8</pre>
+<pre>321	        nbors = list(nx.non_neighbors(graph, 0))</pre>
+<pre>322	        assert len(nbors) == 9</pre>
+<pre>323	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:328:8</pre>
+<pre>327	        nedges = list(nx.non_edges(graph))</pre>
+<pre>328	        assert len(nedges) == 0</pre>
+<pre>329	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:334:12</pre>
+<pre>333	        for u, v in expected:</pre>
+<pre>334	            assert (u, v) in nedges or (v, u) in nedges</pre>
+<pre>335	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:340:12</pre>
+<pre>339	        for u, v in expected:</pre>
+<pre>340	            assert (u, v) in nedges or (v, u) in nedges</pre>
+<pre>341	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:348:12</pre>
+<pre>347	        for e in expected:</pre>
+<pre>348	            assert e in nedges</pre>
+<pre>349	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:352:8</pre>
+<pre>351	        G = nx.Graph()</pre>
+<pre>352	        assert not nx.is_weighted(G)</pre>
+<pre>353	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:355:8</pre>
+<pre>354	        G = nx.path_graph(4)</pre>
+<pre>355	        assert not nx.is_weighted(G)</pre>
+<pre>356	        assert not nx.is_weighted(G, (2, 3))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:356:8</pre>
+<pre>355	        assert not nx.is_weighted(G)</pre>
+<pre>356	        assert not nx.is_weighted(G, (2, 3))</pre>
+<pre>357	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:360:8</pre>
+<pre>359	        G.add_edge(3, 4, weight=4)</pre>
+<pre>360	        assert not nx.is_weighted(G)</pre>
+<pre>361	        assert nx.is_weighted(G, (3, 4))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:361:8</pre>
+<pre>360	        assert not nx.is_weighted(G)</pre>
+<pre>361	        assert nx.is_weighted(G, (3, 4))</pre>
+<pre>362	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:374:8</pre>
+<pre>373	        )</pre>
+<pre>374	        assert nx.is_weighted(G)</pre>
+<pre>375	        assert nx.is_weighted(G, ("1", "0"))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:375:8</pre>
+<pre>374	        assert nx.is_weighted(G)</pre>
+<pre>375	        assert nx.is_weighted(G, ("1", "0"))</pre>
+<pre>376	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:378:8</pre>
+<pre>377	        G = G.to_undirected()</pre>
+<pre>378	        assert nx.is_weighted(G)</pre>
+<pre>379	        assert nx.is_weighted(G, ("1", "0"))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:379:8</pre>
+<pre>378	        assert nx.is_weighted(G)</pre>
+<pre>379	        assert nx.is_weighted(G, ("1", "0"))</pre>
+<pre>380	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:385:8</pre>
+<pre>384	        G = nx.Graph()</pre>
+<pre>385	        assert not nx.is_negatively_weighted(G)</pre>
+<pre>386	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:389:8</pre>
+<pre>388	        G.add_nodes_from([2, 3, 4, 5])</pre>
+<pre>389	        assert not nx.is_negatively_weighted(G)</pre>
+<pre>390	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:392:8</pre>
+<pre>391	        G.add_edge(1, 2, weight=4)</pre>
+<pre>392	        assert not nx.is_negatively_weighted(G, (1, 2))</pre>
+<pre>393	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:396:8</pre>
+<pre>395	        G[1][3]["color"] = "blue"</pre>
+<pre>396	        assert not nx.is_negatively_weighted(G)</pre>
+<pre>397	        assert not nx.is_negatively_weighted(G, (1, 3))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:397:8</pre>
+<pre>396	        assert not nx.is_negatively_weighted(G)</pre>
+<pre>397	        assert not nx.is_negatively_weighted(G, (1, 3))</pre>
+<pre>398	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:400:8</pre>
+<pre>399	        G[2][4]["weight"] = -2</pre>
+<pre>400	        assert nx.is_negatively_weighted(G, (2, 4))</pre>
+<pre>401	        assert nx.is_negatively_weighted(G)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:401:8</pre>
+<pre>400	        assert nx.is_negatively_weighted(G, (2, 4))</pre>
+<pre>401	        assert nx.is_negatively_weighted(G)</pre>
+<pre>402	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:414:8</pre>
+<pre>413	        )</pre>
+<pre>414	        assert nx.is_negatively_weighted(G)</pre>
+<pre>415	        assert not nx.is_negatively_weighted(G, ("0", "3"))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:415:8</pre>
+<pre>414	        assert nx.is_negatively_weighted(G)</pre>
+<pre>415	        assert not nx.is_negatively_weighted(G, ("0", "3"))</pre>
+<pre>416	        assert nx.is_negatively_weighted(G, ("1", "0"))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:416:8</pre>
+<pre>415	        assert not nx.is_negatively_weighted(G, ("0", "3"))</pre>
+<pre>416	        assert nx.is_negatively_weighted(G, ("1", "0"))</pre>
+<pre>417	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:428:12</pre>
+<pre>427	            result = sorted(cls.func(G, u, v))</pre>
+<pre>428	            assert result == expected</pre>
+<pre>429	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:477:4</pre>
+<pre>476	    nx.set_node_attributes(G, vals, attr)</pre>
+<pre>477	    assert G.nodes[0][attr] == vals</pre>
+<pre>478	    assert G.nodes[1][attr] == vals</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:478:4</pre>
+<pre>477	    assert G.nodes[0][attr] == vals</pre>
+<pre>478	    assert G.nodes[1][attr] == vals</pre>
+<pre>479	    assert G.nodes[2][attr] == vals</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:479:4</pre>
+<pre>478	    assert G.nodes[1][attr] == vals</pre>
+<pre>479	    assert G.nodes[2][attr] == vals</pre>
+<pre>480	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:486:4</pre>
+<pre>485	    nx.set_node_attributes(G, vals, attr)</pre>
+<pre>486	    assert G.nodes[0][attr] == 0</pre>
+<pre>487	    assert G.nodes[1][attr] == 1</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:487:4</pre>
+<pre>486	    assert G.nodes[0][attr] == 0</pre>
+<pre>487	    assert G.nodes[1][attr] == 1</pre>
+<pre>488	    assert G.nodes[2][attr] == 2</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:488:4</pre>
+<pre>487	    assert G.nodes[1][attr] == 1</pre>
+<pre>488	    assert G.nodes[2][attr] == 2</pre>
+<pre>489	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:496:4</pre>
+<pre>495	    nx.set_node_attributes(G, vals)</pre>
+<pre>496	    assert G.nodes[0] == {}</pre>
+<pre>497	    assert G.nodes[1]["hi"] == 0</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:497:4</pre>
+<pre>496	    assert G.nodes[0] == {}</pre>
+<pre>497	    assert G.nodes[1]["hi"] == 0</pre>
+<pre>498	    assert G.nodes[2]["hello"] == 200</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:498:4</pre>
+<pre>497	    assert G.nodes[1]["hi"] == 0</pre>
+<pre>498	    assert G.nodes[2]["hello"] == 200</pre>
+<pre>499	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:516:4</pre>
+<pre>515	    nx.set_node_attributes(G, values, name)</pre>
+<pre>516	    assert G.nodes[0]["color"] == "red"</pre>
+<pre>517	    assert 1 not in G.nodes</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:517:4</pre>
+<pre>516	    assert G.nodes[0]["color"] == "red"</pre>
+<pre>517	    assert 1 not in G.nodes</pre>
+<pre>518	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:527:4</pre>
+<pre>526	    nx.set_edge_attributes(G, vals, attr)</pre>
+<pre>527	    assert G[0][1][attr] == vals</pre>
+<pre>528	    assert G[1][2][attr] == vals</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:528:4</pre>
+<pre>527	    assert G[0][1][attr] == vals</pre>
+<pre>528	    assert G[1][2][attr] == vals</pre>
+<pre>529	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:536:4</pre>
+<pre>535	    nx.set_edge_attributes(G, vals, attr)</pre>
+<pre>536	    assert G[0][1][attr] == 0</pre>
+<pre>537	    assert G[1][2][attr] == 1</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:537:4</pre>
+<pre>536	    assert G[0][1][attr] == 0</pre>
+<pre>537	    assert G[1][2][attr] == 1</pre>
+<pre>538	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:545:4</pre>
+<pre>544	    nx.set_edge_attributes(G, vals)</pre>
+<pre>545	    assert G[0][1]["hi"] == 0</pre>
+<pre>546	    assert G[0][1]["hello"] == 200</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:546:4</pre>
+<pre>545	    assert G[0][1]["hi"] == 0</pre>
+<pre>546	    assert G[0][1]["hello"] == 200</pre>
+<pre>547	    assert G[1][2] == {}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:547:4</pre>
+<pre>546	    assert G[0][1]["hello"] == 200</pre>
+<pre>547	    assert G[1][2] == {}</pre>
+<pre>548	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:563:4</pre>
+<pre>562	    nx.set_edge_attributes(G, values, name)</pre>
+<pre>563	    assert G[0][1]["weight"] == 1.0</pre>
+<pre>564	    assert (0, 2) not in G.edges</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:564:4</pre>
+<pre>563	    assert G[0][1]["weight"] == 1.0</pre>
+<pre>564	    assert (0, 2) not in G.edges</pre>
+<pre>565	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:574:4</pre>
+<pre>573	    nx.set_edge_attributes(G, vals, attr)</pre>
+<pre>574	    assert G[0][1][0][attr] == vals</pre>
+<pre>575	    assert G[1][2][0][attr] == vals</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:575:4</pre>
+<pre>574	    assert G[0][1][0][attr] == vals</pre>
+<pre>575	    assert G[1][2][0][attr] == vals</pre>
+<pre>576	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:583:4</pre>
+<pre>582	    nx.set_edge_attributes(G, vals, attr)</pre>
+<pre>583	    assert G[0][1][0][attr] == 0</pre>
+<pre>584	    assert G[1][2][0][attr] == 1</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:584:4</pre>
+<pre>583	    assert G[0][1][0][attr] == 0</pre>
+<pre>584	    assert G[1][2][0][attr] == 1</pre>
+<pre>585	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:592:4</pre>
+<pre>591	    nx.set_edge_attributes(G, vals)</pre>
+<pre>592	    assert G[0][1][0]["hi"] == 0</pre>
+<pre>593	    assert G[0][1][0]["hello"] == 200</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:593:4</pre>
+<pre>592	    assert G[0][1][0]["hi"] == 0</pre>
+<pre>593	    assert G[0][1][0]["hello"] == 200</pre>
+<pre>594	    assert G[1][2][0] == {}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:594:4</pre>
+<pre>593	    assert G[0][1][0]["hello"] == 200</pre>
+<pre>594	    assert G[1][2][0] == {}</pre>
+<pre>595	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:610:4</pre>
+<pre>609	    nx.set_edge_attributes(G, values, name)</pre>
+<pre>610	    assert G[0][1][0]["weight"] == 1.0</pre>
+<pre>611	    assert G[0][1][1] == {}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:611:4</pre>
+<pre>610	    assert G[0][1][0]["weight"] == 1.0</pre>
+<pre>611	    assert G[0][1][1] == {}</pre>
+<pre>612	    assert (0, 2) not in G.edges()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:612:4</pre>
+<pre>611	    assert G[0][1][1] == {}</pre>
+<pre>612	    assert (0, 2) not in G.edges()</pre>
+<pre>613	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:623:8</pre>
+<pre>622	        attrs = nx.get_node_attributes(G, attr)</pre>
+<pre>623	        assert attrs[0] == vals</pre>
+<pre>624	        assert attrs[1] == vals</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:624:8</pre>
+<pre>623	        assert attrs[0] == vals</pre>
+<pre>624	        assert attrs[1] == vals</pre>
+<pre>625	        assert attrs[2] == vals</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:625:8</pre>
+<pre>624	        assert attrs[1] == vals</pre>
+<pre>625	        assert attrs[2] == vals</pre>
+<pre>626	        default_val = 1</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:629:8</pre>
+<pre>628	        attrs = nx.get_node_attributes(G, attr, default=default_val)</pre>
+<pre>629	        assert attrs[4] == default_val</pre>
+<pre>630	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:640:8</pre>
+<pre>639	        attrs = nx.get_edge_attributes(G, attr)</pre>
+<pre>640	        assert len(attrs) == 2</pre>
+<pre>641	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:643:12</pre>
+<pre>642	        for edge in G.edges:</pre>
+<pre>643	            assert attrs[edge] == vals</pre>
+<pre>644	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:648:8</pre>
+<pre>647	        deafult_attrs = nx.get_edge_attributes(G, attr, default=default_val)</pre>
+<pre>648	        assert len(deafult_attrs) == 3</pre>
+<pre>649	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:651:12</pre>
+<pre>650	        for edge in G.edges:</pre>
+<pre>651	            assert deafult_attrs[edge] == vals</pre>
+<pre>652	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:657:8</pre>
+<pre>656	    for G in graphs:</pre>
+<pre>657	        assert nx.is_empty(G)</pre>
+<pre>658	        G.add_nodes_from(range(5))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:659:8</pre>
+<pre>658	        G.add_nodes_from(range(5))</pre>
+<pre>659	        assert nx.is_empty(G)</pre>
+<pre>660	        G.add_edges_from([(1, 2), (3, 4)])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:661:8</pre>
+<pre>660	        G.add_edges_from([(1, 2), (3, 4)])</pre>
+<pre>661	        assert not nx.is_empty(G)</pre>
+<pre>662	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:670:4</pre>
+<pre>669	    G.add_edge(0, 0)</pre>
+<pre>670	    assert nodes_equal(nx.nodes_with_selfloops(G), [0])</pre>
+<pre>671	    assert edges_equal(nx.selfloop_edges(G), [(0, 0)])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:671:4</pre>
+<pre>670	    assert nodes_equal(nx.nodes_with_selfloops(G), [0])</pre>
+<pre>671	    assert edges_equal(nx.selfloop_edges(G), [(0, 0)])</pre>
+<pre>672	    assert edges_equal(nx.selfloop_edges(G, data=True), [(0, 0, {})])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:672:4</pre>
+<pre>671	    assert edges_equal(nx.selfloop_edges(G), [(0, 0)])</pre>
+<pre>672	    assert edges_equal(nx.selfloop_edges(G, data=True), [(0, 0, {})])</pre>
+<pre>673	    assert nx.number_of_selfloops(G) == 1</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:673:4</pre>
+<pre>672	    assert edges_equal(nx.selfloop_edges(G, data=True), [(0, 0, {})])</pre>
+<pre>673	    assert nx.number_of_selfloops(G) == 1</pre>
+<pre>674	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:683:4</pre>
+<pre>682	    G.add_edge(1, 1, weight=2)</pre>
+<pre>683	    assert edges_equal(</pre>
+<pre>684	        nx.selfloop_edges(G, data=True), [(0, 0, {}), (1, 1, {"weight": 2})]</pre>
+<pre>685	    )</pre>
+<pre>686	    assert edges_equal(nx.selfloop_edges(G, data="weight"), [(0, 0, None), (1, 1, 2)])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:686:4</pre>
+<pre>685	    )</pre>
+<pre>686	    assert edges_equal(nx.selfloop_edges(G, data="weight"), [(0, 0, None), (1, 1, 2)])</pre>
+<pre>687	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:693:4</pre>
+<pre>692	    G.add_edge(0, 0, weight=100)</pre>
+<pre>693	    assert edges_equal(</pre>
+<pre>694	        nx.selfloop_edges(G, data="weight", keys=True), [(0, 0, 0, 10), (0, 0, 1, 100)]</pre>
+<pre>695	    )</pre>
+<pre>696	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:718:4</pre>
+<pre>717	    G.remove_edges_from(nx.selfloop_edges(G))</pre>
+<pre>718	    assert (0, 0) not in G.edges()</pre>
+<pre>719	    # With keys</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:747:8</pre>
+<pre>746	        graph.add_edges_from(edges)</pre>
+<pre>747	        assert nx.path_weight(graph, valid_path, "cost") == 4</pre>
+<pre>748	        assert nx.path_weight(graph, valid_path, "dist") == 6</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:748:8</pre>
+<pre>747	        assert nx.path_weight(graph, valid_path, "cost") == 4</pre>
+<pre>748	        assert nx.path_weight(graph, valid_path, "dist") == 6</pre>
+<pre>749	        pytest.raises(nx.NetworkXNoPath, nx.path_weight, graph, invalid_path, "cost")</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:760:4</pre>
+<pre>759	    another_invalid_path = [1, 2, 3, 4, 5]  # contains node not in G</pre>
+<pre>760	    assert nx.is_path(G, valid_path)</pre>
+<pre>761	    assert not nx.is_path(G, invalid_path)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:761:4</pre>
+<pre>760	    assert nx.is_path(G, valid_path)</pre>
+<pre>761	    assert not nx.is_path(G, invalid_path)</pre>
+<pre>762	    assert not nx.is_path(G, another_invalid_path)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:762:4</pre>
+<pre>761	    assert not nx.is_path(G, invalid_path)</pre>
+<pre>762	    assert not nx.is_path(G, another_invalid_path)</pre>
+<pre>763	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:770:4</pre>
+<pre>769	    H = nx.restricted_view(G, [0, 2, 5], [(1, 2), (3, 4)])</pre>
+<pre>770	    assert set(H.nodes()) == {1, 3, 4}</pre>
+<pre>771	    assert set(H.edges()) == {(1, 1)}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:771:4</pre>
+<pre>770	    assert set(H.nodes()) == {1, 3, 4}</pre>
+<pre>771	    assert set(H.edges()) == {(1, 1)}</pre>
+<pre>772	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:781:4</pre>
+<pre>780	    H = nx.restricted_view(G, [0, 2, 5], [(1, 2, 0), (3, 4, 0)])</pre>
+<pre>781	    assert set(H.nodes()) == {1, 3, 4}</pre>
+<pre>782	    assert set(H.edges()) == {(1, 1)}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/networkx/classes/tests/test_function.py:782:4</pre>
+<pre>781	    assert set(H.nodes()) == {1, 3, 4}</pre>
+<pre>782	    assert set(H.edges()) == {(1, 1)}</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<br />
+<pre>Code scanned:</pre>
+<pre>	Total lines of code: 644</pre>
+<pre>	Total lines skipped (#nosec): 0</pre>
+<pre>	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0</pre>
+<br />
+<pre>Run metrics:</pre>
+<pre>	Total issues (by severity):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 163</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 0</pre>
+<pre>	Total issues (by confidence):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 0</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 163</pre>
+<pre>Files skipped (0):</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

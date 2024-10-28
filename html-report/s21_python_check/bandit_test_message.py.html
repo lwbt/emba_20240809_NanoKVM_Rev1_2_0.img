@@ -1,0 +1,906 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s21_python_check.html" title="./../s21_python_check.html" >&laquo; Back to s21_python_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>Run started:2024-10-25 14:42:54.906608</pre>
+<br />
+<pre>Test results:</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:62:12</pre>
+<pre>61	            m = zmq.Frame(s, copy=False)</pre>
+<pre>62	            assert grc(s) == rc + 2</pre>
+<pre>63	            del m</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:65:12</pre>
+<pre>64	            await_gc(s, rc)</pre>
+<pre>65	            assert grc(s) == rc</pre>
+<pre>66	            del s</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:75:12</pre>
+<pre>74	            m_str_b = m_str.encode()</pre>
+<pre>75	            assert s == m_str_b</pre>
+<pre>76	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:83:12</pre>
+<pre>82	            b = m.bytes</pre>
+<pre>83	            assert s == m.bytes</pre>
+<pre>84	            if not PYPY:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:86:16</pre>
+<pre>85	                # check that it copies</pre>
+<pre>86	                assert b is not s</pre>
+<pre>87	            # check that it copies only once</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:88:12</pre>
+<pre>87	            # check that it copies only once</pre>
+<pre>88	            assert b is m.bytes</pre>
+<pre>89	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:97:12</pre>
+<pre>96	            m = zmq.Frame(s.encode('utf8'))</pre>
+<pre>97	            assert s == m.bytes.decode('utf8')</pre>
+<pre>98	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:104:12</pre>
+<pre>103	            m = zmq.Frame(s)</pre>
+<pre>104	            assert len(s) == len(m)</pre>
+<pre>105	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:114:12</pre>
+<pre>113	            rc += 2</pre>
+<pre>114	            assert grc(s) == rc</pre>
+<pre>115	            m2 = copy.copy(m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:117:12</pre>
+<pre>116	            rc += 1</pre>
+<pre>117	            assert grc(s) == rc</pre>
+<pre>118	            # no increase in refcount for accessing buffer</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:121:12</pre>
+<pre>120	            buf = m2.buffer</pre>
+<pre>121	            assert grc(s) == rc</pre>
+<pre>122	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:123:12</pre>
+<pre>122	</pre>
+<pre>123	            assert s == str(m).encode()</pre>
+<pre>124	            assert s == bytes(m2)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:124:12</pre>
+<pre>123	            assert s == str(m).encode()</pre>
+<pre>124	            assert s == bytes(m2)</pre>
+<pre>125	            assert s == m.bytes</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:125:12</pre>
+<pre>124	            assert s == bytes(m2)</pre>
+<pre>125	            assert s == m.bytes</pre>
+<pre>126	            assert s == bytes(buf)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:126:12</pre>
+<pre>125	            assert s == m.bytes</pre>
+<pre>126	            assert s == bytes(buf)</pre>
+<pre>127	            # assert s is str(m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:130:12</pre>
+<pre>129	            del m2</pre>
+<pre>130	            assert grc(s) == rc</pre>
+<pre>131	            # buf holds direct reference to m2 which holds</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:134:12</pre>
+<pre>133	            rc -= 1</pre>
+<pre>134	            assert grc(s) == rc</pre>
+<pre>135	            del m</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:138:12</pre>
+<pre>137	            await_gc(s, rc)</pre>
+<pre>138	            assert grc(s) == rc</pre>
+<pre>139	            assert rc == rc_0</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:139:12</pre>
+<pre>138	            assert grc(s) == rc</pre>
+<pre>139	            assert rc == rc_0</pre>
+<pre>140	            del s</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:150:12</pre>
+<pre>149	            rc += 2</pre>
+<pre>150	            assert grc(s) == rc</pre>
+<pre>151	            m2 = copy.copy(m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:153:12</pre>
+<pre>152	            rc += 1</pre>
+<pre>153	            assert grc(s) == rc</pre>
+<pre>154	            # no increase in refcount for accessing buffer</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:157:12</pre>
+<pre>156	            buf = m.buffer</pre>
+<pre>157	            assert grc(s) == rc</pre>
+<pre>158	            assert s == str(m).encode()</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:158:12</pre>
+<pre>157	            assert grc(s) == rc</pre>
+<pre>158	            assert s == str(m).encode()</pre>
+<pre>159	            assert s == bytes(m2)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:159:12</pre>
+<pre>158	            assert s == str(m).encode()</pre>
+<pre>159	            assert s == bytes(m2)</pre>
+<pre>160	            assert s == m2.bytes</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:160:12</pre>
+<pre>159	            assert s == bytes(m2)</pre>
+<pre>160	            assert s == m2.bytes</pre>
+<pre>161	            assert s == m.bytes</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:161:12</pre>
+<pre>160	            assert s == m2.bytes</pre>
+<pre>161	            assert s == m.bytes</pre>
+<pre>162	            assert s == bytes(buf)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:162:12</pre>
+<pre>161	            assert s == m.bytes</pre>
+<pre>162	            assert s == bytes(buf)</pre>
+<pre>163	            # assert s is str(m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:166:12</pre>
+<pre>165	            del buf</pre>
+<pre>166	            assert grc(s) == rc</pre>
+<pre>167	            del m</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:169:12</pre>
+<pre>168	            rc -= 1</pre>
+<pre>169	            assert grc(s) == rc</pre>
+<pre>170	            del m2</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:173:12</pre>
+<pre>172	            await_gc(s, rc)</pre>
+<pre>173	            assert grc(s) == rc</pre>
+<pre>174	            assert rc == rc_0</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:174:12</pre>
+<pre>173	            assert grc(s) == rc</pre>
+<pre>174	            assert rc == rc_0</pre>
+<pre>175	            del s</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:179:8</pre>
+<pre>178	        m = zmq.Frame(b'asdf', copy=False, track=True)</pre>
+<pre>179	        assert not m.tracker.done</pre>
+<pre>180	        pm = zmq.MessageTracker(m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:181:8</pre>
+<pre>180	        pm = zmq.MessageTracker(m)</pre>
+<pre>181	        assert not pm.done</pre>
+<pre>182	        del m</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:189:8</pre>
+<pre>188	            time.sleep(0.1)</pre>
+<pre>189	        assert pm.done</pre>
+<pre>190	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:193:8</pre>
+<pre>192	        m = zmq.Frame(b'asdf', track=False)</pre>
+<pre>193	        assert m.tracker == None</pre>
+<pre>194	        m2 = copy.copy(m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:195:8</pre>
+<pre>194	        m2 = copy.copy(m)</pre>
+<pre>195	        assert m2.tracker == None</pre>
+<pre>196	        self.assertRaises(ValueError, zmq.MessageTracker, m)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:202:8</pre>
+<pre>201	        mt = zmq.MessageTracker(m, m2)</pre>
+<pre>202	        assert not m.tracker.done</pre>
+<pre>203	        assert not mt.done</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:203:8</pre>
+<pre>202	        assert not m.tracker.done</pre>
+<pre>203	        assert not mt.done</pre>
+<pre>204	        self.assertRaises(zmq.NotDone, mt.wait, 0.1)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:209:8</pre>
+<pre>208	        self.assertRaises(zmq.NotDone, mt.wait, 0.1)</pre>
+<pre>209	        assert not mt.done</pre>
+<pre>210	        del m2</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:213:8</pre>
+<pre>212	            gc.collect()</pre>
+<pre>213	        assert mt.wait(0.1) is None</pre>
+<pre>214	        assert mt.done</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:214:8</pre>
+<pre>213	        assert mt.wait(0.1) is None</pre>
+<pre>214	        assert mt.done</pre>
+<pre>215	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:231:8</pre>
+<pre>230	        outb = m.buffer</pre>
+<pre>231	        assert isinstance(outb, memoryview)</pre>
+<pre>232	        assert outb is m.buffer</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:232:8</pre>
+<pre>231	        assert isinstance(outb, memoryview)</pre>
+<pre>232	        assert outb is m.buffer</pre>
+<pre>233	        assert m.buffer is m.buffer</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:233:8</pre>
+<pre>232	        assert outb is m.buffer</pre>
+<pre>233	        assert m.buffer is m.buffer</pre>
+<pre>234	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:241:8</pre>
+<pre>240	        view1 = f.buffer</pre>
+<pre>241	        assert view1.ndim == 1</pre>
+<pre>242	        assert view1.shape == (n,)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:242:8</pre>
+<pre>241	        assert view1.ndim == 1</pre>
+<pre>242	        assert view1.shape == (n,)</pre>
+<pre>243	        assert view1.tobytes() == data</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:243:8</pre>
+<pre>242	        assert view1.shape == (n,)</pre>
+<pre>243	        assert view1.tobytes() == data</pre>
+<pre>244	        view2 = memoryview(f)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:245:8</pre>
+<pre>244	        view2 = memoryview(f)</pre>
+<pre>245	        assert view2.ndim == 1</pre>
+<pre>246	        assert view2.shape == (n,)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:246:8</pre>
+<pre>245	        assert view2.ndim == 1</pre>
+<pre>246	        assert view2.shape == (n,)</pre>
+<pre>247	        assert view2.tobytes() == data</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:247:8</pre>
+<pre>246	        assert view2.shape == (n,)</pre>
+<pre>247	        assert view2.tobytes() == data</pre>
+<pre>248	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:254:8</pre>
+<pre>253	        m = zmq.Frame(s)</pre>
+<pre>254	        assert s == m.bytes</pre>
+<pre>255	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:258:8</pre>
+<pre>257	        time.sleep(0.1)</pre>
+<pre>258	        assert s == m.bytes</pre>
+<pre>259	        a.send(m, copy=False)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:261:8</pre>
+<pre>260	        time.sleep(0.1)</pre>
+<pre>261	        assert s == m.bytes</pre>
+<pre>262	        a.send(m, copy=True)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:264:8</pre>
+<pre>263	        time.sleep(0.1)</pre>
+<pre>264	        assert s == m.bytes</pre>
+<pre>265	        a.send(m, copy=True)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:267:8</pre>
+<pre>266	        time.sleep(0.1)</pre>
+<pre>267	        assert s == m.bytes</pre>
+<pre>268	        for i in range(4):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:270:12</pre>
+<pre>269	            r = b.recv()</pre>
+<pre>270	            assert s == r</pre>
+<pre>271	        assert s == m.bytes</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:271:8</pre>
+<pre>270	            assert s == r</pre>
+<pre>271	        assert s == m.bytes</pre>
+<pre>272	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:280:8</pre>
+<pre>279	        s2 = buf.tobytes()</pre>
+<pre>280	        assert s2 == s</pre>
+<pre>281	        assert m.bytes == s</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:281:8</pre>
+<pre>280	        assert s2 == s</pre>
+<pre>281	        assert m.bytes == s</pre>
+<pre>282	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:300:16</pre>
+<pre>299	                b = buf.tobytes()</pre>
+<pre>300	                assert b == null</pre>
+<pre>301	                assert mb == null</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:301:16</pre>
+<pre>300	                assert b == null</pre>
+<pre>301	                assert mb == null</pre>
+<pre>302	                assert m2.bytes == ff</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:302:16</pre>
+<pre>301	                assert mb == null</pre>
+<pre>302	                assert m2.bytes == ff</pre>
+<pre>303	                assert type(m2.bytes) is bytes</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:303:16</pre>
+<pre>302	                assert m2.bytes == ff</pre>
+<pre>303	                assert type(m2.bytes) is bytes</pre>
+<pre>304	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:319:16</pre>
+<pre>318	                buf2 = memoryview(m2)</pre>
+<pre>319	                assert buf.tobytes() == null</pre>
+<pre>320	                assert not buf.readonly</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:320:16</pre>
+<pre>319	                assert buf.tobytes() == null</pre>
+<pre>320	                assert not buf.readonly</pre>
+<pre>321	                assert buf2.tobytes() == ff</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:321:16</pre>
+<pre>320	                assert not buf.readonly</pre>
+<pre>321	                assert buf2.tobytes() == ff</pre>
+<pre>322	                assert not buf2.readonly</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:322:16</pre>
+<pre>321	                assert buf2.tobytes() == ff</pre>
+<pre>322	                assert not buf2.readonly</pre>
+<pre>323	                assert type(buf) is memoryview</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:323:16</pre>
+<pre>322	                assert not buf2.readonly</pre>
+<pre>323	                assert type(buf) is memoryview</pre>
+<pre>324	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:360:8</pre>
+<pre>359	        frame = zmq.Frame(b"hello")</pre>
+<pre>360	        assert not frame.more</pre>
+<pre>361	        sa, sb = self.create_bound_pair(zmq.PAIR, zmq.PAIR)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:364:8</pre>
+<pre>363	        frame = self.recv(sb, copy=False)</pre>
+<pre>364	        assert frame.more</pre>
+<pre>365	        if zmq.zmq_version_info()[0] &gt;= 3 and not PYPY:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:366:12</pre>
+<pre>365	        if zmq.zmq_version_info()[0] &gt;= 3 and not PYPY:</pre>
+<pre>366	            assert frame.get(zmq.MORE)</pre>
+<pre>367	        frame = self.recv(sb, copy=False)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:368:8</pre>
+<pre>367	        frame = self.recv(sb, copy=False)</pre>
+<pre>368	        assert not frame.more</pre>
+<pre>369	        if zmq.zmq_version_info()[0] &gt;= 3 and not PYPY:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/zmq/tests/test_message.py:370:12</pre>
+<pre>369	        if zmq.zmq_version_info()[0] &gt;= 3 and not PYPY:</pre>
+<pre>370	            assert not frame.get(zmq.MORE)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<br />
+<pre>Code scanned:</pre>
+<pre>	Total lines of code: 313</pre>
+<pre>	Total lines skipped (#nosec): 0</pre>
+<pre>	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0</pre>
+<br />
+<pre>Run metrics:</pre>
+<pre>	Total issues (by severity):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 73</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 0</pre>
+<pre>	Total issues (by confidence):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 0</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 73</pre>
+<pre>Files skipped (0):</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

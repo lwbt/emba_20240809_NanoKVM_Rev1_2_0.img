@@ -1,0 +1,1008 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s21_python_check.html" title="./../s21_python_check.html" >&laquo; Back to s21_python_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>Run started:2024-10-25 14:20:55.555714</pre>
+<br />
+<pre>Test results:</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:654:12</pre>
+<pre>653	            sample = self.rfunc(lbnd, ubnd, endpoint=endpoint, dtype=dt)</pre>
+<pre>654	            assert not hasattr(sample, 'dtype')</pre>
+<pre>655	            assert_equal(type(sample), dt)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:675:12</pre>
+<pre>674	            sample = self.rfunc(0, 0, (3, 0, 4), endpoint=endpoint, dtype=dt)</pre>
+<pre>675	            assert sample.shape == (3, 0, 4)</pre>
+<pre>676	            assert sample.dtype == dt</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:676:12</pre>
+<pre>675	            assert sample.shape == (3, 0, 4)</pre>
+<pre>676	            assert sample.dtype == dt</pre>
+<pre>677	            assert self.rfunc(0, -10, 0, endpoint=endpoint,</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:677:12</pre>
+<pre>676	            assert sample.dtype == dt</pre>
+<pre>677	            assert self.rfunc(0, -10, 0, endpoint=endpoint,</pre>
+<pre>678	                              dtype=dt).shape == (0,)</pre>
+<pre>679	            assert_equal(random.integers(0, 0, size=(3, 0, 4)).shape,</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:705:8</pre>
+<pre>704	        chi2 = ((counts - expected)**2 / expected).sum()</pre>
+<pre>705	        assert chi2 &lt; chi2max</pre>
+<pre>706	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:749:17</pre>
+<pre>748	        random = Generator(MT19937(self.seed))</pre>
+<pre>749	        actual = random.random((3, 2))</pre>
+<pre>750	        desired = np.array([[0.096999199829214, 0.707517457682192],</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:756:17</pre>
+<pre>755	        random = Generator(MT19937(self.seed))</pre>
+<pre>756	        actual = random.random()</pre>
+<pre>757	        assert_array_almost_equal(actual, desired[0, 0], decimal=15)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:761:17</pre>
+<pre>760	        random = Generator(MT19937(self.seed))</pre>
+<pre>761	        actual = random.random((3, 2))</pre>
+<pre>762	        desired = np.array([[0.0969992 , 0.70751746],</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:769:17</pre>
+<pre>768	        random = Generator(MT19937(self.seed))</pre>
+<pre>769	        actual = random.random(dtype=np.float32)</pre>
+<pre>770	        desired = 0.0969992</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:778:17</pre>
+<pre>777	        random = Generator(MT19937(self.seed))</pre>
+<pre>778	        sample = random.random(100000, dtype=dtype)</pre>
+<pre>779	        num_ones_in_lsb = np.count_nonzero(sample.view(uint_view_type) &amp; 1)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:783:8</pre>
+<pre>782	        # is outside the following range is less than 5e-11.</pre>
+<pre>783	        assert 24100 &lt; num_ones_in_lsb &lt; 25900</pre>
+<pre>784	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:790:17</pre>
+<pre>789	        random = Generator(MT19937(self.seed))</pre>
+<pre>790	        actual = random.choice(4, 4)</pre>
+<pre>791	        desired = np.array([0, 0, 2, 2], dtype=np.int64)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:796:17</pre>
+<pre>795	        random = Generator(MT19937(self.seed))</pre>
+<pre>796	        actual = random.choice(4, 4, p=[0.4, 0.4, 0.1, 0.1])</pre>
+<pre>797	        desired = np.array([0, 1, 0, 1], dtype=np.int64)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:802:17</pre>
+<pre>801	        random = Generator(MT19937(self.seed))</pre>
+<pre>802	        actual = random.choice(4, 3, replace=False)</pre>
+<pre>803	        desired = np.array([2, 0, 3], dtype=np.int64)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:805:17</pre>
+<pre>804	        assert_array_equal(actual, desired)</pre>
+<pre>805	        actual = random.choice(4, 4, replace=False, shuffle=False)</pre>
+<pre>806	        desired = np.arange(4, dtype=np.int64)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:811:17</pre>
+<pre>810	        random = Generator(MT19937(self.seed))</pre>
+<pre>811	        actual = random.choice(4, 3, replace=False, p=[0.1, 0.3, 0.5, 0.1])</pre>
+<pre>812	        desired = np.array([0, 2, 3], dtype=np.int64)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:817:17</pre>
+<pre>816	        random = Generator(MT19937(self.seed))</pre>
+<pre>817	        actual = random.choice(['a', 'b', 'c', 'd'], 4)</pre>
+<pre>818	        desired = np.array(['a', 'a', 'c', 'c'])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:823:17</pre>
+<pre>822	        random = Generator(MT19937(self.seed))</pre>
+<pre>823	        actual = random.choice([[0, 1], [2, 3], [4, 5], [6, 7]], 3)</pre>
+<pre>824	        desired = np.array([[0, 1], [0, 1], [4, 5]])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:829:17</pre>
+<pre>828	        random = Generator(MT19937(self.seed))</pre>
+<pre>829	        actual = random.choice([[0, 1], [2, 3], [4, 5], [6, 7]], 1, axis=1)</pre>
+<pre>830	        desired = np.array([[0], [2], [4], [6]])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:854:28</pre>
+<pre>853	        # Check scalar</pre>
+<pre>854	        assert_(np.isscalar(random.choice(2, replace=True)))</pre>
+<pre>855	        assert_(np.isscalar(random.choice(2, replace=False)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:855:28</pre>
+<pre>854	        assert_(np.isscalar(random.choice(2, replace=True)))</pre>
+<pre>855	        assert_(np.isscalar(random.choice(2, replace=False)))</pre>
+<pre>856	        assert_(np.isscalar(random.choice(2, replace=True, p=p)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:856:28</pre>
+<pre>855	        assert_(np.isscalar(random.choice(2, replace=False)))</pre>
+<pre>856	        assert_(np.isscalar(random.choice(2, replace=True, p=p)))</pre>
+<pre>857	        assert_(np.isscalar(random.choice(2, replace=False, p=p)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:857:28</pre>
+<pre>856	        assert_(np.isscalar(random.choice(2, replace=True, p=p)))</pre>
+<pre>857	        assert_(np.isscalar(random.choice(2, replace=False, p=p)))</pre>
+<pre>858	        assert_(np.isscalar(random.choice([1, 2], replace=True)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:858:28</pre>
+<pre>857	        assert_(np.isscalar(random.choice(2, replace=False, p=p)))</pre>
+<pre>858	        assert_(np.isscalar(random.choice([1, 2], replace=True)))</pre>
+<pre>859	        assert_(random.choice([None], replace=True) is None)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:859:16</pre>
+<pre>858	        assert_(np.isscalar(random.choice([1, 2], replace=True)))</pre>
+<pre>859	        assert_(random.choice([None], replace=True) is None)</pre>
+<pre>860	        a = np.array([1, 2])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:863:16</pre>
+<pre>862	        arr[0] = a</pre>
+<pre>863	        assert_(random.choice(arr, replace=True) is a)</pre>
+<pre>864	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:867:32</pre>
+<pre>866	        s = tuple()</pre>
+<pre>867	        assert_(not np.isscalar(random.choice(2, s, replace=True)))</pre>
+<pre>868	        assert_(not np.isscalar(random.choice(2, s, replace=False)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:868:32</pre>
+<pre>867	        assert_(not np.isscalar(random.choice(2, s, replace=True)))</pre>
+<pre>868	        assert_(not np.isscalar(random.choice(2, s, replace=False)))</pre>
+<pre>869	        assert_(not np.isscalar(random.choice(2, s, replace=True, p=p)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:869:32</pre>
+<pre>868	        assert_(not np.isscalar(random.choice(2, s, replace=False)))</pre>
+<pre>869	        assert_(not np.isscalar(random.choice(2, s, replace=True, p=p)))</pre>
+<pre>870	        assert_(not np.isscalar(random.choice(2, s, replace=False, p=p)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:870:32</pre>
+<pre>869	        assert_(not np.isscalar(random.choice(2, s, replace=True, p=p)))</pre>
+<pre>870	        assert_(not np.isscalar(random.choice(2, s, replace=False, p=p)))</pre>
+<pre>871	        assert_(not np.isscalar(random.choice([1, 2], s, replace=True)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:871:32</pre>
+<pre>870	        assert_(not np.isscalar(random.choice(2, s, replace=False, p=p)))</pre>
+<pre>871	        assert_(not np.isscalar(random.choice([1, 2], s, replace=True)))</pre>
+<pre>872	        assert_(random.choice([None], s, replace=True).ndim == 0)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:872:16</pre>
+<pre>871	        assert_(not np.isscalar(random.choice([1, 2], s, replace=True)))</pre>
+<pre>872	        assert_(random.choice([None], s, replace=True).ndim == 0)</pre>
+<pre>873	        a = np.array([1, 2])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:876:16</pre>
+<pre>875	        arr[0] = a</pre>
+<pre>876	        assert_(random.choice(arr, s, replace=True).item() is a)</pre>
+<pre>877	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:881:21</pre>
+<pre>880	        p = [0.1, 0.1, 0.1, 0.1, 0.4, 0.2]</pre>
+<pre>881	        assert_equal(random.choice(6, s, replace=True).shape, s)</pre>
+<pre>882	        assert_equal(random.choice(6, s, replace=False).shape, s)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:882:21</pre>
+<pre>881	        assert_equal(random.choice(6, s, replace=True).shape, s)</pre>
+<pre>882	        assert_equal(random.choice(6, s, replace=False).shape, s)</pre>
+<pre>883	        assert_equal(random.choice(6, s, replace=True, p=p).shape, s)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:883:21</pre>
+<pre>882	        assert_equal(random.choice(6, s, replace=False).shape, s)</pre>
+<pre>883	        assert_equal(random.choice(6, s, replace=True, p=p).shape, s)</pre>
+<pre>884	        assert_equal(random.choice(6, s, replace=False, p=p).shape, s)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:884:21</pre>
+<pre>883	        assert_equal(random.choice(6, s, replace=True, p=p).shape, s)</pre>
+<pre>884	        assert_equal(random.choice(6, s, replace=False, p=p).shape, s)</pre>
+<pre>885	        assert_equal(random.choice(np.arange(6), s, replace=True).shape, s)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:885:21</pre>
+<pre>884	        assert_equal(random.choice(6, s, replace=False, p=p).shape, s)</pre>
+<pre>885	        assert_equal(random.choice(np.arange(6), s, replace=True).shape, s)</pre>
+<pre>886	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:891:21</pre>
+<pre>890	        assert_equal(random.integers(10, 10, size=0).shape, (0,))</pre>
+<pre>891	        assert_equal(random.choice(0, size=0).shape, (0,))</pre>
+<pre>892	        assert_equal(random.choice([], size=(0,)).shape, (0,))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:892:21</pre>
+<pre>891	        assert_equal(random.choice(0, size=0).shape, (0,))</pre>
+<pre>892	        assert_equal(random.choice([], size=(0,)).shape, (0,))</pre>
+<pre>893	        assert_equal(random.choice(['a', 'b'], size=(3, 0, 4)).shape,</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:893:21</pre>
+<pre>892	        assert_equal(random.choice([], size=(0,)).shape, (0,))</pre>
+<pre>893	        assert_equal(random.choice(['a', 'b'], size=(3, 0, 4)).shape,</pre>
+<pre>894	                     (3, 0, 4))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:906:21</pre>
+<pre>905	        random = Generator(MT19937(self.seed))</pre>
+<pre>906	        non_contig = random.choice(5, 3, p=p[::2])</pre>
+<pre>907	        random = Generator(MT19937(self.seed))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:908:17</pre>
+<pre>907	        random = Generator(MT19937(self.seed))</pre>
+<pre>908	        contig = random.choice(5, 3, p=np.ascontiguousarray(p[::2]))</pre>
+<pre>909	        assert_array_equal(non_contig, contig)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:914:17</pre>
+<pre>913	        p = np.ones(4) / 4.</pre>
+<pre>914	        actual = random.choice(4, 2)</pre>
+<pre>915	        assert actual.dtype == np.int64</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:915:8</pre>
+<pre>914	        actual = random.choice(4, 2)</pre>
+<pre>915	        assert actual.dtype == np.int64</pre>
+<pre>916	        actual = random.choice(4, 2, replace=False)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:916:17</pre>
+<pre>915	        assert actual.dtype == np.int64</pre>
+<pre>916	        actual = random.choice(4, 2, replace=False)</pre>
+<pre>917	        assert actual.dtype == np.int64</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:917:8</pre>
+<pre>916	        actual = random.choice(4, 2, replace=False)</pre>
+<pre>917	        assert actual.dtype == np.int64</pre>
+<pre>918	        actual = random.choice(4, 2, p=p)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:918:17</pre>
+<pre>917	        assert actual.dtype == np.int64</pre>
+<pre>918	        actual = random.choice(4, 2, p=p)</pre>
+<pre>919	        assert actual.dtype == np.int64</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:919:8</pre>
+<pre>918	        actual = random.choice(4, 2, p=p)</pre>
+<pre>919	        assert actual.dtype == np.int64</pre>
+<pre>920	        actual = random.choice(4, 2, p=p, replace=False)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:920:17</pre>
+<pre>919	        assert actual.dtype == np.int64</pre>
+<pre>920	        actual = random.choice(4, 2, p=p, replace=False)</pre>
+<pre>921	        assert actual.dtype == np.int64</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:921:8</pre>
+<pre>920	        actual = random.choice(4, 2, p=p, replace=False)</pre>
+<pre>921	        assert actual.dtype == np.int64</pre>
+<pre>922	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:926:17</pre>
+<pre>925	        random = Generator(MT19937(self.seed))</pre>
+<pre>926	        actual = random.choice(10000, 5000, replace=False)</pre>
+<pre>927	        if sys.byteorder != 'little':</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1095:8</pre>
+<pre>1094	        y = random.permuted(x, axis=axis)</pre>
+<pre>1095	        assert y.dtype == dtype</pre>
+<pre>1096	        assert_array_equal(y, expected)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1370:8</pre>
+<pre>1369	        random = Generator(MT19937(self.seed))</pre>
+<pre>1370	        assert random.logseries(0) == 1</pre>
+<pre>1371	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1458:12</pre>
+<pre>1457	            w = sup.record(RuntimeWarning)</pre>
+<pre>1458	            assert len(w) == 0</pre>
+<pre>1459	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1487:8</pre>
+<pre>1486	        # these are pretty loose and are only designed to detect major errors</pre>
+<pre>1487	        assert np.all(np.abs(s_center.mean(-2)) &lt; 0.1)</pre>
+<pre>1488	        assert np.all(np.abs(cov_emp - cov) &lt; 0.2)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1488:8</pre>
+<pre>1487	        assert np.all(np.abs(s_center.mean(-2)) &lt; 0.1)</pre>
+<pre>1488	        assert np.all(np.abs(cov_emp - cov) &lt; 0.2)</pre>
+<pre>1489	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1549:8</pre>
+<pre>1548	        actual = random.noncentral_f(dfnum=5, dfden=2, nonc=np.nan)</pre>
+<pre>1549	        assert np.isnan(actual)</pre>
+<pre>1550	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1706:17</pre>
+<pre>1705	        random = Generator(MT19937(self.seed))</pre>
+<pre>1706	        actual = random.triangular(left=5.12, mode=10.23, right=20.34,</pre>
+<pre>1707	                                   size=(3, 2))</pre>
+<pre>1708	        desired = np.array([[ 7.86664070590917, 13.6313848513185 ],</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1715:17</pre>
+<pre>1714	        random = Generator(MT19937(self.seed))</pre>
+<pre>1715	        actual = random.uniform(low=1.23, high=10.54, size=(3, 2))</pre>
+<pre>1716	        desired = np.array([[2.13306255040998 , 7.816987531021207],</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1735:8</pre>
+<pre>1734	        # DBL_MAX by increasing fmin a bit</pre>
+<pre>1735	        random.uniform(low=np.nextafter(fmin, 1), high=fmax / 1e17)</pre>
+<pre>1736	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1805:12</pre>
+<pre>1804	        else:</pre>
+<pre>1805	            assert np.all(random_state_vals != gen_vals)</pre>
+<pre>1806	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1859:17</pre>
+<pre>1858	        random = Generator(MT19937(self.seed))</pre>
+<pre>1859	        actual = random.uniform(low * 3, high)</pre>
+<pre>1860	        assert_array_almost_equal(actual, desired, decimal=14)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-330 (<a href="https://cwe.mitre.org/data/definitions/330.html" title="https://cwe.mitre.org/data/definitions/330.html" target="_blank" >https://cwe.mitre.org/data/definitions/330.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b311-random</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1863:17</pre>
+<pre>1862	        random = Generator(MT19937(self.seed))</pre>
+<pre>1863	        actual = random.uniform(low, high * 3)</pre>
+<pre>1864	        assert_array_almost_equal(actual, desired, decimal=14)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:1978:8</pre>
+<pre>1977	        assert_array_almost_equal(actual, desired, decimal=14)</pre>
+<pre>1978	        assert np.all(np.isnan(nonc_f(dfnum, dfden, [np.nan] * 3)))</pre>
+<pre>1979	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2424:8</pre>
+<pre>2423	        expected_shape = n_shape + (4,)</pre>
+<pre>2424	        assert actual.shape == expected_shape</pre>
+<pre>2425	        pvals = np.vstack([pvals, pvals])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2428:8</pre>
+<pre>2427	        expected_shape = np.broadcast_shapes(n_shape, pvals.shape[:-1]) + (4,)</pre>
+<pre>2428	        assert actual.shape == expected_shape</pre>
+<pre>2429	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2433:8</pre>
+<pre>2432	        expected_shape = np.broadcast_shapes(n_shape, pvals.shape[:-1])</pre>
+<pre>2433	        assert actual.shape == expected_shape + (4,)</pre>
+<pre>2434	        actual = random.multinomial(n, pvals, size=(3, 2) + expected_shape)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2435:8</pre>
+<pre>2434	        actual = random.multinomial(n, pvals, size=(3, 2) + expected_shape)</pre>
+<pre>2435	        assert actual.shape == (3, 2) + expected_shape + (4,)</pre>
+<pre>2436	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2450:8</pre>
+<pre>2449	        actual = random.multinomial(np.empty((10, 0, 6), "i8"), [1 / 6] * 6)</pre>
+<pre>2450	        assert actual.shape == (10, 0, 6, 6)</pre>
+<pre>2451	        actual = random.multinomial(12, np.empty((10, 0, 10)))</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2452:8</pre>
+<pre>2451	        actual = random.multinomial(12, np.empty((10, 0, 10)))</pre>
+<pre>2452	        assert actual.shape == (10, 0, 10)</pre>
+<pre>2453	        actual = random.multinomial(np.empty((3, 0, 7), "i8"),</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2455:8</pre>
+<pre>2454	                                    np.empty((3, 0, 7, 4)))</pre>
+<pre>2455	        assert actual.shape == (3, 0, 7, 4)</pre>
+<pre>2456	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2607:4</pre>
+<pre>2606	    sha256 = hashlib.sha256(key)</pre>
+<pre>2607	    assert mt19937.state["state"]["pos"] == config["initial"]["pos"]</pre>
+<pre>2608	    assert sha256.hexdigest() == config["initial"]["key_sha256"]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2608:4</pre>
+<pre>2607	    assert mt19937.state["state"]["pos"] == config["initial"]["pos"]</pre>
+<pre>2608	    assert sha256.hexdigest() == config["initial"]["key_sha256"]</pre>
+<pre>2609	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2615:4</pre>
+<pre>2614	    sha256 = hashlib.sha256(key)</pre>
+<pre>2615	    assert jumped.state["state"]["pos"] == config["jumped"]["pos"]</pre>
+<pre>2616	    assert sha256.hexdigest() == config["jumped"]["key_sha256"]</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2616:4</pre>
+<pre>2615	    assert jumped.state["state"]["pos"] == config["jumped"]["pos"]</pre>
+<pre>2616	    assert sha256.hexdigest() == config["jumped"]["key_sha256"]</pre>
+<pre>2617	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2623:4</pre>
+<pre>2622	    size = (10, 4, 2)</pre>
+<pre>2623	    assert random.normal(mu, sigma, size=(5, 4, 3)).shape == (5, 4, 3)</pre>
+<pre>2624	    with pytest.raises(ValueError):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2657:4</pre>
+<pre>2656	    c = random.chisquare(5, size=(5, 4, 3))</pre>
+<pre>2657	    assert random.noncentral_f(a, b, c).shape == (5, 4, 3)</pre>
+<pre>2658	    with pytest.raises(ValueError, match=r"Output size \(6, 5, 1, 1\) is"):</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2675:4</pre>
+<pre>2674	    assert_no_warnings(gen.shuffle, seq)</pre>
+<pre>2675	    assert seq == [1, [], []]</pre>
+<pre>2676	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2711:4</pre>
+<pre>2710	    variates = dist(out=out, dtype=dtype)</pre>
+<pre>2711	    assert variates is out</pre>
+<pre>2712	    variates = dist(out=out, dtype=dtype, size=out.shape)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2713:4</pre>
+<pre>2712	    variates = dist(out=out, dtype=dtype, size=out.shape)</pre>
+<pre>2713	    assert variates is out</pre>
+<pre>2714	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2722:4</pre>
+<pre>2721	    # Simulate unpickling an old pickle that only has the name</pre>
+<pre>2722	    assert args[:1] == ("PCG64DXSM",)</pre>
+<pre>2723	    b = ctor(*args[:1])</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/numpy/random/tests/test_generator_mt19937.py:2726:4</pre>
+<pre>2725	    state_b = b.bit_generator.state</pre>
+<pre>2726	    assert state_a == state_b</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<br />
+<pre>Code scanned:</pre>
+<pre>	Total lines of code: 2169</pre>
+<pre>	Total lines skipped (#nosec): 0</pre>
+<pre>	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0</pre>
+<br />
+<pre>Run metrics:</pre>
+<pre>	Total issues (by severity):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 83</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 0</pre>
+<pre>	Total issues (by confidence):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 0</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 83</pre>
+<pre>Files skipped (0):</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

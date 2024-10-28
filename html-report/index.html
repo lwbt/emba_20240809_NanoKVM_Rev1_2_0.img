@@ -1,0 +1,668 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./index.html"><img class="inherit" id="logoImage" src="./style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton hidden" href="./index.html">&laquo; Back to main</a>
+      <!-- navigation start -->
+<a class="modul p" data="p02" href="./p02_firmware_bin_file_check.html" title="./p02_firmware_bin_file_check.html">Binary firmware file analyzer</a>
+<a class="modul p" data="p05" href="./p05_patools_init.html" title="./p05_patools_init.html">Initial extractor of different archive types via patools</a>
+<a class="modul p" data="p60" href="./p60_deep_extractor.html" title="./p60_deep_extractor.html">Binary firmware deep extractor</a>
+<a class="modul p" data="p99" href="./p99_prepare_analyzer.html" title="./p99_prepare_analyzer.html">Analysis preparation</a>
+<a class="modul s" data="s03" href="./s03_firmware_bin_base_analyzer.html" title="./s03_firmware_bin_base_analyzer.html">Binary firmware basic analyzer</a>
+<a class="modul s" data="s04" href="./s04_windows_basic_analysis.html" title="./s04_windows_basic_analysis.html">Discover basic information of Windows executables</a>
+<a class="modul s" data="s05" href="./s05_firmware_details.html" title="./s05_firmware_details.html">Firmware and testing details</a>
+<a class="modul s" data="s06" href="./s06_distribution_identification.html" title="./s06_distribution_identification.html">System identification</a>
+<a class="modul s" data="s07" href="./s07_bootloader_check.html" title="./s07_bootloader_check.html">Check bootloader and system startup</a>
+<a class="modul s" data="s08" href="./s08_package_mgmt_extractor.html" title="./s08_package_mgmt_extractor.html">EMBA central SBOM environment</a>
+<a class="modul s" data="s09" href="./s09_firmware_base_version_check.html" title="./s09_firmware_base_version_check.html">Static binary firmware versions detection</a>
+<a class="modul s" data="s12" href="./s12_binary_protection.html" title="./s12_binary_protection.html">Check binary protection mechanisms</a>
+<a class="modul s" data="s20" href="./s20_shell_check.html" title="./s20_shell_check.html">Check scripts with shellcheck and semgrep</a>
+<a class="modul s" data="s21" href="./s21_python_check.html" title="./s21_python_check.html">Check python scripts for security issues</a>
+<a class="modul s" data="s24" href="./s24_kernel_bin_identifier.html" title="./s24_kernel_bin_identifier.html">Kernel Binary and Configuration Identifier</a>
+<a class="modul s" data="s25" href="./s25_kernel_check.html" title="./s25_kernel_check.html">Identify and analyze kernel version</a>
+<a class="modul s" data="s35" href="./s35_http_file_check.html" title="./s35_http_file_check.html">Check HTTP files</a>
+<a class="modul s" data="s45" href="./s45_pass_file_check.html" title="./s45_pass_file_check.html">Search password files</a>
+<a class="modul s" data="s50" href="./s50_authentication_check.html" title="./s50_authentication_check.html">Check users, groups and authentication</a>
+<a class="modul s" data="s60" href="./s60_cert_file_check.html" title="./s60_cert_file_check.html">Search certificates</a>
+<a class="modul s" data="s65" href="./s65_config_file_check.html" title="./s65_config_file_check.html">Search/scan config files</a>
+<a class="modul s" data="s95" href="./s95_interesting_files_check.html" title="./s95_interesting_files_check.html">Check for interesting files</a>
+<a class="modul s" data="s106" href="./s106_deep_key_search.html" title="./s106_deep_key_search.html">Deep analysis of files for interesting key material</a>
+<a class="modul s" data="s107" href="./s107_deep_password_search.html" title="./s107_deep_password_search.html">Deep analysis of files for password hashes</a>
+<a class="modul s" data="s108" href="./s108_stacs_password_search.html" title="./s108_stacs_password_search.html">Stacs analysis of firmware for password hashes</a>
+<a class="modul s" data="s109" href="./s109_jtr_local_pw_cracking.html" title="./s109_jtr_local_pw_cracking.html">Cracking identified password hashes</a>
+<a class="modul s" data="s115" href="./s115_usermode_emulator.html" title="./s115_usermode_emulator.html">Qemu user-mode emulation</a>
+<a class="modul f" data="f02" href="./f02_toolchain.html" title="./f02_toolchain.html">Toolchain overview</a>
+<a class="modul f" data="f10" href="./f10_license_summary.html" title="./f10_license_summary.html">License inventory</a>
+<a class="modul f" data="f15" href="./f15_cyclonedx_sbom.html" title="./f15_cyclonedx_sbom.html">CycloneDX SBOM converter</a>
+<a class="modul f" data="f20" href="./f20_vul_aggregator.html" title="./f20_vul_aggregator.html">Final vulnerability aggregator</a>
+<a class="modul f" data="f50" href="./f50_base_aggregator.html" title="./f50_base_aggregator.html">Final aggregator</a>
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="./emba.html"><div id="buttonTime" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</span><span class="blue">+</span>] </span><span class="cyan"><span class="bold"><a id="final_aggregator">Final aggregator</a></span></pre>
+<pre><span class="bold"><hr class="double" /></span></pre>
+<pre>The main aggregator module compiles and summarizes results from various analysis modules into a comprehensive overview by processing and logging detailed information from each identified element.</pre>
+<br />
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Tested firmware:</span><span class="orange"> /home/kali/Downloads/emba/20240809_NanoKVM_Rev1_2_0.img.xz</span></span></pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> EMBA start command:</span><span class="orange"> ./emba -l /home/kali/log -f ./20240809_NanoKVM_Rev1_2_0.img.xz -p ./scan-profiles/default-scan.emba</span></span></pre>
+<a class="refmodul" href="./p99_prepare_analyzer.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Detected architecture and endianness (</span><span class="orange">verified</span><span class="green">):</span><span class="orange"> RISCV / EL</span></span></pre></a>
+
+<a class="refmodul" href="./s25_kernel_check.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Operating system detected (</span><span class="orange">verified</span><span class="green">): </span><span class="orange">Linux / v4.4.0 / v5.10.4</span></span></pre></a>
+
+<a class="refmodul" href="./s06_distribution_identification.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Linux distribution detected: </span><span class="orange"></span><span class="orange">Buildroot 2023.11.2</span><span class="green"></span></span></pre></a>
+
+<a class="refmodul" href="./s06_distribution_identification.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Linux distribution detected: </span><span class="orange"></span><span class="orange">buildroot 2023.11.2</span><span class="green"></span></span></pre></a>
+
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+<a class="refmodul" href="./s05_firmware_details.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> </span><span class="orange">25022</span><span class="green"> files and </span><span class="orange">5082 </span><span class="green">directories detected.</span></pre></a>
+
+<a class="refmodul" href="./p02_firmware_bin_file_check.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Entropy analysis of binary firmware is: </span><span class="orange">7.999996 bits per byte.</span></pre></a>
+
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Entropy analysis of binary firmware is available:</span><span class="orange"> /logs/firmware_entropy.png</span></pre>
+<img class="image" src="./style/firmware_entropy.png">
+<a class="refmodul" href="./s20_shell_check.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">159 issues</span><span class="green"> in </span><span class="orange">94</span><span class="green"> shell scripts.</span></span></pre></a>
+
+<a class="refmodul" href="./s21_python_check.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">16879 vulnerabilities</span><span class="green"> in </span><span class="orange">3094</span><span class="green"> python files.</span></span></pre></a>
+
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Found the following configuration issues:</span></pre>
+<a class="refmodul" href="./s50_authentication_check.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">1</span><span class="green"> authentication issues.</span></pre></a>
+
+<a class="refmodul" href="./s107_deep_password_search.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">107</span><span class="green"> password related details.</span></pre></a>
+
+<a class="refmodul" href="./s108_stacs_password_search.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">243</span><span class="green"> password related details via STACS.</span></pre></a>
+
+<a class="refmodul" href="./s60_cert_file_check.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">15</span><span class="green"> outdated certificates and </span><span class="orange">6 expiring certificates in </span><span class="orange">145</span><span class="green"> certificate files and in a total of </span><span class="orange">703</span><span class="green"> certificates.</span></pre></a>
+
+<a class="refmodul" href="./s25_kernel_check.html#anchor_kernel_modules" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">184</span><span class="green"> kernel modules with </span><span class="orange">0</span><span class="green"> licensing issues.</span></pre></a>
+
+<a class="refmodul" href="./s95_interesting_files_check.html" title="LINK" ><pre>    </span><span class="green">Found </span><span class="orange">3</span><span class="green"> interesting files and </span><span class="orange">4</span><span class="green"> files that could be useful for post-exploitation.</span></pre></a>
+
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+<a class="refmodul" href="./s12_binary_protection.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">397 (36%)</span><span class="green"> binaries without enabled stack canaries in </span><span class="orange">1111</span><span class="green"> binaries.</span></pre></a>
+
+<a class="refmodul" href="./s12_binary_protection.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">190 (17%)</span><span class="green"> binaries without enabled RELRO in </span><span class="orange">1111</span><span class="green"> binaries.</span></pre></a>
+
+<a class="refmodul" href="./s12_binary_protection.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">185 (17%)</span><span class="green"> binaries without enabled NX in </span><span class="orange">1111</span><span class="green"> binaries.</span></pre></a>
+
+<a class="refmodul" href="./s12_binary_protection.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">66 (6%)</span><span class="green"> binaries without enabled PIE in </span><span class="orange">1111</span><span class="green"> binaries.</span></pre></a>
+
+<a class="refmodul" href="./s12_binary_protection.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found </span><span class="orange">916 (82%)</span><span class="green"> stripped binaries without symbols in </span><span class="orange">1111</span><span class="green"> binaries.</span></pre></a>
+
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_softwareinventoryinitialoverview" title="LINK" ><pre>[</span><span class="orange">*</span>] Identified the following software inventory, vulnerabilities and exploits:</pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-login" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-login         :   0.6.3          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ethtool" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ethtool             :   6.5            :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_async-timeout" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	async-timeout       :   4.0.3          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_dbus-next" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	dbus-next           :   0.2.3          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-sqlalchemy" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-sqlalchemy    :   3.1.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_executing" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	executing           :   2.0.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_charset-normalizer" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	charset-normalizer  :   3.3.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_asttokens" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	asttokens           :   2.4.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-smorest" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-smorest       :   0.42.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_decorator" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	decorator           :   5.1.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_dbus-fast" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	dbus-fast           :   2.12.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libusb1" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libusb1             :   3.1.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_lxml" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	lxml                :   4.9.3          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_click" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	click               :   8.1.7          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_brotli" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	brotli              :   1.1.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_devmem" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	devmem              :   0.1.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_argh" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	argh                :   0.30.4         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_itsdangerous" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	itsdangerous        :   2.1.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_intelhex" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	intelhex            :   2.3.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_certifi" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	certifi             :   2023.7.22      :   CVEs: 1         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_crcmod" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	crcmod              :   1.7            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-jsonrpc" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-jsonrpc       :   2.2.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_async-generator" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	async-generator     :   1.10           :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_beautifulsoup4" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	beautifulsoup4      :   4.12.2         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flatbuffers" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flatbuffers         :   20240717091322 :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-babel" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-babel         :   0.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_aenum" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	aenum               :   3.1.15         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_evdev" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	evdev               :   1.6.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_hwdata" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	hwdata              :   2.3.7          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_humanize" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	humanize            :   0.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ipython-genutils" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ipython-genutils    :   0.2.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_cffi" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	cffi                :   1.16.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_markupsafe" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	markupsafe          :   2.1.3          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_crc16" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	crc16               :   0.1.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ifaddr" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ifaddr              :   0.2.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_attrs" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	attrs               :   23.1.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libevdev" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libevdev            :   0.11           :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_cycler" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	cycler              :   0.12.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_blinker" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	blinker             :   0.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-wtf" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-wtf           :   0.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask               :   3.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_liblz4" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	liblz4              :   1.5.5          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_backcall" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	backcall            :   0.2.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_bidict" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	bidict              :   0.22.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_liblz4" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	liblz4              :   1.9.4          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_kiwisolver" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	kiwisolver          :   0.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_jinja2" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	jinja2              :   3.1.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_idna" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	idna                :   3.4            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_asgiref" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	asgiref             :   3.7.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_bsdiff4" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	bsdiff4             :   1.2.4          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_h11" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	h11                 :   0.14.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_flask-cors" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	flask-cors          :   4.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_apispec" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	apispec             :   6.3.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_jedi" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	jedi                :   0.19.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_html5lib" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	html5lib            :   1.1            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_markdown" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	markdown            :   3.5.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_e2fsprogs" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	e2fsprogs           :   1.47.0         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_babel" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	babel               :   2.13.1         :   CVEs: 1         :   Exploits: 1    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ipython" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ipython             :   8.17.2         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libcurl" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	libcurl             :   8.5.0          :   CVEs: 1         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libarchive" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	libarchive          :   3.7.2          :   CVEs: 3         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_dnsmasq" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	dnsmasq             :   2.89           :   CVEs: 2         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_django" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	django              :   4.2.7          :   CVEs: 7         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_marshmallow" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	marshmallow         :   3.20.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_memtester" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	memtester           :   4.5.1          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_msgpack" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	msgpack             :   1.0.7          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_mypy-extensions" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	mypy-extensions     :   1.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_netaddr" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	netaddr             :   0.9.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_netifaces" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	netifaces           :   0.11.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_networkx" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	networkx            :   3.2.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_nftables" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	nftables            :   0.1            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_outcome" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	outcome             :   1.2.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_oauthlib" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	oauthlib            :   3.2.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_paho-mqtt" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	paho-mqtt           :   1.6.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_packaging" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	packaging           :   23.1           :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pickleshare" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pickleshare         :   0.7.5          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_parso" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	parso               :   0.8.3          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pexpect" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pexpect             :   4.8.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pathtools" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	pathtools           :   0.1.2          :   CVEs: 1         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_posix-ipc" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	posix-ipc           :   1.1.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_prompt-toolkit" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	prompt-toolkit      :   3.0.36         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_py-ubjson" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	py-ubjson           :   0.16.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_protobuf" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	protobuf            :   4.21.12        :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_psutil" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	psutil              :   5.9.4          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyaes" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyaes               :   1.6.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pure-eval" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pure-eval           :   0.2.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pip" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	pip                 :   22.3.1         :   CVEs: 2         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ptyprocess" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ptyprocess          :   0.7.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyalsa" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyalsa              :   1.2.7          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyalsaaudio" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyalsaaudio         :   0.10.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pillow" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	pillow              :   10.0.1         :   CVEs: 1         :   Exploits: 1    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyasn1" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyasn1              :   0.4.8          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pycparser" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pycparser           :   2.21           :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pymodbus" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pymodbus            :   3.0.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pygments" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pygments            :   2.15.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pylibfdt" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pylibfdt            :   1.7.0.post1    :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyparsing" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyparsing           :   3.1.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyserial-asyncio" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyserial-asyncio    :   0.6            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyqrcode" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyqrcode            :   1.2.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyserial" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyserial            :   3.5            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pysocks" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pysocks             :   1.7.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pysmb" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pysmb               :   1.2.9          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_python-dateutil" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	python-dateutil     :   2.8.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_python-crontab" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	python-crontab      :   3.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_python-engineio" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	python-engineio     :   4.8.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_python-socketio" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	python-socketio     :   5.7.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_python-periphery" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	python-periphery    :   2.3.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_python-snappy" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	python-snappy       :   0.6.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyusb" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyusb               :   1.2.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pytz" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pytz                :   2023.3         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyudev" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyudev              :   0.24.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyyaml" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyyaml              :   6.0.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_qrcode" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	qrcode              :   7.3.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_pyzmq" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	pyzmq               :   24.0.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_requests-oauthlib" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	requests-oauthlib   :   1.3.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_requests-toolbelt" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	requests-toolbelt   :   0.10.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_scapy" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	scapy               :   2.5.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_setserial" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	setserial           :   2.17           :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_setuptools" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	setuptools          :   68.2.2         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_requests" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	requests            :   2.31.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_selenium" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	selenium            :   4.9.1          :   CVEs: 1         :   Exploits: 1    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_six" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	six                 :   1.16.0         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_simple_launcher" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	simple_launcher     :   1.1.0.14       :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_smbus-cffi" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	smbus-cffi          :   0.5.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_sniffio" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	sniffio             :   1.3.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_soupsieve" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	soupsieve           :   2.3.2.post1    :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_sortedcontainers" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	sortedcontainers    :   2.4.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_spidev" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	spidev              :   3.6            :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_stack-data" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	stack-data          :   0.6.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_tinyrpc" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	tinyrpc             :   1.1.4          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_sqlalchemy" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	sqlalchemy          :   1.4.42         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_sqlparse" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	sqlparse            :   0.4.3          :   CVEs: 1         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_toml" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	toml                :   0.10.2         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_traceroute" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	traceroute          :   2.1.3          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_tqdm" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	tqdm                :   4.64.1         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_traitlets" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	traitlets           :   5.8.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_trio-websocket" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	trio-websocket      :   0.9.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_tornado" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	tornado             :   6.2            :   CVEs: 1         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_typeguard" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	typeguard           :   2.13.3         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_typing-inspect" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	typing-inspect      :   0.8.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_typing_extensions" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	typing_extensions   :   4.7.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_udhcp" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	udhcp               :   1.36.1         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ujson" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ujson               :   5.7.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_trio" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	trio                :   0.22.0         :   CVEs: 1         :   Exploits: 1    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_uhid" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	uhid                :   0.0.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_urllib3" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	urllib3             :   2.0.7          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_util-linux" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	util-linux          :   2.39.2         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_watchdog" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	watchdog            :   2.2.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_wcwidth" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	wcwidth             :   0.2.5          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_webargs" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	webargs             :   8.2.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_webencodings" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	webencodings        :   0.5.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_websocket-client" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	websocket-client    :   1.4.2          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_websockets" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	websockets          :   10.4           :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_wsproto" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	wsproto             :   1.2.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_wpa_cli" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	wpa_cli             :   2.10           :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_wtforms" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	wtforms             :   3.0.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_xlsxwriter" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	xlsxwriter          :   3.0.6          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_xlutils" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	xlutils             :   2.0.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_xlrd" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	xlrd                :   2.0.1          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_werkzeug" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	werkzeug            :   0.0.0          :   CVEs: 8         :   Exploits: 1    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_xlwt" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	xlwt                :   1.3.0          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_xmodem" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	xmodem              :   0.4.7          :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_buildroot" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	buildroot           :   2023.11.2      :   CVEs: 0         :   Exploits: 0    :   Source: STAT/STAT      </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_xz-utils" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	xz-utils            :   5.4.4          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_zeroconf" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	zeroconf            :   0.39.4         :   CVEs: 0         :   Exploits: 0    :   Source: unknown        </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_alsa" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	alsa                :   1.2.10         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_curl" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	curl                :   8.5.0          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_curl" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	curl                :   8.5.0          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_bzip2" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	bzip2               :   1.0.8          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_busybox" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	busybox             :   1.36.1         :   CVEs: 4         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_gmp" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	gmp                 :   6.3.0          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_dbus" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	dbus                :   1.14.10        :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_u-boot" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	u-boot              :   2021.07        :   CVEs: 4         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ncurses" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ncurses             :   6.4.20230603   :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libpng" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libpng              :   1.6.40         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_sed" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	sed                 :   4.0            :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ncurses" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ncurses             :   6.4            :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libpng" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libpng              :   1.6.37         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_json-c" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	json-c              :   0.15.99        :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_binutils" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	binutils            :   2.39.50        :   CVEs: 7         :   Exploits: 1    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_iptables" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	iptables            :   1.8.9          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libexpat" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	libexpat            :   2.6.0          :   CVEs: 3         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libpng" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libpng              :   1.6.37         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libpng" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libpng              :   1.6.40         :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_opencv" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	opencv              :   4.8.0          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_opencv" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	opencv              :   4.9.0          :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_vim" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	vim                 :   9.0            :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_ntp" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	ntp                 :   4.2.8:p17      :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_wpa_supplicant" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	wpa_supplicant      :   2.10           :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_sqlite" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	sqlite              :   3.43.1         :   CVEs: 1         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_wpa_supplicant" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	wpa_supplicant      :   2.10           :   CVEs: 1         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_systemd" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	systemd             :   3.2.14         :   CVEs: 25        :   Exploits: 8    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_zlib" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	zlib                :   1.2.11         :   CVEs: 3         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_zlib" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	zlib                :   1.2.13         :   CVEs: 1         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_zlib" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	zlib                :   1.3            :   CVEs: 1         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libxml2" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found version details: 	libxml2             :   2.11.06        :   CVEs: 0         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_libtiff" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	libtiff             :   4.6.0          :   CVEs: 1         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_openssl" title="LINK" ><pre>[</span><span class="orange">+</span>]</span><span class="orange"> Found version details: 	openssl             :   3.1.4          :   CVEs: 3         :   Exploits: 0    :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_vim" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	vim                 :   9.0            :   CVEs: 88        :   Exploits: 10   :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_linux_kernel" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	linux_kernel        :   5.10.4         :   CVEs: 1366      :   Exploits: 40   :   Source: STAT           </span></pre></a>
+
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_cve_linux_kernel" title="LINK" ><pre>[</span><span class="magenta">+</span>]</span><span class="magenta"> Found version details: 	linux_kernel        :   4.4.0          :   CVEs: 1767      :   Exploits: 90   :   Source: STAT           </span></pre></a>
+
+<br />
+<br />
+<a class="refmodul" href="./f15_cyclonedx_sbom.html" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Identified a SBOM including </span><span class="orange">201</span><span class="green"> software components with version details.</span></pre></a>
+
+<br />
+<br />
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_collectcveandexploitdetails" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Identified </span><span class="orange">3306</span><span class="green"> CVE entries.</span></pre></a>
+
+<pre>    </span><span class="green">Identified </span><span class="red"><span class="bold">1188</span></span><span class="green"> High rated CVE entries / Exploits: </span><span class="orange">97</span></span></pre>
+<pre>    </span><span class="green">Identified </span><span class="orange"><span class="bold">1975</span></span><span class="green"> Medium rated CVE entries / Exploits: </span><span class="orange">49</span></span></pre>
+<pre>    </span><span class="green">Identified </span><span class="green"><span class="bold">143</span></span><span class="green"> Low rated CVE entries /Exploits: </span><span class="orange">8</span></span></pre>
+<a class="refmodul" href="./f20_vul_aggregator.html#anchor_minimalreportofexploitsandcves" title="LINK" ><pre>    </span><span class="green"></span><span class="magenta"><span class="bold">154</span></span><span class="green"> possible exploits available (</span><span class="magenta">17</span><span class="green"> Metasploit modules).</span></pre></a>
+
+<pre>    </span><span class="green">Remote exploits: </span><span class="magenta"><span class="bold">0</span></span><span class="green"> / Local exploits: </span><span class="magenta"><span class="bold">34</span></span><span class="green"> / DoS exploits: </span><span class="magenta"><span class="bold">4</span></span><span class="green"> / Github PoCs: </span><span class="magenta"><span class="bold">0</span></span><span class="green"> / Known exploited vulnerabilities: </span><span class="magenta"><span class="bold">10</span><span class="green"> / Verified Exploits: </span><span class="magenta"><span class="bold">0</span></span></pre>
+<br />
+<pre><hr class="mono" /></pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<a href="./p02_firmware_bin_file_check.html" title="./p02_firmware_bin_file_check.html" ><div id="buttonBack" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

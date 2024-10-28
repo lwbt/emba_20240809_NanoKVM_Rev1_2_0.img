@@ -1,0 +1,518 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./index.html"><img class="inherit" id="logoImage" src="./style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./index.html">&laquo; Back to main</a>
+      <!-- navigation start --><a class="modul" href="#check_http_files" title="#check_http_files" >Check HTTP files</a><a class="submodul" href="#searchwebservedfiles" title="#searchwebservedfiles" >Search web served files</a><a class="submodul" href="#searchhttpfiles" title="#searchhttpfiles" >Search http files</a><a class="submodul" href="#checkforapacheornginxrelatedfiles" title="#checkforapacheornginxrelatedfiles" >Check for apache or nginx related files</a><a class="submodul" href="#checkforphpini" title="#checkforphpini" >Check for php.ini</a>
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</span><span class="blue">+</span>] </span><span class="cyan"><span class="bold"><a id="check_http_files">Check HTTP files</a></span></pre>
+<pre><span class="bold"><hr class="double" /></span></pre>
+<pre>This module tries to identify httpd-related files including Nginx, Apache, httpd, lighttpd, cherokee and php.ini files.</pre>
+<br />
+<br />
+<br />
+<br />
+<pre></span><span class="blue">==&gt</span></span> </span><span class="cyan"><a id="searchwebservedfiles">Search web served files</a></span></pre>
+<pre><hr class="mono" /></pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Found web related files:</span></pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/formsets/p.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/arm-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/netbsd.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/missing_docutils.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/text.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/ensurepip/_bundled/setuptools-65.5.0-py3-none-any.whl_extract/setuptools/command/launcher</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/attrs.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/select.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/change_list.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/sparc64-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/static/sample.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/auth/user/add_form.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/popup_response.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/default.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/submit_line.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/div.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/label.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_reset_done.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/logged_out.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/formsets/default.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/bookmarklets.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/lbpcascades/lbpcascade_profileface.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.Server.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/formsets/div.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/netaddr/ip/ipv4-address-space.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/invalid_setup.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/template_tag_index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/widgets/select_option.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/errors/list/default.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_eye.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/change_list_object_tools.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/clearable_file_input.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/formsets/table.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_jsonrpc/contrib/browse/templates/browse/partials/dashboard.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/url.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/errors/dict/default.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/label.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/formsets/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_upperbody.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/500.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/base.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/widgets/multiple_input.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/change_form.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/search_form.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/sitemaps/templates/sitemap_index.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/color_theme_toggle.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/sitemaps/templates/sitemap.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/sparc-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/includes/object_delete_summary.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/netaddr/ip/multicast-addresses.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/base_site.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/doctools/mpformats/idx.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/lbpcascades/lbpcascade_silverware.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/freebsd.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/model_detail.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/p.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/formsets/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/multiwidget.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/netaddr/ip/ipv6-address-space.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/html/50x.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_lowerbody.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_change_done.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/lbpcascades/lbpcascade_frontalcatface.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/clearable_file_input.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/p.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/radio.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/input_option.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/doctools/mpformats/toc.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/xml/dbus-1/catalog.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_frontalcatface_extended.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_smorest/spec/templates/rapidoc.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/table.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/model_index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/mnt/system/usr/bin/server/web/index.html (-rwxr-xr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/kvmapp/server/web/index.html (-rwxrw-r-- linuxbrew linuxbrew)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/foreign_key_raw_id.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/date_hierarchy.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/change_list_results.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/related_widget_wrapper.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/amd64-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/doctools/mpformats/fmt.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/attrs.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_smorest/spec/templates/swagger_ui.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/select_option.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/templates/utf8.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/html/index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_profileface.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/mips-o32-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/attrs.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/formsets/div.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/delete_confirmation.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/mips-n32-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/errors/dict/default.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/errors/list/default.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_change_form.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/errors/dict/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/formsets/p.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/delete_selected_confirmation.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/auth/templates/auth/widgets/read_only_password_hash.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.ServiceBrowser.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/app_index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.EntryGroup.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/date.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/gis/templates/gis/openlayers-osm.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/i386-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/edit_inline/tabular.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/view_detail.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/prepopulated_fields_js.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.ServiceTypeBrowser.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_frontalface_default.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.DomainBrowser.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/ppc64-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/views/templates/default_urlconf.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/multiple_input.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_jsonrpc/contrib/browse/templates/browse/index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_reset_form.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_lefteye_2splits.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_reset_email.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/multiple_hidden.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_russian_plate_number.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/object_history.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/lbpcascades/lbpcascade_frontalface.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/gis/templates/gis/openlayers.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/lbpcascades/lbpcascade_frontalface_improved.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_smorest/spec/templates/redoc.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/login.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_jsonrpc/contrib/browse/templates/layout.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/formsets/table.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/static/dir/index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/errors/list/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_reset_confirm.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/template_detail.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/gis/templates/gis/admin/openlayers.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/mips-n64-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/postgres/jinja2/postgres/widgets/split_array.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/flask_jsonrpc/contrib/browse/templates/browse/partials/response_object.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/split_datetime.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_license_plate_rus_16stages.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_frontalface_alt_tree.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/gis/templates/gis/admin/osm.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/change_form_object_tools.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.HostNameResolver.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/app_list.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/view_index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/auth/user/change_password.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/div.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/nav_sidebar.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/netaddr/ip/ipv6-unicast-address-assignments.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/table.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/textarea.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/s390-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_righteye_2splits.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/ppc-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/actions.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admindocs/templates/admin_doc/template_filter_index.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.AddressResolver.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/includes/fieldset.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/widgets/select.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_frontalcatface.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/errors/list/ul.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/widgets/attrs.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/time.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/widgets/input.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/pagination.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/input.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/views/templates/technical_500.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_eye_tree_eyeglasses.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.RecordBrowser.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/s390x-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/registration/password_reset_complete.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_smile.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/dbus-1/interfaces/org.freedesktop.Avahi.ServiceResolver.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/jinja2/django/forms/widgets/radio_option.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/edit_inline/stacked.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/404.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/opencv4/haarcascades/haarcascade_fullbody.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/widgets/many_to_many_raw_id.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/views/templates/technical_404.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/gdb/syscalls/aarch64-linux.xml (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/forms/templates/django/forms/widgets/multiwidget.html (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/contrib/admin/templates/admin/filter.html (-rw-r--r-- root root)</pre>
+<br />
+<br />
+<pre></span><span class="blue">==&gt</span></span> </span><span class="cyan"><a id="searchhttpfiles">Search http files</a></span></pre>
+<pre><hr class="mono" /></pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Found http related files:</span></pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/kvmapp/server/web/assets/http-DYeZYrT9.js (-rwxrw-r-- linuxbrew linuxbrew)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__init__.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__pycache__ (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__pycache__/__init__.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__pycache__/client.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__pycache__/cookiejar.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__pycache__/cookies.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/__pycache__/server.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/client.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/cookiejar.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/cookies.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/http/server.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/core/servers/__pycache__/basehttp.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/core/servers/basehttp.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__init__.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__pycache__ (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__pycache__/__init__.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__pycache__/cookie.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__pycache__/multipartparser.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__pycache__/request.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/__pycache__/response.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/cookie.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/multipartparser.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/request.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/http/response.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/middleware/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/middleware/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/utils/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/utils/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/views/decorators/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/django/views/decorators/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/engineio/async_drivers/__pycache__/aiohttp.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/engineio/async_drivers/aiohttp.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/h11/tests/__pycache__/test_against_stdlib_http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/h11/tests/test_against_stdlib_http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/core/servers/basehttp.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/http (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/http/__init__.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/http/cookie.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/http/multipartparser.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/http/request.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/http/response.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/middleware/http.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/utils/http.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/django-stubs/django-stubs/views/decorators/http.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/2/BaseHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/2/CGIHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/2/SimpleHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/2/httplib.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/http (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/http/__init__.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/http/client.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/http/cookiejar.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/http/cookies.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/stdlib/3/http/server.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/six/moves/BaseHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/six/moves/CGIHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/six/moves/SimpleHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/six/moves/http_client.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/six/moves/http_cookiejar.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/six/moves/http_cookies.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/tornado/httpclient.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/tornado/httpserver.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2/tornado/httputil.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/werkzeug/http.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/2and3/werkzeug/middleware/http_proxy.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/3/six/moves/BaseHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/3/six/moves/CGIHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/3/six/moves/SimpleHTTPServer.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/3/six/moves/http_client.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/3/six/moves/http_cookiejar.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/jedi/third_party/typeshed/third_party/3/six/moves/http_cookies.pyi (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/requests_toolbelt/auth/__pycache__/http_proxy_digest.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/requests_toolbelt/auth/http_proxy_digest.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/scapy/contrib/__pycache__/http2.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/scapy/contrib/http2.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/scapy/layers/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/scapy/layers/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tinyrpc/transports/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tinyrpc/transports/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/__pycache__/curl_httpclient.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/__pycache__/http1connection.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/__pycache__/httpclient.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/__pycache__/httpserver.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/__pycache__/httputil.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/__pycache__/simple_httpclient.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/curl_httpclient.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/http1connection.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/httpclient.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/httpserver.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/httputil.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/simple_httpclient.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/__pycache__/curl_httpclient_test.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/__pycache__/http1connection_test.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/__pycache__/httpclient_test.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/__pycache__/httpserver_test.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/__pycache__/httputil_test.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/__pycache__/simple_httpclient_test.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/curl_httpclient_test.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/http1connection_test.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/httpclient_test.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/httpserver_test.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/httputil_test.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/tornado/test/simple_httpclient_test.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/webargs/__pycache__/aiohttpparser.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/webargs/aiohttpparser.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websocket/__pycache__/_http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websocket/_http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websocket/tests/__pycache__/test_http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websocket/tests/test_http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websockets/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websockets/__pycache__/http11.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websockets/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websockets/http11.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websockets/legacy/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/websockets/legacy/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/werkzeug/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/werkzeug/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/werkzeug/middleware/__pycache__/http_proxy.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/werkzeug/middleware/http_proxy.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/werkzeug/sansio/__pycache__/http.cpython-311.pyc (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/werkzeug/sansio/http.py (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcl8.6/http1.0 (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcl8.6/http1.0/http.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcl8.6/http1.0/pkgIndex.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcl8/8.6/http-2.9.8.tm (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/http (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/http/autoproxy.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/http/pkgIndex.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpd (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpd/httpd.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpd/pkgIndex.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpwget (drwxrwxr-x root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpwget/pkgIndex.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpwget/wget.tcl (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/ncgi (drwxrwxr-x root root)</pre>
+<br />
+<br />
+<pre></span><span class="blue">==&gt</span></span> </span><span class="cyan"><a id="checkforapacheornginxrelatedfiles">Check for apache or nginx related files</a></span></pre>
+<pre><hr class="mono" /></pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Found Apache related files:</span></pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/vim/vim90/ftplugin/apache.vim (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/packaging-23.1.dist-info/LICENSE.APACHE (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/vim/vim90/syntax/apache.vim (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/vim/vim90/syntax/apachestyle.vim (-rw-r--r-- root root)</pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Found nginx related files:</span></pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/vim/vim90/syntax/nginx.vim (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/vim/vim90/ftplugin/nginx.vim (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/share/vim/vim90/indent/nginx.vim (-rw-r--r-- root root)</pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/etc/init.d/S50nginx (-rwxr-xr-x root root)</pre>
+<pre>[</span><span class="red">-</span>] No Lighttpd related files found</pre>
+<pre>[</span><span class="red">-</span>] No Cherokee related files found</pre>
+<pre>[</span><span class="green">+</span>]</span><span class="green"> Found HTTPd related files:</span></pre>
+<pre>    ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/tcllib1.21/httpd/httpd.tcl (-rw-r--r-- root root)</pre>
+<br />
+<br />
+<pre></span><span class="blue">==&gt</span></span> </span><span class="cyan"><a id="checkforphpini">Check for php.ini</a></span></pre>
+<pre><hr class="mono" /></pre>
+<pre>[</span><span class="red">-</span>] No php.ini found</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<a href="./s45_pass_file_check.html" title="./s45_pass_file_check.html" ><div id="buttonBack" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+<a href="./s25_kernel_check.html" title="./s25_kernel_check.html" ><div id="buttonForward" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div> </a>
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

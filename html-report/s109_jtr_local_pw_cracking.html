@@ -1,0 +1,389 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./index.html"><img class="inherit" id="logoImage" src="./style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./index.html">&laquo; Back to main</a>
+      <!-- navigation start --><a class="modul" href="#cracking_identified_password_hashes" title="#cracking_identified_password_hashes" >Cracking identified password hashes</a>
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</span><span class="blue">+</span>] </span><span class="cyan"><span class="bold"><a id="cracking_identified_password_hashes">Cracking identified password hashes</a></span></pre>
+<pre><span class="bold"><hr class="double" /></span></pre>
+<pre>The jtr local password cracking module cracks password hashes found in firmware using John the Ripper.</pre>
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">ld-musl-riscv64-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">ld-musl-riscv64.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">ld-musl-riscv64v0p7_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">ld-musl-riscv64v_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">boot.cpio</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDJhJDEwJHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkTS4wb1BlcmNaWFU5VlIkOXdyVC8ydVBqdFF2ai45M2hzZmtFMkJtRVEydVdOQjV6TEtpRDNURWdpMw==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXlkT2V5ZgRk</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllX29wZW4JZXllX2Nsb3NlDHdhcm5pbmdfc2lnbg==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllX3RyZWVfZXllZ2xhc3Nlcy54bWw=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllYmFsbHNfZGVsYXk9aGFwcHlfZXllYmFsbHNfZGVsYXk=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllc29mbmV0d29yayZleWVzb2ZuZXR3b3JrLmNvbQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllcyZleWVzLXdvcmtzLmNvbQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL21lOnNlY3JldEBz</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Q=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Qv</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Qy</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3QyLw==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2pvaG4lNDBleGFtcGxlLmNvbTpQJTQwU1NXT1JEQGxvY2FsaG9zdA==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2pvaG4lNDBleGFtcGxlLmNvbTpQJTQwU1NXT1JEQGxvY2FsaG9zdDI=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2pzY2htb2U6eHl6enlAd3d3LmJvZ3VzLm5ldA==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29t</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29t</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29tOjgwODA8L2E+eiJodHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29telM=</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwPC9hPnoiaHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJuYW1lOnBhc3N3b3JkQGhvc3QuY29t</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cHM6Ly91c2VybmFtZTpwYXNzd29yZEBob3N0LmNvbQ==</span> for further processing in </span><span class="orange">firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDJhJDEwJHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkTS4wb1BlcmNaWFU5VlIkOXdyVC8ydVBqdFF2ai45M2hzZmtFMkJtRVEydVdOQjV6TEtpRDNURWdpMw==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXlkT2V5ZgRk</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllX29wZW4JZXllX2Nsb3NlDHdhcm5pbmdfc2lnbg==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllX3RyZWVfZXllZ2xhc3Nlcy54bWw=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllYmFsbHNfZGVsYXk9aGFwcHlfZXllYmFsbHNfZGVsYXk=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllc29mbmV0d29yayZleWVzb2ZuZXR3b3JrLmNvbQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">ZXllcyZleWVzLXdvcmtzLmNvbQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL21lOnNlY3JldEBz</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Q=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Qv</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Qy</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3QyLw==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2pvaG4lNDBleGFtcGxlLmNvbTpQJTQwU1NXT1JEQGxvY2FsaG9zdA==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2pvaG4lNDBleGFtcGxlLmNvbTpQJTQwU1NXT1JEQGxvY2FsaG9zdDI=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2pzY2htb2U6eHl6enlAd3d3LmJvZ3VzLm5ldA==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29t</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29t</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29tOjgwODA8L2E+eiJodHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29telM=</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwPC9hPnoiaHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJuYW1lOnBhc3N3b3JkQGhvc3QuY29t</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cHM6Ly91c2VybmFtZTpwYXNzd29yZEBob3N0LmNvbQ==</span> for further processing in </span><span class="orange">16777728-960496128.extfs</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">$5$M.0oPercZXU9VR$9wrT/2uPjtQvj.93hsfkE2BmEQ2uWNB5zLKiD3TEgi3</span> for further processing in </span><span class="orange">shadow</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">root:$5$M.0oPercZXU9VR$9wrT/2uPjtQvj.93hsfkE2BmEQ2uWNB5zLKiD3TEgi3:::::::</span> for further processing in </span><span class="orange">shadow</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">ld-musl-riscv64-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">ld-musl-riscv64.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64v0p7_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">ld-musl-riscv64v0p7_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64v0p7_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64v_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">ld-musl-riscv64v_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64v_xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead-sf.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">ld-musl-riscv64xthead.so.1</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://username:passwordLINKcommat;host.com" title="http://username:passwordLINKcommat;host.com" target="_blank" >http://username:passwordhttp://username:password&commat;host.comcommat;host.com</a></span> for further processing in </span><span class="orange">url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJuYW1lOnBhc3N3b3JkQGhvc3QuY29t</span> for further processing in </span><span class="orange">url.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://username:passwordLINKcommat;host.com" title="http://username:passwordLINKcommat;host.com" target="_blank" >http://username:passwordhttp://username:password&commat;host.comcommat;host.com</a></span> for further processing in </span><span class="orange">url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29t</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29tOjgwODA8L2E+eiJodHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29telM=</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwPC9hPnoiaHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</span> for further processing in </span><span class="orange">escape_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL21lOnNlY3JldEBz</span> for further processing in </span><span class="orange">httpclient_test.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://userid:passwordLINKcommat;example.com" title="http://userid:passwordLINKcommat;example.com" target="_blank" >http://userid:passwordhttp://userid:password&commat;example.comcommat;example.com</a></span> for further processing in </span><span class="orange">escape_test.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">http://userid:password&commat;example.com:8080\&gt;http://userid:password&commat;example.com</span> for further processing in </span><span class="orange">escape_test.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">http://userid:password&commat;example.com\&gt;http://userid:password&commat;example.com</span> for further processing in </span><span class="orange">escape_test.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">http://userid&commat;example.com:8080\&gt;http://userid&commat;example.com</span> for further processing in </span><span class="orange">escape_test.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cHM6Ly91c2VybmFtZTpwYXNzd29yZEBob3N0LmNvbQ==</span> for further processing in </span><span class="orange">url.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="https://username:passwordLINKcommat;host.com" title="https://username:passwordLINKcommat;host.com" target="_blank" >https://username:passwordhttps://username:password&commat;host.comcommat;host.com</a></span> for further processing in </span><span class="orange">url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Q=</span> for further processing in </span><span class="orange">test_url.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Qv</span> for further processing in </span><span class="orange">test_url.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3Qy</span> for further processing in </span><span class="orange">test_url.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">aHR0cDovL2E6YkBsb2NhbGhvc3QyLw==</span> for further processing in </span><span class="orange">test_url.cpython-311.pyc</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://a:bLINKcommat;localhost" title="http://a:bLINKcommat;localhost" target="_blank" >http://a:bhttp://a:b&commat;localhostcommat;localhost</a></span> for further processing in </span><span class="orange">test_url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://a:bLINKcommat;localhost/" title="http://a:bLINKcommat;localhost/" target="_blank" >http://a:bhttp://a:b&commat;localhost/commat;localhost/</a></span> for further processing in </span><span class="orange">test_url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://a:bLINKcommat;localhost2" title="http://a:bLINKcommat;localhost2" target="_blank" >http://a:bhttp://a:b&commat;localhost2commat;localhost2</a></span> for further processing in </span><span class="orange">test_url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://a:bLINKcommat;localhost2/" title="http://a:bLINKcommat;localhost2/" target="_blank" >http://a:bhttp://a:b&commat;localhost2/commat;localhost2/</a></span> for further processing in </span><span class="orange">test_url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://john%40example.com:P%40SSWORDLINKcommat;localhost" title="http://john%40example.com:P%40SSWORDLINKcommat;localhost" target="_blank" >http://john%40example.com:P%40SSWORDhttp://john%40example.com:P%40SSWORD&commat;localhostcommat;localhost</a></span> for further processing in </span><span class="orange">test_url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://john%40example.com:P%40SSWORDLINKcommat;localhost2" title="http://john%40example.com:P%40SSWORDLINKcommat;localhost2" target="_blank" >http://john%40example.com:P%40SSWORDhttp://john%40example.com:P%40SSWORD&commat;localhost2commat;localhost2</a></span> for further processing in </span><span class="orange">test_url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://jschmoe:xyzzyLINKcommat;www.bogus.net" title="http://jschmoe:xyzzyLINKcommat;www.bogus.net" target="_blank" >http://jschmoe:xyzzyhttp://jschmoe:xyzzy&commat;www.bogus.netcommat;www.bogus.net</a></span> for further processing in </span><span class="orange">http-2.9.8.tm</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDJhJDEwJHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4</span> for further processing in </span><span class="orange">sshd</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange">JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</span> for further processing in </span><span class="orange">libc.so</span></pre>
+<pre>[</span><span class="orange">*</span>] Found password data </span><span class="orange"><a href="http://username:passwordLINKcommat;host.com" title="http://username:passwordLINKcommat;host.com" target="_blank" >http://username:passwordhttp://username:password&commat;host.comcommat;host.com</a></span> for further processing in </span><span class="orange">url.py</span></pre>
+<pre>[</span><span class="orange">*</span>] Starting jtr with a runtime of </span><span class="orange">3600</span> on the following data:</pre>
+<pre>$1$abcd0123$9Qcg8DyviekV3tDGMZynJ1</pre>
+<pre>$5$M.0oPercZXU9VR$9wrT/2uPjtQvj.93hsfkE2BmEQ2uWNB5zLKiD3TEgi3</pre>
+<pre>JDEkYWJjZDAxMjMkOVFjZzhEeXZpZWtWM3RER01aeW5KMQ==</pre>
+<pre>JDJhJDEwJHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4</pre>
+<pre>JDUkTS4wb1BlcmNaWFU5VlIkOXdyVC8ydVBqdFF2ai45M2hzZmtFMkJtRVEydVdOQjV6TEtpRDNURWdpMw==</pre>
+<pre>JDUkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSQzVmZEalB0MDVWSEZuNDdDL29qRlo2S1JQWXJPamoxbExiSC5ka0YzYlo2</pre>
+<pre>JDYkcm91bmRzPTEyMzQkYWJjMDEyMzQ1Njc4OSRCQ3B0OHpMcmMvUmN5dVhtQ0RPRTFBTHFNWEIyTUg2bjFnODkxSGhGajgudzdMeEd2LkZUa3FxNlZ4Yy9rbTNZMGpFMGoyNGpZNVBJdi9vT3U2cmVnMQ==</pre>
+<pre>ZXlkT2V5ZgRk</pre>
+<pre>ZXllX29wZW4JZXllX2Nsb3NlDHdhcm5pbmdfc2lnbg==</pre>
+<pre>ZXllX3RyZWVfZXllZ2xhc3Nlcy54bWw=</pre>
+<pre>ZXllYmFsbHNfZGVsYXk9aGFwcHlfZXllYmFsbHNfZGVsYXk=</pre>
+<pre>ZXllc29mbmV0d29yayZleWVzb2ZuZXR3b3JrLmNvbQ==</pre>
+<pre>ZXllcyZleWVzLXdvcmtzLmNvbQ==</pre>
+<pre>aHR0cDovL21lOnNlY3JldEBz</pre>
+<pre>aHR0cDovL2E6YkBsb2NhbGhvc3Q=</pre>
+<pre>aHR0cDovL2E6YkBsb2NhbGhvc3Qv</pre>
+<pre>aHR0cDovL2E6YkBsb2NhbGhvc3Qy</pre>
+<pre>aHR0cDovL2E6YkBsb2NhbGhvc3QyLw==</pre>
+<pre>aHR0cDovL2pvaG4lNDBleGFtcGxlLmNvbTpQJTQwU1NXT1JEQGxvY2FsaG9zdA==</pre>
+<pre>aHR0cDovL2pvaG4lNDBleGFtcGxlLmNvbTpQJTQwU1NXT1JEQGxvY2FsaG9zdDI=</pre>
+<pre>aHR0cDovL2pzY2htb2U6eHl6enlAd3d3LmJvZ3VzLm5ldA==</pre>
+<pre>aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</pre>
+<pre>aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbQ==</pre>
+<pre>aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbSI+aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</pre>
+<pre>aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29t</pre>
+<pre>aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbTwvYT56Rm1lc3NhZ2U6Ly8lM2MzMzBlN2Y4NDA5NzI2cjZhNGJhNzhka2YxZmQ3MTQyMGMxYmY2ZmZAbWFpbC5nbWFpbC5jb20=</pre>
+<pre>aHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</pre>
+<pre>aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29t</pre>
+<pre>aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwIj5odHRwOi8vdXNlcmlkQGV4YW1wbGUuY29tOjgwODA8L2E+eiJodHRwOi8vdXNlcmlkOnBhc3N3b3JkQGV4YW1wbGUuY29telM=</pre>
+<pre>aHR0cDovL3VzZXJpZEBleGFtcGxlLmNvbTo4MDgwPC9hPnoiaHR0cDovL3VzZXJpZDpwYXNzd29yZEBleGFtcGxlLmNvbXpT</pre>
+<pre>aHR0cDovL3VzZXJuYW1lOnBhc3N3b3JkQGhvc3QuY29t</pre>
+<pre>aHR0cHM6Ly91c2VybmFtZTpwYXNzd29yZEBob3N0LmNvbQ==</pre>
+<pre><a href="http://a:bLINKcommat;localhost" title="http://a:bLINKcommat;localhost" target="_blank" >http://a:bhttp://a:b&commat;localhostcommat;localhost</a></pre>
+<pre><a href="http://a:bLINKcommat;localhost/" title="http://a:bLINKcommat;localhost/" target="_blank" >http://a:bhttp://a:b&commat;localhost/commat;localhost/</a></pre>
+<pre><a href="http://a:bLINKcommat;localhost2" title="http://a:bLINKcommat;localhost2" target="_blank" >http://a:bhttp://a:b&commat;localhost2commat;localhost2</a></pre>
+<pre><a href="http://a:bLINKcommat;localhost2/" title="http://a:bLINKcommat;localhost2/" target="_blank" >http://a:bhttp://a:b&commat;localhost2/commat;localhost2/</a></pre>
+<pre><a href="http://john%40example.com:P%40SSWORDLINKcommat;localhost" title="http://john%40example.com:P%40SSWORDLINKcommat;localhost" target="_blank" >http://john%40example.com:P%40SSWORDhttp://john%40example.com:P%40SSWORD&commat;localhostcommat;localhost</a></pre>
+<pre><a href="http://john%40example.com:P%40SSWORDLINKcommat;localhost2" title="http://john%40example.com:P%40SSWORDLINKcommat;localhost2" target="_blank" >http://john%40example.com:P%40SSWORDhttp://john%40example.com:P%40SSWORD&commat;localhost2commat;localhost2</a></pre>
+<pre><a href="http://jschmoe:xyzzyLINKcommat;www.bogus.net" title="http://jschmoe:xyzzyLINKcommat;www.bogus.net" target="_blank" >http://jschmoe:xyzzyhttp://jschmoe:xyzzy&commat;www.bogus.netcommat;www.bogus.net</a></pre>
+<pre><a href="http://userid:passwordLINKcommat;example.com" title="http://userid:passwordLINKcommat;example.com" target="_blank" >http://userid:passwordhttp://userid:password&commat;example.comcommat;example.com</a></pre>
+<pre>http://userid:password&commat;example.com:8080\&gt;http://userid:password&commat;example.com</pre>
+<pre>http://userid:password&commat;example.com\&gt;http://userid:password&commat;example.com</pre>
+<pre>http://userid&commat;example.com:8080\&gt;http://userid&commat;example.com</pre>
+<pre><a href="http://username:passwordLINKcommat;host.com" title="http://username:passwordLINKcommat;host.com" target="_blank" >http://username:passwordhttp://username:password&commat;host.comcommat;host.com</a></pre>
+<pre><a href="https://username:passwordLINKcommat;host.com" title="https://username:passwordLINKcommat;host.com" target="_blank" >https://username:passwordhttps://username:password&commat;host.comcommat;host.com</a></pre>
+<pre>root:$5$M.0oPercZXU9VR$9wrT/2uPjtQvj.93hsfkE2BmEQ2uWNB5zLKiD3TEgi3:::::::</pre>
+<br />
+<br />
+<pre>Warning: detected hash type "md5crypt", but the string is also recognized as "md5crypt-long"</pre>
+<pre>Use the "--format=md5crypt-long" option to force loading these as that type instead</pre>
+<pre>Warning: only loading hashes of type "md5crypt", but also saw type "sha256crypt"</pre>
+<pre>Use the "--format=sha256crypt" option to force loading hashes of that type instead</pre>
+<pre>Using default input encoding: UTF-8</pre>
+<pre>Loaded 1 password hash (md5crypt, crypt(3) $1$ (and variants) [MD5 256/256 AVX2 8x3])</pre>
+<pre>Will run 16 OpenMP threads</pre>
+<pre>Proceeding with single, rules:Single</pre>
+<pre>Press Ctrl-C to abort, or send SIGUSR1 to john process for status</pre>
+<pre>Almost done: Processing the remaining buffered candidate passwords, if any.</pre>
+<pre>Proceeding with wordlist:/usr/share/john/password.lst</pre>
+<pre>Proceeding with incremental:ASCII</pre>
+<pre>0g 0:00:02:00  3/3 0g/s 26373p/s 26373c/s 26373C/s ccrod..lhdii</pre>
+<pre>0g 0:00:04:00  3/3 0g/s 27286p/s 27286c/s 27286C/s jitet2..jh25ag</pre>
+<pre>0g 0:00:06:00  3/3 0g/s 27532p/s 27532c/s 27532C/s kkch1t..kkbe13</pre>
+<pre>0g 0:00:08:00  3/3 0g/s 27658p/s 27658c/s 27658C/s redstik..rebek25</pre>
+<pre>0g 0:00:10:00  3/3 0g/s 27644p/s 27644c/s 27644C/s amp2664..ariasik</pre>
+<pre>0g 0:00:12:00  3/3 0g/s 27541p/s 27541c/s 27541C/s mee141..mylwwf</pre>
+<pre>0g 0:00:14:00  3/3 0g/s 27624p/s 27624c/s 27624C/s krbro2..kumua2</pre>
+<pre>0g 0:00:16:00  3/3 0g/s 27715p/s 27715c/s 27715C/s hsntu1..hs4169</pre>
+<pre>0g 0:00:18:00  3/3 0g/s 27802p/s 27802c/s 27802C/s 048lmj..04jp76</pre>
+<pre>0g 0:00:20:00  3/3 0g/s 31746p/s 31746c/s 31746C/s ls10r..lsd40</pre>
+<pre>0g 0:00:22:00  3/3 0g/s 42349p/s 42349c/s 42349C/s gsxio..gsfpb</pre>
+<pre>0g 0:00:24:00  3/3 0g/s 58539p/s 58539c/s 58539C/s efmc7..euln1</pre>
+<pre>0g 0:00:26:00  3/3 0g/s 71659p/s 71659c/s 71659C/s l0543vj..l06376m</pre>
+<pre>0g 0:00:28:00  3/3 0g/s 83075p/s 83075c/s 83075C/s bk13r3..bkbr6x</pre>
+<pre>0g 0:00:30:00  3/3 0g/s 92870p/s 92870c/s 92870C/s modym0r..mohomge</pre>
+<pre>0g 0:00:32:00  3/3 0g/s 102807p/s 102807c/s 102807C/s 040110406..041802411</pre>
+<pre>0g 0:00:34:00  3/3 0g/s 114014p/s 114014c/s 114014C/s fujtop1..fujhsh7</pre>
+<pre>0g 0:00:36:00  3/3 0g/s 127254p/s 127254c/s 127254C/s enrgog..ennow*</pre>
+<pre>0g 0:00:38:00  3/3 0g/s 139474p/s 139474c/s 139474C/s k1762bc..k176aki</pre>
+<pre>0g 0:00:40:00  3/3 0g/s 149829p/s 149829c/s 149829C/s tmimpl3..tmim17a</pre>
+<pre>0g 0:00:42:00  3/3 0g/s 159471p/s 159471c/s 159471C/s tu3ap..thwjj</pre>
+<pre>0g 0:00:44:00  3/3 0g/s 167367p/s 167367c/s 167367C/s dhsh1995..dhshbika</pre>
+<pre>0g 0:00:46:00  3/3 0g/s 175026p/s 175026c/s 175026C/s bfsnku..bft7tj</pre>
+<pre>0g 0:00:48:00  3/3 0g/s 180892p/s 180892c/s 180892C/s 190413420..190403408</pre>
+<pre>0g 0:00:50:00  3/3 0g/s 186886p/s 186886c/s 186886C/s wcbugz..wcbhmi</pre>
+<pre>0g 0:00:52:00  3/3 0g/s 192382p/s 192382c/s 192382C/s dareboal..davicidd</pre>
+<pre>0g 0:00:54:00  3/3 0g/s 197985p/s 197985c/s 197985C/s tw104238..tw106511</pre>
+<pre>0g 0:00:56:00  3/3 0g/s 202892p/s 202892c/s 202892C/s kmog22d..kmosa1n</pre>
+<pre>0g 0:00:58:00  3/3 0g/s 206716p/s 206716c/s 206716C/s poctumm9..pocieama</pre>
+<pre>0g 0:01:00:00  3/3 0g/s 210782p/s 210782c/s 210782C/s 3w466..3w22o</pre>
+<pre>0g 0:01:02:00  3/3 0g/s 214742p/s 214742c/s 214742C/s dotengkw..dotb244j</pre>
+<pre>Wait...0g 0:01:03:16  3/3 0g/s 216749p/s 216749c/s 216749C/s 6t3w25..6t3doo</pre>
+<pre>Session aborted</pre>
+<br />
+<br />
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] John the ripper final status: </span><span class="orange">0 password hashes cracked, 3 left</span></pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<a href="./s115_usermode_emulator.html" title="./s115_usermode_emulator.html" ><div id="buttonBack" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+<a href="./s108_stacs_password_search.html" title="./s108_stacs_password_search.html" ><div id="buttonForward" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div> </a>
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

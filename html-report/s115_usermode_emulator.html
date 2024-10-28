@@ -1,0 +1,1212 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./index.html"><img class="inherit" id="logoImage" src="./style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./index.html">&laquo; Back to main</a>
+      <!-- navigation start --><a class="modul" href="#qemu_user-mode_emulation" title="#qemu_user-mode_emulation" >Qemu user-mode emulation</a><a class="submodul" href="#cleanupphase" title="#cleanupphase" >Cleanup phase</a>
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</span><span class="blue">+</span>] </span><span class="cyan"><span class="bold"><a id="qemu_user-mode_emulation">Qemu user-mode emulation</a></span></pre>
+<pre><span class="bold"><hr class="double" /></span></pre>
+<pre>The usermode emulator module emulates exectuables from the firmware with Qemu to get version information.</pre>
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] Using </span><span class="orange">jchroot</span> for building more secure chroot environments</pre>
+<pre>[</span><span class="orange">*</span>] This module creates a working copy of the firmware filesystem in the log directory /logs.</pre>
+<br />
+<pre>[</span><span class="orange">*</span>] Create a firmware backup for emulation ...</pre>
+<pre>[</span><span class="orange">*</span>] Firmware backup for emulation created in </span><span class="orange">/logs/s115_usermode_emulator/firmware</span></pre>
+<pre>[</span><span class="orange">*</span>] Root directory auto detection for </span><span class="orange">/logs/s115_usermode_emulator/firmware</span> (could take some time)</pre>
+<br />
+<a class="refmodul" href="./s05_firmware_details.html#anchor_file_dirs" title="LINK" ><pre>[</span><span class="orange">*</span>] Found </span><span class="orange">2</span> different root directories:</pre></a>
+
+<a class="refmodul" href="./s05_firmware_details.html#anchor_file_dirs" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found the following root directory: </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract</span><span class="green"> via </span><span class="orange">binary interpreter / dir names / busybox</span><span class="green">.</span></pre></a>
+
+<a class="refmodul" href="./s05_firmware_details.html#anchor_file_dirs" title="LINK" ><pre>[</span><span class="green">+</span>]</span><span class="green"> Found the following root directory: </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr</span><span class="green"> via </span><span class="orange">binary interpreter / dir names / busybox</span><span class="green">.</span></pre></a>
+
+<pre>[</span><span class="orange">*</span>] Detected </span><span class="orange">2</span> root directories:</pre>
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] Detected root path: </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract</span></pre>
+<pre>[</span><span class="orange">*</span>] Running emulation processes in </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract</span> root path (</span><span class="orange">1/2</span>).</pre>
+<pre>[</span><span class="orange">*</span>] Create unique binary array for </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract</span> root path (</span><span class="orange">1/2</span>).</pre>
+<pre>[</span><span class="orange">*</span>] Testing </span><span class="orange">533</span> unique executables in root dirctory: </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract</span> (</span><span class="orange">1/2</span>).</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_xor</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_filterandcsc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_sad</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_query</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_add</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_ncc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_bgmodel</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_cannyedge</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_and</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_overlay</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_thresh_U16</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_dilate</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_fisheye</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/test_mmf</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_gradfg</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_cannyhysedge</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_vdecvo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_resize</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_gmm2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/server/NanoKVM-Server</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_sub</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_map</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_or</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_bernsen</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_dma</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_ordstatfilter</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_vio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_framediffmotion</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_region</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_filter</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_venc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_thresh_S16</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_integ</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_erode</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/jpg_stream_demo_release/dl_lib/jpg_stream_demo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/jpg_stream_demo_release/dl_lib/libjson-c.so.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/jpg_stream_demo_release/jpg_stream_demo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/ive_stress</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_vcodec</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_dsi</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_stcandicorner</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_magandang</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_vdec</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_thresh</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_lbp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_hist</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_csc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_normgrad</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_16bitto8bit</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_gmm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sensor_test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_audio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./mnt/system/usr/bin/sample_sobel</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_core</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/avahi-resolve</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/airolib-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/out123</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gio-querymodules</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_imgcodecs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mkimage</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/cifsiostat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/udevadm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/vmtouch</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-binding-tool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dhrystone</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mpstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_calib3d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/pcre2grep</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ssh-agent</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/pcre2test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lzmainfo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/pidstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mpris-proxy</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_features2d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/traceroute</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bzip2recover</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gdbserver</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/delv</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bluealsa-rfcomm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xxd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rctest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gdb</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bt-adapter</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gatttool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ssh</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/macchanger</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/filan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/aircrack-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-launch</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/evtest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_flann</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bsdunzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/python3.11</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ramspeed</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ascii_invaders</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/packetforge-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bt-obex</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lrzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-send</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/busybox</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/procan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/chattr</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dtc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/pixz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gsettings</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/htop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_stitching</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/tmux</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_highgui</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xorcurses</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mosh-server</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mpg123-id3dump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mouse-dpi-tool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zstd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dl_lib/libopencv_imgcodecs.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dl_lib/libjson-c.so.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dl_lib/libopencv_imgproc.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dl_lib/libopencv_core.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dl_lib/libopencv_highgui.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rtc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fbgrab</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bluealsa</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/iperf3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/airdecap-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sdptool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-update-activation-environment</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ssdp-scan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ping</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/convert-dtsv0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/arecord</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ssh-keygen</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/wg</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zipsplit</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ffmpeg</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gapplication</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ffprobe</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sadf</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gnuchess</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/avahi-set-host-name</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/qrencode</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/setserial</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/buddy-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_imgproc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bt-agent</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/brotli</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mksquashfs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/picocom</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fdtoverlay</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_calib3d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bt-device</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/curl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xmlcatalog</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_videoio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lib/libz.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_video</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ipmitool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/tapestat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/nn_runner</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hcitool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/alsamixer</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/tailscale</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/openssl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bluemoon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_photo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/iostat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bunzip2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hcitop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gdbus</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_features2d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rtc-sync</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hcidump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rsync</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lzop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hciattach</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fdtput</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mdig</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/besside-ng-crawler</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/memtester</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-run-session</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/expect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lsattr</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ziptool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fbpattern</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/avahi-publish</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/libevdev-tweak-device</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/empty</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xzdec</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/stress-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lzmadec</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rtc-range</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/isotest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_objdetect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/amixer</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mpg123-strip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/7zr</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_imgcodecs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/unzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/tracepath</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/named-rrchecker</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hciconfig</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fdtdump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hostapd_cli</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bluealsa-aplay</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/makeivs-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_core</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gresource</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/touchpad-edge-detector</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/scp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/btmon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bluetoothctl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/clockdiff</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zipcloak</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/file</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ssh-keyscan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-test-tool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/gio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/airdecloak-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xsltproc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/cache_calibrator</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zipcmp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zipnote</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zipmerge</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ssh-add</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/wpaclean</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/tclsh8.6</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/kstats</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ciptool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fdtget</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/unsquashfs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/model_runner</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/nn_yolov5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sftp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_photo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_video</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ivstools</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-monitor</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_imgproc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/avahi-browse</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mosh-client</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/hex2hcd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/l2ping</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mpg123</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_objdetect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/lz4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sqlite3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/xmllint</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_stitching</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_dnn</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/socat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/a2dpconf</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/fbbar</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/rfcomm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-uuidgen</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/tcpdump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/arpaname</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/bt-network</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/strace</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/ntpdate</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/mhz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_ml</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/frpc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/btattach</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/l2test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-cleanup-sockets</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_test_dnn</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/zip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/unrar</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/vim</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/input-event-daemon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/sar</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/dbus-daemon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/opencv_perf_videoio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/pigz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/bin/aserver</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/sshd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/rdma</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/wd_identify</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/spidev_test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/e2freefrag</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/dcb</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/parted</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/wesside-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/e2fsck</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/nstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/dump.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ifrename</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/devlink</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tkiptun-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/airodump-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/rfkill</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/avahi-daemon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/dumpimage</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/iwconfig</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/dnssec-cds</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./usr/sbin/killall5</span> (</span><span class="orange">300/533</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/nft</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tune2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/chat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/rtmon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/pppdump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/avahi-dnsconfd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/airserv-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/partprobe</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ntpd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/exfat2img</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/fw_printenv</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/hostapd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/mke2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/wpa_cli</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/badblocks</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/e2undo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/rtacct</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/e4crypt</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/airtun-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/fsck.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/arping</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/vdpa</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./usr/sbin/init</span> (</span><span class="orange">324/533</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/aireplay-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/airbase-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/easside-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/pppd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tipc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/resize2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/fsck</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ssdpd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tailscaled</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tincd</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./usr/sbin/halt</span> (</span><span class="orange">335/533</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/xtables-nft-multi</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/udevd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/exfatlabel</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/mklost+found</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/lnstat</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./usr/sbin/shutdown</span> (</span><span class="orange">341/533</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tune.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/filefrag</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/bridge</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/dumpe2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/haveged</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/watchdog</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/logsave</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/xtables-legacy-multi</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/wpa_passphrase</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/dnsmasq</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/wd_keepalive</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ss</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/pppstats</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/pppoe-discovery</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ethtool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/wpa_supplicant</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/genl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/airventriloquist-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/mkfs.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/iw</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/tc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/ifstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/besside-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/sbin/alsactl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libtiff.so.6.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libncursesw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libfts.so.0.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libhistory.so.8.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libss.so.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libmd.so.0.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libswscale.so.5.9.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpython3.11.so.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libtbbmalloc_proxy.so.2.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libuv.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_photo.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libevdev.so.2.3.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/liblzma.so.5.4.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libparted-fs-resize.so.0.0.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libcurl.so.4.8.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libdaemon.so.0.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavfilter.so.7.110.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libz.so.1.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libbrotlienc.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_imgproc.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/ld-musl-riscv64.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/ld-musl-riscv64-sf.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libtbbmalloc.so.2.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_video.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libmpg123.so.0.48.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnl-idiag-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libexslt.so.0.8.21</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_stitching.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libmenuw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libbrotlicommon.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgmodule-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgobject-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libip6tc.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libzip.so.5.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libqrencode.so.4.1.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnl-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgomp.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libjpeg.so.9.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavahi-libevent.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/ld-musl-riscv64v_xthead.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/sa/sadc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgmp.so.10.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnftables.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libformw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libxtables.so.12.7.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libssl.so.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libexpat.so.1.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavahi-client.so.3.2.9</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnftnl.so.11.6.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libuuid.so.1.3.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_calib3d.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_videoio.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/fido_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/collect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/ata_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/cdrom_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/v4l_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/dmi_memory_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/hid2hci</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/scsi_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/udev/mtd_probe</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libprotobuf.so.32.0.12</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgio-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_imgcodecs.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libout123.so.0.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libdbus-glib-1.so.2.3.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libusb-1.0.so.0.3.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_objdetect.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libip4tc.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/liblz4.so.1.9.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libxslt.so.1.1.38</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libreadline.so.8.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavcodec.so.58.134.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_core.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgthread-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavresample.so.4.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_ml.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libbluetooth.so.3.19.9</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpcre2-8.so.0.11.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libstdc++.so.6.0.28</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/ld-musl-riscv64xthead.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libcom_err.so.2.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libatopology.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavahi-glib.so.1.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libext2fs.so.2.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_features2d.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libevent_openssl-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libzstd.so.1.5.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgmpxx.so.4.7.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libkmod.so.2.4.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libfl.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libtbb.so.12.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libprotobuf-lite.so.32.0.12</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libmagic.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libdouble-conversion.so.3.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/liblzo2.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libwebp.so.7.1.8</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpcap.so.1.10.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnl-route-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libglib-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpostproc.so.55.9.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libevent_core-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libmnl.so.0.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnl-nf-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/ld-musl-riscv64xthead-sf.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnl-xfrm-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libblkid.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libffi.so.8.1.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavahi-gobject.so.0.0.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libudev.so.1.6.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libbrotlidec.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsharpyuv.so.0.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavformat.so.58.76.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libyaml-0.so.2.0.9</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libiw.so.30</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libparted.so.2.0.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libbz2.so.1.0.8</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libswresample.so.3.9.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libevent-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libarchive.so.13.7.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libbsd.so.0.11.7</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libxml2.so.2.11.6</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libiperf.so.0.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libnl-genl-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsbc.so.1.3.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libatomic_ops.so.1.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpng16.so.16.40.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libevent_pthreads-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libe2p.so.2.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/ld-musl-riscv64v0p7_xthead.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_highgui.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libgcc_s.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libcrypto.so.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsqlite3.so.0.8.6</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavahi-core.so.7.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libwebsockets.so.19</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libtiffxx.so.6.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpopt.so.0.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsnappy.so.1.1.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libasound.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpcre2-posix.so.3.0.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavutil.so.56.70.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsyn123.so.0.2.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libatomic.so.1.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libdbus-1.so.3.32.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libevent_extra-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libatomic_ops_gpl.so.1.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsz.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_dnn.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavdevice.so.58.13.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libsmartcols.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libzmq.so.5.2.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libopencv_flann.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libpanelw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libhavege.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/lib/libavahi-common.so.3.5.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/ssh-pkcs11-helper</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/sftp-server</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/dbus-daemon-launch-helper</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/gio-launch-desktop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/lzo/examples/lzotest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/lzo/examples/testmini</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/lzo/examples/lzopack</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/lzo/examples/simple</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/bluetooth/bluetoothd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./usr/libexec/ssh-keysign</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./kvmapp/server/NanoKVM-Server</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./kvmapp/kvm_system/kvm_system</pre>
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] Detected root path: </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr</span></pre>
+<pre>[</span><span class="orange">*</span>] Running emulation processes in </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr</span> root path (</span><span class="orange">2/2</span>).</pre>
+<pre>[</span><span class="orange">*</span>] Create unique binary array for </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr</span> root path (</span><span class="orange">2/2</span>).</pre>
+<pre>[</span><span class="orange">*</span>] Testing </span><span class="orange">478</span> unique executables in root dirctory: </span><span class="orange">/logs/s115_usermode_emulator/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr</span> (</span><span class="orange">2/2</span>).</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_core</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/avahi-resolve</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/airolib-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/out123</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gio-querymodules</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_imgcodecs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mkimage</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/cifsiostat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/udevadm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/vmtouch</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-binding-tool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dhrystone</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mpstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_calib3d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/pcre2grep</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ssh-agent</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/pcre2test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lzmainfo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/pidstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mpris-proxy</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_features2d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/traceroute</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bzip2recover</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gdbserver</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/delv</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bluealsa-rfcomm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xxd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rctest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gdb</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bt-adapter</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gatttool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ssh</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/macchanger</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/filan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/aircrack-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-launch</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/evtest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_flann</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bsdunzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/python3.11</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ramspeed</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ascii_invaders</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/packetforge-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bt-obex</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lrzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-send</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/busybox</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/procan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/chattr</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dtc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/pixz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gsettings</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/htop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_stitching</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/tmux</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_highgui</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xorcurses</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mosh-server</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mpg123-id3dump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mouse-dpi-tool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zstd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dl_lib/libopencv_imgcodecs.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dl_lib/libjson-c.so.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dl_lib/libopencv_imgproc.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dl_lib/libopencv_core.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dl_lib/libopencv_highgui.so.408</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rtc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fbgrab</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bluealsa</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/iperf3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/airdecap-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sdptool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-update-activation-environment</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ssdp-scan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ping</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/convert-dtsv0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/arecord</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ssh-keygen</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/wg</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zipsplit</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ffmpeg</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gapplication</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ffprobe</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sadf</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gnuchess</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/avahi-set-host-name</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/qrencode</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/setserial</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/buddy-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_imgproc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bt-agent</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/brotli</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mksquashfs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/picocom</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fdtoverlay</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_calib3d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bt-device</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/curl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xmlcatalog</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_videoio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lib/libz.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_video</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ipmitool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/tapestat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/nn_runner</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hcitool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/alsamixer</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/tailscale</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/openssl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bluemoon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_photo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/iostat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bunzip2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hcitop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gdbus</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_features2d</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rtc-sync</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hcidump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rsync</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lzop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hciattach</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fdtput</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mdig</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/besside-ng-crawler</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/memtester</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-run-session</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/expect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lsattr</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ziptool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fbpattern</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/avahi-publish</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/libevdev-tweak-device</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/empty</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xzdec</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/stress-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lzmadec</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rtc-range</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/isotest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_objdetect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/amixer</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mpg123-strip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/7zr</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_imgcodecs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/unzip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/tracepath</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/named-rrchecker</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hciconfig</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fdtdump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hostapd_cli</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bluealsa-aplay</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/makeivs-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_core</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gresource</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/touchpad-edge-detector</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/scp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/btmon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bluetoothctl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/clockdiff</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zipcloak</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/file</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ssh-keyscan</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-test-tool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/gio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/airdecloak-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xsltproc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/cache_calibrator</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zipcmp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zipnote</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zipmerge</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ssh-add</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/wpaclean</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/tclsh8.6</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/kstats</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ciptool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fdtget</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/unsquashfs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/model_runner</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/nn_yolov5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sftp</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_photo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_video</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ivstools</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-monitor</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_imgproc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/avahi-browse</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mosh-client</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/hex2hcd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/l2ping</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mpg123</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_objdetect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/lz4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sqlite3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/xmllint</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_stitching</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_dnn</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/socat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/a2dpconf</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/fbbar</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/rfcomm</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-uuidgen</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/tcpdump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/arpaname</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/bt-network</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/strace</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/ntpdate</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/mhz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_ml</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/frpc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/btattach</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/l2test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-cleanup-sockets</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_test_dnn</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/zip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/unrar</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/vim</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/input-event-daemon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/sar</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/dbus-daemon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/opencv_perf_videoio</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/pigz</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./bin/aserver</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/sshd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/rdma</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/wd_identify</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/spidev_test</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/e2freefrag</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/dcb</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/parted</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/wesside-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/e2fsck</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/nstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/dump.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ifrename</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/devlink</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tkiptun-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/airodump-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/rfkill</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/avahi-daemon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/dumpimage</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/iwconfig</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/dnssec-cds</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./sbin/killall5</span> (</span><span class="orange">247/478</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/nft</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tune2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ip</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/chat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/rtmon</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/pppdump</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/avahi-dnsconfd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/airserv-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/partprobe</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ntpd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/exfat2img</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/fw_printenv</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/hostapd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/mke2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/wpa_cli</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/badblocks</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/e2undo</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/rtacct</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/e4crypt</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/airtun-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/fsck.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/arping</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/vdpa</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./sbin/init</span> (</span><span class="orange">271/478</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/aireplay-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/airbase-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/easside-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/pppd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tipc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/resize2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/fsck</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ssdpd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tailscaled</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tincd</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./sbin/halt</span> (</span><span class="orange">282/478</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/xtables-nft-multi</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/udevd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/exfatlabel</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/mklost+found</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/lnstat</pre>
+<pre>[</span><span class="orange">*</span>] Binary </span><span class="orange">./sbin/shutdown</span> (</span><span class="orange">288/478</span>) not emulated - blacklist triggered</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tune.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/filefrag</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/bridge</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/dumpe2fs</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/haveged</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/watchdog</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/logsave</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/xtables-legacy-multi</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/wpa_passphrase</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/dnsmasq</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/wd_keepalive</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ss</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/pppstats</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/pppoe-discovery</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ethtool</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/wpa_supplicant</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/genl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/airventriloquist-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/mkfs.exfat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/iw</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/tc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/ifstat</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/besside-ng</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./sbin/alsactl</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libtiff.so.6.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libncursesw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libfts.so.0.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libhistory.so.8.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libss.so.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libmd.so.0.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libswscale.so.5.9.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpython3.11.so.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libtbbmalloc_proxy.so.2.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libuv.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_photo.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libevdev.so.2.3.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/liblzma.so.5.4.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libparted-fs-resize.so.0.0.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libcurl.so.4.8.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libdaemon.so.0.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavfilter.so.7.110.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libz.so.1.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libbrotlienc.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_imgproc.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/ld-musl-riscv64.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/ld-musl-riscv64-sf.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libtbbmalloc.so.2.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_video.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libmpg123.so.0.48.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnl-idiag-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libexslt.so.0.8.21</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_stitching.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libmenuw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libbrotlicommon.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgmodule-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgobject-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libip6tc.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libzip.so.5.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libqrencode.so.4.1.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnl-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgomp.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libjpeg.so.9.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavahi-libevent.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/ld-musl-riscv64v_xthead.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/sa/sadc</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgmp.so.10.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnftables.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libformw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libxtables.so.12.7.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libssl.so.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libexpat.so.1.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavahi-client.so.3.2.9</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnftnl.so.11.6.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libuuid.so.1.3.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_calib3d.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_videoio.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/fido_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/collect</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/ata_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/cdrom_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/v4l_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/dmi_memory_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/hid2hci</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/scsi_id</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/udev/mtd_probe</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libprotobuf.so.32.0.12</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgio-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_imgcodecs.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libout123.so.0.5.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libdbus-glib-1.so.2.3.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libusb-1.0.so.0.3.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_objdetect.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libip4tc.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/liblz4.so.1.9.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libxslt.so.1.1.38</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libreadline.so.8.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavcodec.so.58.134.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_core.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgthread-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavresample.so.4.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_ml.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libbluetooth.so.3.19.9</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpcre2-8.so.0.11.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libstdc++.so.6.0.28</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/ld-musl-riscv64xthead.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libcom_err.so.2.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libatopology.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavahi-glib.so.1.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libext2fs.so.2.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_features2d.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libevent_openssl-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libzstd.so.1.5.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgmpxx.so.4.7.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libkmod.so.2.4.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libfl.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libtbb.so.12.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libprotobuf-lite.so.32.0.12</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libmagic.so.1.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libdouble-conversion.so.3.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/liblzo2.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libwebp.so.7.1.8</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpcap.so.1.10.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnl-route-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libglib-2.0.so.0.7600.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpostproc.so.55.9.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libevent_core-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libmnl.so.0.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnl-nf-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/ld-musl-riscv64xthead-sf.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnl-xfrm-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libblkid.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libffi.so.8.1.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavahi-gobject.so.0.0.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libudev.so.1.6.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libbrotlidec.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsharpyuv.so.0.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavformat.so.58.76.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libyaml-0.so.2.0.9</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libiw.so.30</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libparted.so.2.0.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libbz2.so.1.0.8</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libswresample.so.3.9.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libevent-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libarchive.so.13.7.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libbsd.so.0.11.7</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libxml2.so.2.11.6</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libiperf.so.0.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libnl-genl-3.so.200.26.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsbc.so.1.3.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libatomic_ops.so.1.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpng16.so.16.40.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libevent_pthreads-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libe2p.so.2.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/ld-musl-riscv64v0p7_xthead.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_highgui.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libgcc_s.so.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libcrypto.so.3</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsqlite3.so.0.8.6</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavahi-core.so.7.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libwebsockets.so.19</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libtiffxx.so.6.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpopt.so.0.0.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsnappy.so.1.1.10</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libasound.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpcre2-posix.so.3.0.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavutil.so.56.70.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsyn123.so.0.2.2</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libatomic.so.1.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libdbus-1.so.3.32.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libevent_extra-2.1.so.7.0.1</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libatomic_ops_gpl.so.1.2.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsz.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_dnn.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavdevice.so.58.13.100</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libsmartcols.so.1.1.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libzmq.so.5.2.5</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libopencv_flann.so.4.9.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libpanelw.so.6.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libhavege.so.2.0.0</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./lib/libavahi-common.so.3.5.4</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/ssh-pkcs11-helper</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/sftp-server</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/dbus-daemon-launch-helper</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/gio-launch-desktop</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/lzo/examples/lzotest</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/lzo/examples/testmini</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/lzo/examples/lzopack</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/lzo/examples/simple</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/bluetooth/bluetoothd</pre>
+<pre>[</span><span class="red">-</span>] No working emulator found for ./libexec/ssh-keysign</pre>
+<br />
+<br />
+<br />
+<br />
+<pre></span><span class="blue">==&gt</span></span> </span><span class="cyan"><a id="cleanupphase">Cleanup phase</a></span></pre>
+<pre><hr class="mono" /></pre>
+<pre>[</span><span class="orange">*</span>] Terminating qemu processes - check it with ps</pre>
+<pre>[</span><span class="orange">*</span>] Cleaning the emulation environment</pre>
+<br />
+<br />
+<br />
+<pre>[</span><span class="orange">*</span>] Umounting proc, sys and run</pre>
+<pre>[</span><span class="orange">*</span>] Remove firmware copy from emulation directory.</pre>
+<br />
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<a href="./f02_toolchain.html" title="./f02_toolchain.html" ><div id="buttonBack" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div></a>
+<a href="./s109_jtr_local_pw_cracking.html" title="./s109_jtr_local_pw_cracking.html" ><div id="buttonForward" class="rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/></svg></div> </a>
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

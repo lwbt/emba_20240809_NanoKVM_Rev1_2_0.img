@@ -1,0 +1,371 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s20_shell_check.html" title="./../s20_shell_check.html" >&laquo; Back to s20_shell_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>#!/bin/bash</pre>
+<br />
+<pre># Copyright (C) 1998, 2002, 2006, 2007 Free Software Foundation</pre>
+<pre># Copyright (C) 1993 Jean-loup Gailly</pre>
+<br />
+<pre># Modified for XZ Utils by Andrew Dudman and Lasse Collin.</pre>
+<br />
+<pre># This program is free software; you can redistribute it and/or modify</pre>
+<pre># it under the terms of the GNU General Public License as published by</pre>
+<pre># the Free Software Foundation; either version 2 of the License, or</pre>
+<pre># (at your option) any later version.</pre>
+<br />
+<pre># This program is distributed in the hope that it will be useful,</pre>
+<pre># but WITHOUT ANY WARRANTY; without even the implied warranty of</pre>
+<pre># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</pre>
+<pre># GNU General Public License for more details.</pre>
+<br />
+<br />
+<pre>#SET_PATH - This line is a placeholder to ease patching this script.</pre>
+<br />
+<pre># Instead of unsetting XZ_OPT, just make sure that xz will use file format</pre>
+<pre># autodetection. This way memory usage limit and thread limit can be</pre>
+<pre># specified via XZ_OPT. With gzip, bzip2, and lzop it's OK to just unset the</pre>
+<pre># environment variables.</pre>
+<pre>xz='xz --format=auto'</pre>
+<pre>unset GZIP BZIP BZIP2 LZOP</pre>
+<br />
+<pre>case ${0##*/} in</pre>
+<pre>  *cmp*) prog=xzcmp; cmp=${CMP:-cmp}</span>;</pre>
+<pre>  *)     prog=xzdiff; cmp=${DIFF:-diff}</span>;</pre>
+<pre>esac</pre>
+<br />
+<pre>version="$prog (XZ Utils) 5.4.4"</pre>
+<br />
+<pre>usage="Usage: ${0##*/} [OPTION]... FILE1 [FILE2]</pre>
+<pre>Compare FILE1 to FILE2, using their uncompressed contents if they are</pre>
+<pre>compressed.  If FILE2 is omitted, then the files compared are FILE1 and</pre>
+<pre>FILE1 from which the compression format suffix has been stripped.</pre>
+<br />
+<pre>Do comparisons like '$cmp' does.  OPTIONs are the same as for '$cmp'.</pre>
+<br />
+<pre>Report bugs to &lt;xz&commat;tukaani.org&gt;."</pre>
+<br />
+<pre># sed script to escape all ' for the shell, and then (to handle trailing</pre>
+<pre># newlines correctly) turn trailing X on last line into '.</pre>
+<pre>escape='</pre>
+<pre>  s/'\''/'\''\\'\'''\''/g</pre>
+<pre>  $s/X$/'\''/</pre>
+<pre>'</pre>
+<br />
+<pre>while :; do</pre>
+<pre>  case $1 in</pre>
+<pre>    --h*) printf '%s\n' "$usage" || exit 2; exit</span>;</pre>
+<pre>    --v*) printf '%s\n' "$version" || exit 2; exit</span>;</pre>
+<pre>    --) shift; break</span>;</pre>
+<pre>    -*\'*) cmp="$cmp '"`printf '%sX\n' "$1" | sed "$escape"`</span>;</pre>
+<pre>    -?*) cmp="$cmp '$1'"</span>;</pre>
+<pre>    *) break</span>;</pre>
+<pre>  esac</pre>
+<pre>  shift</pre>
+<pre>done</pre>
+<pre>cmp="$cmp --"</pre>
+<br />
+<pre>for file; do</pre>
+<pre>  test "X$file" = X- || &lt;"$file" || exit 2</pre>
+<pre>done</pre>
+<br />
+<pre># xz needs -qQ to ignore warnings like unsupported check type.</pre>
+<pre>xz1="$xz -qQ"</pre>
+<pre>xz2="$xz -qQ"</pre>
+<pre>xz_status=0</pre>
+<pre>exec 3&gt;&amp;1</pre>
+<br />
+<pre>if test $# -eq 1; then</pre>
+<pre>  case $1 in</pre>
+<pre>    *[-.]xz | *[-.]lzma | *[-.]lz | *.t[lx]z)</pre>
+<pre>      </span>;</pre>
+<pre>    *[-.]bz2 | *.tbz | *.tbz2)</pre>
+<pre>      xz1=bzip2</span>;</pre>
+<pre>    *[-.][zZ] | *_z | *[-.]gz | *.t[ag]z)</pre>
+<pre>      xz1=gzip</span>;</pre>
+<pre>    *[-.]lzo | *.tzo)</pre>
+<pre>      xz1=lzop</span>;</pre>
+<pre>    *[-.]zst | *.tzst)</pre>
+<pre>      xz1='zstd -q'</span>;</pre>
+<pre>    *)</pre>
+<pre>      printf '%s\n' "$0: $1: Unknown compressed file name suffix" &gt;&amp;2</pre>
+<pre>      exit 2</span>;</pre>
+<pre>  esac</pre>
+<pre>  case $1 in</pre>
+<pre>    *[-.][zZ] | *_z | *[-.][gx]z | *[-.]bz2 | *[-.]lzma | *[-.]lz | *[-.]lzo | *[-.]zst)</pre>
+<pre>      FILE=`expr "X$1" : 'X\(.*\)[-.][abglmostxzZ2]*$'`</span>;</pre>
+<pre>    *.t[abglx]z)</pre>
+<pre>      FILE=`expr "X$1" : 'X\(.*[-.]t\)[abglx]z$'`ar</span>;</pre>
+<pre>    *.tbz2)</pre>
+<pre>      FILE=`expr "X$1" : 'X\(.*[-.]t\)bz2$'`ar</span>;</pre>
+<pre>    *.tzo)</pre>
+<pre>      FILE=`expr "X$1" : 'X\(.*[-.]t\)zo$'`ar</span>;</pre>
+<pre>    *.tzst)</pre>
+<pre>      FILE=`expr "X$1" : 'X\(.*[-.]t\)zst$'`ar</span>;</pre>
+<pre>  esac</pre>
+<pre>  xz_status=$(</pre>
+<pre>    exec 4&gt;&amp;1</pre>
+<pre><span class="green">    ($xz1 -cd -- "$1" 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- | eval "$cmp" - '"$FILE"' &gt;&amp<span class="italic"></span></pre>
+<pre>  )</pre>
+<pre>elif test $# -eq 2; then</pre>
+<pre>  case $1 in</pre>
+<pre>    *[-.]bz2 | *.tbz | *.tbz2) xz1=bzip2</span>;</pre>
+<pre>    *[-.][zZ] | *_z | *[-.]gz | *.t[ag]z) xz1=gzip</span>;</pre>
+<pre>    *[-.]lzo | *.tzo) xz1=lzop</span>;</pre>
+<pre>    *[-.]zst | *.tzst) xz1='zstd -q'</span>;</pre>
+<pre>  esac</pre>
+<pre>  case $2 in</pre>
+<pre>    *[-.]bz2 | *.tbz | *.tbz2) xz2=bzip2</span>;</pre>
+<pre>    *[-.][zZ] | *_z | *[-.]gz | *.t[ag]z) xz2=gzip</span>;</pre>
+<pre>    *[-.]lzo | *.tzo) xz2=lzop</span>;</pre>
+<pre>    *[-.]zst | *.tzst) xz2='zstd -q'</span>;</pre>
+<pre>  esac</pre>
+<pre>  case $1 in</pre>
+<pre>    *[-.][zZ] | *_z | *[-.][gx]z | *[-.]bz2 | *[-.]lzma | *[-.]lz | *.t[abglx]z | *.tbz2 | *[-.]lzo | *.tzo | *[-.]zst | *.tzst | -)</pre>
+<pre>      case "$2" in</pre>
+<pre>        *[-.][zZ] | *_z | *[-.][gx]z | *[-.]bz2 | *[-.]lzma | *[-.]lz | *.t[abglx]z | *.tbz2 | *[-.]lzo | *.tzo | *[-.]zst | *.tzst | -)</pre>
+<pre>          if test "$1$2" = --; then</pre>
+<pre>            xz_status=$(</pre>
+<pre>              exec 4&gt;&amp;1</pre>
+<pre>              ($xz1 -cdf - 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- |</pre>
+<pre><span class="green">                eval "$cmp" - - &gt;&amp<span class="italic"></span></pre>
+<pre>            )</pre>
+<pre>          elif # Reject Solaris 8's buggy /bin/bash 2.03.</pre>
+<pre><span class="green">              echo X | (echo X | eval "$cmp" /dev/fd/5 - &gt;/dev/null 2&gt;&amp;1) 5&lt;&amp</span>; then</span></pre>
+<pre>            # NOTE: xz_status will contain two numbers.</pre>
+<pre>            xz_status=$(</pre>
+<pre>              exec 4&gt;&amp;1</pre>
+<pre>              ($xz1 -cdf -- "$1" 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- |</pre>
+<pre>                ( ($xz2 -cdf -- "$2" 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- 5&lt;&amp;- &lt;/dev/null |</pre>
+<pre><span class="green">                eval "$cmp" /dev/fd/5 - &gt;&amp;3) 5&lt;&amp</span></span></pre>
+<pre>            )</pre>
+<pre>          else</pre>
+<pre>            F=`expr "/$2" : '.*/\(.*\)[-.][ablmotxz2]*$'` || F=$prog</pre>
+<pre>            tmp=</pre>
+<pre>            trap '</pre>
+<pre>              test -n "$tmp" &amp;&amp; rm -rf "$tmp"</pre>
+<pre>              (exit 2); exit 2</pre>
+<pre>            ' HUP INT PIPE TERM 0</pre>
+<pre>            if type mktemp &gt;/dev/null 2&gt;&amp<span class="bold">; then</pre>
+<pre>              # Note that FreeBSD's mktemp isn't fully compatible with</pre>
+<pre>              # the implementations from mktemp.org and GNU coreutils.</pre>
+<pre>              # It is important that the -t argument is the last argument</pre>
+<pre>              # and that no "--" is used between -t and the template argument.</pre>
+<pre>              # This way this command works on all implementations.</pre>
+<pre>              tmp=`mktemp -d -t "$prog.XXXXXXXXXX"` || exit 2</pre>
+<pre>            else</pre>
+<pre>              # Fallback code if mktemp is missing. This isn't as</pre>
+<pre>              # robust as using mktemp since this doesn't try with</pre>
+<pre>              # different file names in case of a file name conflict.</pre>
+<pre>              #</pre>
+<pre>              # There's no need to save the original umask since</pre>
+<pre>              # we don't create any non-temp files. Note that using</pre>
+<pre>              # mkdir -m 0077 isn't secure since some mkdir implementations</pre>
+<pre>              # create the dir with the default umask and chmod the</pre>
+<pre>              # the dir afterwards.</pre>
+<pre>              umask 0077</pre>
+<pre>              mkdir -- "${TMPDIR-/tmp}/$prog.$$" || exit 2</pre>
+<pre>              tmp="${TMPDIR-/tmp}/$prog.$$"</pre>
+<pre>            fi</pre>
+<pre>            $xz2 -cdf -- "$2" &gt; "$tmp/$F" || exit 2</pre>
+<pre>            xz_status=$(</pre>
+<pre>              exec 4&gt;&amp;1</pre>
+<pre>              ($xz1 -cdf -- "$1" 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- |</pre>
+<pre><span class="green">                eval "$cmp" - '"$tmp/$F"' &gt;&amp<span class="italic"></span></pre>
+<pre>            )</pre>
+<pre>            cmp_status=$?</pre>
+<pre>            rm -rf "$tmp" || xz_status=$?</pre>
+<pre>            trap - HUP INT PIPE TERM 0</pre>
+<pre>            (exit $cmp_status)</pre>
+<pre>          fi</span>;</pre>
+<pre>      *)</pre>
+<pre>        xz_status=$(</pre>
+<pre>          exec 4&gt;&amp;1</pre>
+<pre>          ($xz1 -cdf -- "$1" 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- |</pre>
+<pre><span class="green">            eval "$cmp" - '"$2"' &gt;&amp<span class="italic"></span></pre>
+<pre>        )</span>;</pre>
+<pre>    esac</span>;</pre>
+<pre>  *)</pre>
+<pre>    case "$2" in</pre>
+<pre>      *[-.][zZ] | *_z | *[-.][gx]z | *[-.]bz2 | *[-.]lzma | *[-.]lz | *.t[abglx]z | *.tbz2 | *[-.]lzo | *.tzo | *[-.]zst | *.tzst | -)</pre>
+<pre>        xz_status=$(</pre>
+<pre>          exec 4&gt;&amp;1</pre>
+<pre>          ($xz2 -cdf -- "$2" 4&gt;&amp;-; echo $? &gt;&amp;4) 3&gt;&amp;- |</pre>
+<pre><span class="green">            eval "$cmp" '"$1"' - &gt;&amp<span class="italic"></span></pre>
+<pre>         )</span>;</pre>
+<pre>      *)</pre>
+<pre><span class="green">        eval "$cmp" '"$1"' '"$2"'</span>;</span></pre>
+<pre>    esac</span>;</pre>
+<pre>  esac</pre>
+<pre>else</pre>
+<pre>  printf '%s\n' "$0: Invalid number of operands; try \`${0##*/} --help' for help" &gt;&amp;2</pre>
+<pre>  exit 2</pre>
+<pre>fi</pre>
+<br />
+<pre>cmp_status=$?</pre>
+<pre>for num in $xz_status ; do</pre>
+<pre>  # 0 from decompressor means successful decompression. SIGPIPE from</pre>
+<pre>  # decompressor is possible when diff or cmp exits before the whole file</pre>
+<pre>  # has been decompressed. In that case we want to retain the exit status</pre>
+<pre>  # from diff or cmp. Note that using "trap '' PIPE" is not possible</pre>
+<pre>  # because gzip changes its behavior (including exit status) if SIGPIPE</pre>
+<pre>  # is ignored.</pre>
+<pre>  test "$num" -eq 0 &amp;&amp; continue</pre>
+<pre>  test "$num" -ge 128 \</pre>
+<pre>      &amp;&amp; test "$(kill -l "$num" 2&gt; /dev/null)" = "PIPE" \</pre>
+<pre>      &amp;&amp; continue</pre>
+<pre>  exit 2</pre>
+<pre>done</pre>
+<pre>exit $cmp_status</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

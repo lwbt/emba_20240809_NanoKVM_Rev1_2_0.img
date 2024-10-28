@@ -1,0 +1,165 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s106_deep_key_search.html" title="./../s106_deep_key_search.html" >&laquo; Back to s106_deep_key_search</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>[</span><span class="orange">*</span>] FILE_PATH: ./logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/sbin/hostapd (-rwxr-xr-x root root)</pre>
+<br />
+<pre>6878:%sOpenSSL: OCSP responder error %d (%s)OpenSSL: Could not find BasicOCSPResponseAdd OCSP issuerOpenSSL: Could not add issuer to certificate storeOpenSSL: Could not add issuer to OCSP responder trust storeOpenSSL: Could not add issuer's issuer to OCSP responder trust storeOpenSSL: OCSP response failed verificationOpenSSL: OCSP response verification succeededOpenSSL: Peer certificate not available for OCSP status checkOpenSSL: Peer issuer certificate not available for OCSP status checkOpenSSL: Could not create OCSP certificate identifier (SHA256)OpenSSL: Could not create OCSP certificate identifier (SHA1)OpenSSL: Could not find current server certificate from OCSP response%sOpenSSL: OCSP status times invalidOpenSSL: OCSP status for server certificate: %sOpenSSL: OCSP status unknown, but OCSP requiredOpenSSL: OCSP status unknown, but OCSP was not required, so allow connection to continueTLS: Embedded null in a string - rejectTLS: Reject due to incomplete label matchsuffix MatchSuffix matchTLS: Match domain against %s%sTLS: Certificate dNSNameTLS: %s in dNSName foundTLS: None of the dNSName(s) matchedTLS: Certificate commonNameTLS: %s in commonName foundTLS: No CommonName %smatch foundNULLRSADHDSA%d: %s (%s) %sOpenSSL: %s: length=%dOpenSSL: ClientHello SessionTicket extensionHandshake failed - BIO_writeSSL: SSL_connect - want more dataSSL: SSL_connect - want to writeOpenSSL: Could not generate ClientHelloSSL: %d bytes pending from ssl_outSSL: Failed to allocate memory for handshake output (%d bytes)BIO_reset failedHandshake failed - BIO_readTLS: Heartbeat attack detected - do not send responseOpenSSL: Handshake finished - resumed=%dOpenSSL: Shared ciphers: %sSSL: No Application Data includedFailed to read possible Application DataSSL: Application Data in Finished messagehandshakehello requestinner content typechange cipher specalertheartbeatserver hellokey updatesupplemental datacertificate statuscertificate urlfinishedclient key exchangecertificate verifyserver hello donecertificate requestserver key exchangecertificateencrypted extensionshello retry requestend of early datanew session tickethello verify requestclient helloapplication datamessage hashTLS header infoOpenSSL: session ver=0x%x content_type=%dOpenSSL: DataOpenSSL: %s ver=0x%x content_type=%d (%s/%s)OpenSSL: MessageOpenSSL: Heartbeat attack detectedServer certificate mismatchPeer certificate - depth %dOpenSSL: Ignore certificate validity time mismatchOpenSSL: Ignore certificate validity CRL time mismatchOpenSSL: Could not fetch server certificate dataOpenSSL: Ignore validation issues for a pinned server certificateTLS: Certificate verification failed, error %d (%s) depth %d for '%s'TLS: tls_verify_cb - preverify_ok=%d err=%d (%s) ca_cert_verify=%d depth=%d buf='%s'OpenSSL: Too long DN matching field value in '%s'emailAddressTLS: Unknown field '%s' in check_cert_subjectTLS: Distinguished Name field '%s' value is not defined in check_cert_subjectOpenSSL: Failed to match %s '%s' with certificate DN field value '%s'OpenSSL: No match for DN '%s'Distinguished NameTLS: Subject '%s' did not match with '%s'Subject mismatchEMAIL:DNS:URI:TLS: Invalid altSubjectName match '%s'TLS: altSubjectName match '%s' not foundAltSubject mismatchOpenSSL: Reject server certificate on probe-only runServer certificate chain probeTLS: Domain match '%s' not foundDomain mismatchTLS: Domain suffix match '%s' not foundDomain suffix mismatchFailed to parse PKCS12 fileTLS: Successfully parsed PKCS12 dataTLS: Got certificate from PKCS12: subject='%s'TLS: Got private key from PKCS12TLS: additional certificate from PKCS12: subject='%s'Failed to add additional certificateFailed to build certificate chainTLS: Ignore certificate chain verification error when building chain with PKCS#12 extra certificatesTLS - SSL error: %sFailed to use PKCS#12 fileFailed to load private keyPrivate key failed verificationDEFAULT:!EXP:!LOWOpenSSL: Failed to set cipher string '%s'OpenSSL: Flushing X509 store with ca_cert fileOpenSSL: %s - failed to allocate new certificate storeFailed to load root certificatesOpenSSL: Error replacing X509 store with ca_cert fileFailed to initialize new SSL connectionFailed to create a new BIO for ssl_inFailed to create a new BIO for ssl_outFailed to get certificate store when enabling check_crlOpenSSL: cipher nid %d digest nid %dOpenSSL: no cipher in use?!OpenSSL: no digest in use (e.g., AEAD)OpenSSL: keyblock size: mac_key_len=%d enc_key_len=%d fixed_iv_len=%dTLSv1.2key expansionEncryption failed - SSL_writeEncryption failed - BIO_readDecryption failed - BIO_writeDecryption failed - SSL_readRC4-SHADHE-RSA-AES128-SHAADH-AES128-SHADHE-RSA-AES256-SHAOpenSSL: No ciphers listedTLS: Unsupported cipher selection: %dOpenSSL: cipher suites: %s:ADH-tpm2pkcs11OpenSSL: ocsp=3 not supportedpkcs11:OpenSSL: Disable TLSv1.3 for EAP-FAST%s: Clearing pending SSL error: %sSSL: Initializing TLS engine %sprobe://OpenSSL: Probe for server certificate chainhash://server/sha256/OpenSSL: Unsupported ca_cert hash value '%s'OpenSSL: Unexpected SHA256 hash length in ca_cert '%s'OpenSSL: Invalid SHA256 hash value in ca_cert '%s'OpenSSL: Checking only server certificate matchFailed to parse ca_cert_blobFailed to add ca_cert_blob to certificate storeOpenSSL: %s - ignoring cert already in hash table errorOpenSSL: %s - added ca_cert_blob to certificate storeFailed add lookup for X509 storeFailed load CA in DER formatOpenSSL: %s - loaded DER format CA certificateTLS: Trusted root certificate(s) loadedOpenSSL: SSL_use_certificate_ASN1 --&gt; OKOpenSSL: Found PEM encoded certificate from blobOpenSSL: Added an additional certificate into the chainOpenSSL: SSL_use_certificate_file (DER) --&gt; OKOpenSSL: SSL_use_certificate_chain_file --&gt; OKSSL_use_certificate_file failedTLS: Using private key from engineSSL: Configuration uses engine, but engine support was not compiled inOpenSSL: SSL_use_PrivateKey_ASN1(EVP_PKEY_RSA) --&gt; OKOpenSSL: SSL_use_PrivateKey_ASN1(EVP_PKEY_DSA) --&gt; OKOpenSSL: SSL_use_PrivateKey_ASN1(EVP_PKEY_EC) --&gt; OKOpenSSL: SSL_use_RSAPrivateKey_ASN1 --&gt; OKOpenSSL: SSL_use_PrivateKey --&gt; OKFailed to use PKCS#12 blobOpenSSL: PKCS#12 as blob --&gt; OKOpenSSL: Reading PKCS#12 file --&gt; OKSSL: Private key loaded successfullyTLS: Failed to load private key '%s'TLS: Failed to open DH file '%s': %sTLS: Failed to parse DH file '%s': %s - trying to parse as DSA paramsTLS: Failed to parse DSA file '%s': %sTLS: DH file in DSA param formatTLS: Failed to convert DSA params into DH paramsTLS: Failed to read/parse DH/DSA file '%s'TLS: Failed to set DH params from '%s': %sTLS: Failed to load DH file '%s'OpenSSL: Failed to set ECDH curves '%s'SSL_use_certificate_ASN1 failedOpenSSL: Found TPM2 wrapped key %sTLS: Failed to set global parametersOpenSSL: Enabled cipher suites in priority orderCipher %d: %sOpenSSL: Configured certificate chainOpenSSL 3.1.4 24 Oct 2023OpenSSL build=%s run=%sOpenSSL: Replacing old success data %pOpenSSL: Stored success data %pOpenSSL: Failed to store success dataOpenSSL: Success data accepted for resumed sessionOpenSSL: Session was not cachedOpenSSL: Removed cached session to disable session resumption-----BEGIN TSS2 PRIVATE KEY----------BEGIN TSS2 KEY BLOB-----R¼øÿ&amp;¼øÿ4½øÿ*½øÿH¾øÿR¾øÿ\¾øÿÚ½øÿä½øÿî½øÿø½øÿ.½øÿ¾øÿ.½øÿ.½øÿ¾øÿ¾øÿ ¾øÿ*¾øÿ4¾øÿ&gt;¾øÿ.½øÿ.½øÿ.½øÿ¨½øÿ²½øÿ¼½øÿÆ½øÿĞ½øÿ&amp;¾øÿ8¾øÿ¾øÿ¾øÿJ¾øÿnÚøÿVÚøÿ&lt;ÚøÿŒÙøÿZÚøÿdÚøÿRÚøÿtls_set_conn_flagstls_use_private_key_filetls_global_client_certocsp_resp_cbtls_session_ticket_ext_cbopenssl_handshakeopenssl_get_appl_datatls_parse_pkcs12tls_read_pkcs12tls_global_private_keytls_crl_cert_reloadtls_connection_inittls_global_set_verifytls_connection_encrypttls_connection_decrypttls_connection_set_cipher_listtls_connection_set_paramstls_connection_ca_certtls_load_ca_dertls_connection_client_certtls_read_pkcs12_blobtls_connection_private_keytls_global_set_paramstls_global_ca_cert1.3.6.1.4.1.40808.1.3.1OpenSSL: EVP_DigestInit_ex failed: %sOpenSSL: EVP_DigestUpdate failed: %sOpenSSL: EVP_DigestFinal failed: %slegacydefaultOpenSSL: DES encrypt failed%s: Unsupported len=%uOpenSSL: EVP_EncryptUpdate failed: %sOpenSSL: EVP_EncryptFinal_ex failed: %sOpenSSL: Unexpected padding length %d in AES encryptOpenSSL: EVP_DecryptUpdate failed: %sOpenSSL: EVP_DecryptFinal_ex failed: %sOpenSSL: Unexpected padding length %d in AES decrypt%s (%s,%s)../src/crypto/crypto_openssl.cOpenSSL: Failed to generate EC_KEY parametersOpenSSL: Failed to generate EVP_PKEY parametersOpenSSL: EVP_PKEY_keygen_init failed: %sOpenSSL: EVP_PKEY_keygen failed: %sOpenSSL: EC_POINT_get_affine_coordinates_GFp failed: %sOpenSSL: EC_POINT_set_affine_coordinates_GFp failed: %sOpenSSL: EC_POINT_set_compressed_coordinates_GFp failed: %sOpenSSL: ECDH peer public key is not on curveOpenSSL: EC_KEY_set_public_key failed: %sOpenSSL: EVP_PKEY_derive(1) failed: %sOpenSSL: EVP_PKEY_derive(2) failed: %sOpenSSL: EVP_PKEY_derive(2) changed secret_len %d -&gt; %dOpenSSL: d2i_ECPrivateKey() failed: %sOpenSSL: d2i_PUBKEY() failed: %sOpenSSL: Unsupported group %dOpenSSL: Invalid pointOpenSSL: Failed to set EC_KEY: %sOpenSSL: Could not create EVP_PKEYOpenSSL: Failed to generate EC keyOpenSSL: i2d_PUBKEY() failed: %sOpenSSL: Failed to determine public key encoding lengthOpenSSL: Failed to encode public key (res=%d/%d)OpenSSL: Could not DER encode signatureOpenSSL: Unsupported curve (nid=%d) in EC keyOpenSSL: Could not parse PKCS#7 object: %sOpenSSL: No certificates found in PKCS#7 object¢óøÿ¼óøÿØóøÿàóøÿèóøÿ(óøÿaes_encrypt_initaes_decrypt_initÿÿÿÿÿÿÿä‡íQ´abc1EÀnh”'E3æ:ßS‰Í‘(¥&lt;Çn÷ÊŒÙæ!˜…6ù/Š§ğš¶¶¨á"òBÚ»1/?cz&amp;!tÓöµ…ÿ®[z[ö÷5ı­DÏÒ×O’¾%ó$”3(ör-á&gt;\P±ß‚Ìm$*éÍ4‹Ô~’g¯Á²®‘îQÖË1y«B©]Ïj”ƒ¸KK6³†§%^Lxº6e¹“ÿÿÿÿÿÿÿÿŸËÌÿÿÿÿÿÿÿÿÿÿÿÿ™ÉŸ£¥d#Eg‰«ÍïşÜº˜vT2ASN.1: No room for IdentifierASN.1: Invalid extended tag (first octet has to be included with at least one nonzero bit for the tag value)ASN.1: Identifier underflowASN.1: Extended tag data: 0x%02xASN.1: Extended Tag: 0x%x (len=%zu)ASN.1: Invalid or unsupported (too large) extended Tag: 0x%x (len=%zu)ASN.1: No room for LengthASN.1: Reserved length value 0xff usedASN.1: Definite long form of the length does not start with a nonzero valueASN.1: Too long length fieldASN.1: Length underflowASN.1: Definite long form of the length used with too short lengthASN.1: Contents underflowASN.1: Unexpected BOOLEAN length (%u)ASN.1: Invalid BOOLEAN value 0x%x (DER requires 0 or 0xff)ASN.1: Invalid DER encoding: %sclass %d constructed %d tag 0x%x%s - found class %d constructed %d tag 0x%xASN.1: Too long OID valueASN.1: Expected OID%s%luX509: %s - some bits ignored (BIT STRING length %lu)ASN.1: Expected INTEGERASN.1: Too large INTEGER (len %u)ASN.1: Expected SEQUENCEasn1_bit_string_to_longhŸ</pre>
+<pre>6879-hŸ</pre>
+<pre>6880-H»H»</pre>
+<br />
+<pre>[</span><span class="orange">*</span>] Deep search results:</pre>
+<pre>    1	:	\-\-\-\-\-BEGIN\ .*PRIVATE KEY\-\-\-\-\-</pre>
+<br />
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>

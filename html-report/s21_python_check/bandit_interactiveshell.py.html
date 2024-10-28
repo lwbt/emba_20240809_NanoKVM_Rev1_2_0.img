@@ -1,0 +1,451 @@
+<!-- 
+EMBA - EMBEDDED LINUX ANALYZER
+
+Copyright 2020-2023 Siemens AG
+Copyright 2020-2024 Siemens Energy AG
+
+EMBA comes with ABSOLUTELY NO WARRANTY. This is free software, and you are
+welcome to redistribute it under the terms of the GNU General Public License.
+See LICENSE file for usage of this software.
+
+EMBA is licensed under GPLv3
+
+Author(s) and contributors from the EMBA project are listed here: https://github.com/e-m-b-a/emba/blob/master/CONTRIBUTORS.md
+-->
+
+<!-- Used icons: https://github.com/CoreyGinnivan/system-uicons -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EMBA firmware report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./../style/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="./../style/favicon.png">
+</head>
+<body>
+
+<div id="sidenav" class="side">
+  <div id="logo">
+    <a class="inherit" href="./../index.html"><img class="inherit" id="logoImage" src="./../style/emba.svg" alt="logo"></a>
+  </div>
+  <div id="nav">
+      <a id="embark" class="hidden" href="{{ embarkBackUrl }}">&laquo; Back to EMBArk</a> <!-- nosem -->
+      <a class="backButton" href="./../index.html">&laquo; Back to main</a>
+<a class="modul" href="./../s21_python_check.html" title="./../s21_python_check.html" >&laquo; Back to s21_python_check</a>
+      <!-- navigation start -->
+      <!-- navigation end -->
+      <input id="expand" class="expand_njs hidden" type="button" value="More results:" onclick="this.value=this.value=='+ Show more results'?'- Hide more results':'+ Show more results';">
+      <div class="expand_area">
+        <!-- etc start -->
+        <!-- etc end -->
+      </div>
+  </div>
+  <a href="TIMELINK"><div id="buttonTimeInvisible" class="rectButton"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 1 19 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 5.5v4H5"/></g></svg></div></a>
+  <div id="buttonSizer" class="rectButton buttonClose" onclick="buttonNav()"></div>
+</div>
+<div id="main" class="main">
+  <!-- content start -->
+<pre>Run started:2024-10-25 14:26:36.399834</pre>
+<br />
+<pre>Test results:</pre>
+<pre>&gt;&gt; Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_imports.html#b404-import-subprocess" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_imports.html#b404-import-subprocess" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_imports.html#b404-import-subprocess</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:25:0</pre>
+<pre>24	import shutil</pre>
+<pre>25	import subprocess</pre>
+<pre>26	import sys</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B403:blacklist] Consider possible security implications associated with PickleShareDB module.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-502 (<a href="https://cwe.mitre.org/data/definitions/502.html" title="https://cwe.mitre.org/data/definitions/502.html" target="_blank" >https://cwe.mitre.org/data/definitions/502.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_imports.html#b403-import-pickle" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_imports.html#b403-import-pickle" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_imports.html#b403-import-pickle</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:41:4</pre>
+<pre>40	try:</pre>
+<pre>41	    from pickleshare import PickleShareDB</pre>
+<pre>42	except ModuleNotFoundError:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:782:28</pre>
+<pre>781	</pre>
+<pre>782	        self.builtin_trap = BuiltinTrap(shell=self)</pre>
+<pre>783	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:811:27</pre>
+<pre>810	    def init_display_pub(self):</pre>
+<pre>811	        self.display_pub = self.display_pub_class(parent=self, shell=self)</pre>
+<pre>812	        self.configurables.append(self.display_pub)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:825:27</pre>
+<pre>824	            parent=self,</pre>
+<pre>825	            shell=self,</pre>
+<pre>826	            cache_size=self.cache_size,</pre>
+<pre>827	        )</pre>
+<pre>828	        self.configurables.append(self.displayhook)</pre>
+<pre>829	        # This is a context manager that installs/revmoes the displayhook at</pre>
+<pre>830	        # the appropriate time.</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:1550:34</pre>
+<pre>1549	                try:</pre>
+<pre>1550	                    vdict[name] = eval(name, cf.f_globals, cf.f_locals)</pre>
+<pre>1551	                except:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:1743:18</pre>
+<pre>1742	        if not found and oname_head in ["''",'""','[]','{}','()']:</pre>
+<pre>1743	            obj = eval(oname_head)</pre>
+<pre>1744	            found = True</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:1882:31</pre>
+<pre>1881	        """Sets up the command history, and starts regular autosaves."""</pre>
+<pre>1882	        self.history_manager = HistoryManager(shell=self, parent=self)</pre>
+<pre>1883	        self.configurables.append(self.history_manager)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B110:try_except_pass] Try, Except, Pass detected.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b110_try_except_pass.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b110_try_except_pass.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b110_try_except_pass.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2194:12</pre>
+<pre>2193	                value.filename = filename</pre>
+<pre>2194	            except:</pre>
+<pre>2195	                # Not the format we expect; leave it alone</pre>
+<pre>2196	                pass</pre>
+<pre>2197	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2248:25</pre>
+<pre>2247	</pre>
+<pre>2248	        self.Completer = IPCompleter(shell=self,</pre>
+<pre>2249	                                     namespace=self.user_ns,</pre>
+<pre>2250	                                     global_namespace=self.user_global_ns,</pre>
+<pre>2251	                                     parent=self,</pre>
+<pre>2252	                                     )</pre>
+<pre>2253	        self.configurables.append(self.Completer)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2344:30</pre>
+<pre>2343	        from IPython.core import magics as m</pre>
+<pre>2344	        self.magics_manager = magic.MagicsManager(shell=self,</pre>
+<pre>2345	                                   parent=self,</pre>
+<pre>2346	                                   user_magics=m.UserMagics(self))</pre>
+<pre>2347	        self.configurables.append(self.magics_manager)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.</pre>
+<pre>   Severity: High   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b605_start_process_with_a_shell.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b605_start_process_with_a_shell.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b605_start_process_with_a_shell.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2658:25</pre>
+<pre>2657	                try:</pre>
+<pre>2658	                    ec = os.system(cmd)</pre>
+<pre>2659	                except KeyboardInterrupt:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.</pre>
+<pre>   Severity: High   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b602_subprocess_popen_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b602_subprocess_popen_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b602_subprocess_popen_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2675:21</pre>
+<pre>2674	                # Use env shell instead of default /bin/sh</pre>
+<pre>2675	                ec = subprocess.call(cmd, shell=True, executable=executable)</pre>
+<pre>2676	            except KeyboardInterrupt:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2727:29</pre>
+<pre>2726	    def init_alias(self):</pre>
+<pre>2727	        self.alias_manager = AliasManager(shell=self, parent=self)</pre>
+<pre>2728	        self.configurables.append(self.alias_manager)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2735:33</pre>
+<pre>2734	    def init_extension_manager(self):</pre>
+<pre>2735	        self.extension_manager = ExtensionManager(shell=self, parent=self)</pre>
+<pre>2736	        self.configurables.append(self.extension_manager)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.</pre>
+<pre>   Severity: Medium   Confidence: Low</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b604_any_other_function_with_shell_equals_true.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2751:33</pre>
+<pre>2750	    def init_prefilter(self):</pre>
+<pre>2751	        self.prefilter_manager = PrefilterManager(shell=self, parent=self)</pre>
+<pre>2752	        self.configurables.append(self.prefilter_manager)</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2836:46</pre>
+<pre>2835	            try:</pre>
+<pre>2836	                value = self._format_user_obj(eval(expr, global_ns, user_ns))</pre>
+<pre>2837	            except:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B102:exec_used] Use of exec detected.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2849:12</pre>
+<pre>2848	        with self.builtin_trap:</pre>
+<pre>2849	            exec(cmd, self.user_global_ns, self.user_ns)</pre>
+<pre>2850	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2857:19</pre>
+<pre>2856	        with self.builtin_trap:</pre>
+<pre>2857	            return eval(expr, self.user_global_ns, self.user_ns)</pre>
+<pre>2858	</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3074:8</pre>
+<pre>3073	</pre>
+<pre>3074	        assert transformed_cell is not None</pre>
+<pre>3075	        coro = self.run_cell_async(</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b101_assert_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3132:8</pre>
+<pre>3131	            return False</pre>
+<pre>3132	        assert preprocessing_exc_tuple is None</pre>
+<pre>3133	        if transformed_cell is None:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3546:26</pre>
+<pre>3545	                if async_:</pre>
+<pre>3546	                    await eval(code_obj, self.user_global_ns, self.user_ns)</pre>
+<pre>3547	                else:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B102:exec_used] Use of exec detected.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b102_exec_used.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3548:20</pre>
+<pre>3547	                else:</pre>
+<pre>3548	                    exec(code_obj, self.user_global_ns, self.user_ns)</pre>
+<pre>3549	            finally:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B110:try_except_pass] Try, Except, Pass detected.</pre>
+<pre>   Severity: Low   Confidence: High</pre>
+<pre>   CWE: CWE-703 (<a href="https://cwe.mitre.org/data/definitions/703.html" title="https://cwe.mitre.org/data/definitions/703.html" target="_blank" >https://cwe.mitre.org/data/definitions/703.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/plugins/b110_try_except_pass.html" title="https://bandit.readthedocs.io/en/1.7.10/plugins/b110_try_except_pass.html" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/plugins/b110_try_except_pass.html</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3726:8</pre>
+<pre>3725	            cmd = formatter.vformat(cmd, args=[], kwargs=ns)</pre>
+<pre>3726	        except Exception:</pre>
+<pre>3727	            # if formatter couldn't format, just let it go untransformed</pre>
+<pre>3728	            pass</pre>
+<pre>3729	        return cmd</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-22 (<a href="https://cwe.mitre.org/data/definitions/22.html" title="https://cwe.mitre.org/data/definitions/22.html" target="_blank" >https://cwe.mitre.org/data/definitions/22.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b310-urllib-urlopen" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b310-urllib-urlopen" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b310-urllib-urlopen</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3843:27</pre>
+<pre>3842	                from urllib.request import urlopen</pre>
+<pre>3843	                response = urlopen(target)</pre>
+<pre>3844	                return response.read().decode('latin1')</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<pre>&gt;&gt; Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.</pre>
+<pre>   Severity: Medium   Confidence: High</pre>
+<pre>   CWE: CWE-78 (<a href="https://cwe.mitre.org/data/definitions/78.html" title="https://cwe.mitre.org/data/definitions/78.html" target="_blank" >https://cwe.mitre.org/data/definitions/78.html</a>)</pre>
+<pre>   More Info: <a href="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" title="https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval" target="_blank" >https://bandit.readthedocs.io/en/1.7.10/blacklists/blacklist_calls.html#b307-eval</a></pre>
+<pre>   Location: /logs/firmware/patool_extraction/firmware_unblob_extracted/firmware_extract/16777728-960496128.extfs_extract/usr/lib/python3.11/site-packages/IPython/core/interactiveshell.py:3872:22</pre>
+<pre>3871	        try:                                              # User namespace</pre>
+<pre>3872	            codeobj = eval(target, self.user_ns)</pre>
+<pre>3873	        except Exception as e:</pre>
+<br />
+<pre>--------------------------------------------------</pre>
+<br />
+<pre>Code scanned:</pre>
+<pre>	Total lines of code: 2778</pre>
+<pre>	Total lines skipped (#nosec): 0</pre>
+<pre>	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0</pre>
+<br />
+<pre>Run metrics:</pre>
+<pre>	Total issues (by severity):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 6</pre>
+<pre>		Medium: 18</pre>
+<pre>		High: 2</pre>
+<pre>	Total issues (by confidence):</pre>
+<pre>		Undefined: 0</pre>
+<pre>		Low: 9</pre>
+<pre>		Medium: 0</pre>
+<pre>		High: 17</pre>
+<pre>Files skipped (0):</pre>
+  <!-- content end -->
+</div>
+
+<a href="https://github.com/e-m-b-a/emba" title="github.com/e-m-b-a/emba" target="_blank">
+  <div id="buttonInfo" class="rectButtonVisible">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" transform="translate(2 2)"><g stroke="white" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8.5" r="8"/><path d="M8.5 12.5v-4h-1"/><path d="M7.5 12.5h2"/></g><circle cx="8.5" cy="5.5" fill="white" r="1"/></g></svg>
+  </div>
+</a>
+<div id="buttonBack" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M9.5 14.5l4-4l-4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div id="buttonForward" class="nonClickable rectButtonVisible"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><path d="M11.5 14.5l-4-4l4-4" fill="none" stroke="#444" stroke-linecap="round" stroke-linejoin="round"/></svg></div> 
+<div id="buttonDown" class="rectButton" onclick="scrollDown()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5l-4 4l-4-4"/><path d="M14.5 10.5l-4 4l-4-4"/></g></svg></div>
+<div id="buttonUp" class="rectButton" onclick="scrollUp()"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 14.5l4-4l4 4"/><path d="M6.5 10.5l4-4l4 4"/></g></svg></div> 
+
+<script>
+window.onload = function () {
+  var buttons = document.getElementsByClassName("rectButton");
+  for (let i=0; i<buttons.length; i++) {
+    buttons[i].style.visibility = "visible";
+  }
+  var buttonDown = document.getElementById("buttonDown");
+  buttonDown.classList.add('rectButtonVisible');
+  buttonDown.classList.remove('rectButton');
+
+  var buttonUp = document.getElementById("buttonUp");
+  buttonUp.classList.add('rectButtonVisible');
+  buttonUp.classList.remove('rectButton');
+    
+  var buttonSizer = document.getElementById("buttonSizer");
+  buttonSizer.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+  if (document.getElementById("buttonTime") !== null) {
+    var buttonTime = document.getElementById("buttonTime");
+    buttonTime.style.bottom = "50px";
+  }
+  document.getElementById("expand").value = "+ Show more results";
+  document.getElementById("expand").className += " expand";
+  var embarkButton = document.getElementById("embark");
+  if ( !(embarkButton.href.includes("embarkBackUrl")) ) {
+    embarkButton.classList.remove('hidden');
+    document.getElementById("logoImage").src = "./../style/embark.svg";
+    document.getElementById("logo").style.background = "#2d2d2d";
+  }
+}
+
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("nav").style.visibility = "visible";
+}
+
+function closeNav() {
+  document.getElementById("sidenav").style.width = "50px";
+  document.getElementById("sidenav").scrollTop = 0;
+  document.getElementById("main").style.marginLeft = "50px";
+  document.getElementById("nav").style.visibility = "hidden";
+}
+
+function scrollDown() {
+  window.scrollTo(0,document.body.scrollHeight);
+}
+
+function scrollUp() {
+  window.scrollTo(0,0);
+}
+
+function buttonNav() {
+  var button = document.getElementById("buttonSizer");
+  if ( button.classList.contains('buttonOpen') ) {
+    button.classList.remove('buttonOpen');
+    button.classList.add('buttonClose');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 16.5v-4.978l-5-.022"/><path d="M18.5 2.5l-7 7"/><path d="M16.5 9.5l-5 .023V4.5"/><path d="M9.5 11.5l-7 7"/></g></svg>';
+    openNav();
+  } else if( button.classList.contains('buttonClose') ) {
+    button.classList.remove('buttonClose');
+    button.classList.add('buttonOpen');
+    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="40" height="40" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21"><g fill="none" fill-rule="evenodd" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M18.5 7.5v-5h-5"/><path d="M18.5 2.5l-6 5.929"/><path d="M7.5 18.5l-5 .023V13.5"/><path d="M8.5 12.5l-6 6"/></g></svg>';
+    closeNav();
+  };
+}
+
+// the following function is currently not used
+// it is for future extensions
+function overlay_output(link) {
+  var rawfile = new XMLHttpRequest();
+  rawfile.open('GET', link, false);
+  rawfile.overrideMimeType("text");
+  rawfile.onreadystatechange = function()
+  {
+    alert(rawfile.responseText);
+    //console.log(rawfile.responseText);
+  }
+  rawfile.send(null);
+}
+
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        document.getElementById("buttonForward").parentNode.click(); 
+        break;
+      case 39:
+        document.getElementById("buttonBack").parentNode.click();       
+        break;
+    }
+};
+</script>
+
+</body>
+</html>
